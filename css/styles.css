@@ -1,0 +1,234 @@
+    @font-face {
+        font-family: PTSans;
+        src: url(../fonts/ptsans.woff2);
+    }
+    
+    @font-face {
+        font-family: PTSans;
+        src: url(../fonts/ptsansbold.woff2);
+        font-weight: bold;
+    }
+    
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    html {
+        background-color: #f2f2f2;
+    }
+    
+    body {
+        max-width: 1200px;
+        min-width: 768px;
+        font-family: PTSans;
+        text-transform: uppercase;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: white;
+        box-shadow: 15px 5px 50px grey;
+    }
+    
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+    
+    .col-1 {
+        width: 33.33%;
+        float: left;
+    }
+    
+    .col-2 {
+        width: 66.66%;
+        float: left;
+    }
+    
+    .col-3 {
+        width: 100%;
+    }
+    
+    .align-left {
+        text-align: left;
+    }
+    
+    .align-right {
+        text-align: right;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .main-header {
+        position: relative;
+        height: 55px;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+    
+    .main-menu {
+        list-style-type: none;
+        font-size: 0;
+        /* как убрать пробелы между элементами меню?*/
+        width: 100%;
+        padding-top: 8px;
+        /* почему margin-top смещает весь body вниз? */
+    }
+    
+    .main-menu-item {
+        display: inline-block;
+        width: 25%;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    
+    .main-header-logo {
+        position: absolute;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 10;
+    }
+    
+    .banner {
+        position: relative;
+        height: 500px;
+        background-image: url("../img/banner-img-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 50% 30%;
+    }
+    
+    .banner-decoration {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+    }
+    
+    .row {
+        height: 250px;
+    }
+    
+    .reason-row {
+        background-color: #eeeeee;
+    }
+    
+    .advice-row {
+        height: 330px;
+        padding-top: 60px;
+    }
+    
+    .reason-img {
+        background-size: cover;
+    }
+    
+    .reason-img-1 {
+        background-image: url("../img/reason-img-1.jpg");
+    }
+    
+    .reason-img-2 {
+        background-image: url("../img/reason-img-2.jpg");
+    }
+    
+    .title {
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    
+    header.reasons-header {
+        height: 210px;
+        font-size: 26px;
+        padding-top: 60px;
+    }
+    
+    .story {
+        font-size: 21px;
+        font-weight: normal;
+    }
+    
+    .banner-text {
+        /*display: block;*/
+        /*margin-right: auto;
+        margin-left: auto;*/
+        margin-top: 75px;
+    }
+    
+    .story-illustrated {
+        background-color: #81b3d2;
+        color: white;
+        padding: 20px;
+    }
+    
+    .full-height {
+        height: 100%;
+    }
+    
+    .advice-row img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    
+    b {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    
+    .reason-row .story {
+        padding-top: 50px;
+    }
+    
+    .header-title {
+        margin-bottom: 40px;
+    }
+    
+    .booking {
+        /*width: 570px;*/
+        height: 760px;
+        position: relative;
+        border: 2px solid red;
+    }
+    
+    .search-form {
+        position: absolute;
+        top: 300px;
+        height: 400px;
+        width: 570px;
+        border: 1px solid black;
+        z-index: 9;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    header.booking-header {
+        height: 300px;
+        font-size: 24px;
+        padding-top: 60px;
+        position: relative;
+        border: 3px solid green;
+    }
+    
+    header.booking-header button {
+        background-color: #766357;
+        height: 85px;
+        width: 570px;
+        font-size: 26px;
+        color: #ffffff;
+        position: absolute;
+        bottom: 0px;
+        margin-right: auto;
+    }
+    
+    .map {
+        border: 1px solid blue;
+        height: 460px;
+        width: 100%;
+    }

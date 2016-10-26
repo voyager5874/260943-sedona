@@ -1,12 +1,170 @@
+<!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе
+    «<a href="https://htmlacademy.ru/intensive/htmlcss">
+    Базовый HTML и CSS</a>».</p>-->
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
 
-  </body>
+<body>
+  <header class="main-header container">
+
+      <a href="index.html">
+        <img class="main-header-logo" src="img/main-header-logo.png" alt="Sedona logo">
+      </a>
+      <nav>
+        <ul class="main-menu">
+          <li class="main-menu-item align-left">
+            <a href="#">Информация</a>
+          </li>
+          <li class="main-menu-item align-left">
+            <a href="#">Фото и видео</a>
+          </li>
+          <li class="main-menu-item align-right">
+            <a href="#">Карта штата</a>
+          </li>
+          <li class="main-menu-item align-right">
+            <a href="#">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+
+  </header>
+  <main>
+    <div class="banner container col-3">
+      <!--<img src="img/banner-img-bg.jpg" width="768" height="300" alt="panorama of sedona mountains"> -->
+      <!-- вставить фоном через CSS?-->
+
+      <!-- <img src="img/banner-text.png" alt="welcome to the gorgeous Sedona">
+                экспортировать 4 SVG или объединить все в png?-->
+      <img class="banner-text" src="img/banner-text-img.png" alt="welcome to the gorgeous Sedona">
+
+
+      <img class="banner-decoration" src="img/banner-img-decoration.png" height="60">
+    </div>
+    <article>
+      <header class="reasons-header container">
+        <p class="title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+        <h1 class="story">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h1>
+      </header>
+      <section class="row reason-row">
+        <div class="story full-height story-illustrated container col-1">
+          <b class="title">Настоящий городок</b>
+          <b>-№1&minus;</b>
+          <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+        </div>
+        <div class="full-height reason-img reason-img-1 col-2">
+          <!--<img src="img/town.img" width="500" height="200" alt="sedona town photo"> наверно CSS-> background-image: url(), background-size: cover-->
+        </div>
+      </section>
+      <section class="row advice-row">
+        <div class="story full-height container col-1">
+          <img src="img/house-icon.png" alt="house icon">
+          <b class="title">Жилье</b>
+          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+        <div class="story full-height container col-1">
+          <img src="img/food-icon.png" alt="food icon">
+          <b class="title">Еда</b>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+        <div class="story full-height container col-1">
+          <img src="img/souvenir-icon.png" alt="souvenir icon">
+          <b class="title">Сувениры</b>
+          <p>Не только китайского, но и местного производства!</p>
+        </div>
+      </section>
+      <section class="row reason-row">
+        <div class="full-height reason-img reason-img-2 col-2">
+          <!--<img src="img/mountains.img" width="500" height="200" alt="sedona mountains photo">
+                    или фоном через CSS?-->
+        </div>
+        <div class="story story-illustrated full-height container">
+          <b class="title">Там есть мост дьявола</b>
+          <b>№2</b>
+          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
+      </section>
+      <section class="row reason-row">
+        <div class="story full-height container col-1">
+          <b class="title">Небольшая площадь</b>
+          <b>№3</b>
+          <p>Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="story full-height container col-1">
+          <b class="title">Красивая дорога</b>
+          <b>№4</b>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="story full-height container col-1">
+          <b class="title">Мало туристов</b>
+          <b>№5</b>
+          <p>Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+      </section>
+    </article>
+  </main>
+  <section class="booking">
+    <header class="booking-header container">
+      <b class="header-title">
+        Заинтересовались?
+      </b>
+      <p class="header-story">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения в Седоне
+      </p>
+      <button class="btn btn-show-form" id="show-search-form" type="button">
+                
+            Поиск гостиницы в Седоне
+          
+            </button>
+    </header>
+    <div class="search-form">
+      <form id="hotel-search-form" action="#" method="get">
+        <label>
+                    Дата заезда:
+                    <input type="date" name="arrival-date" value="2016-10-25">
+                </label>
+        <br>
+        <label>
+                    Дата выезда:
+                    <input type="date" name="departure-date" value="2016-10-25">
+                </label>
+        <br>
+        <label>
+                    Взрослые:
+                    <input type="number" name="adults-count" min="1" value="1">
+                </label>
+        <label>
+                    Дети:
+                    <input type="number" name="children-count" min="1" value="1">
+                </label>
+        <br>
+        <button class="btn btn-find" type="submit" value="Найти">
+                    Найти
+                </button>
+      </form>
+    </div>
+    <div class="map container">
+      <!--<img src="img/map.jpg"> -->
+    </div>
+  </section>
+  <footer class="footer main-footer container">
+    <div class="contacts container">
+      <a href="#">#Visit sedona</a>
+    </div>
+    <div class="social-media container">
+      <a class="social-btn social-btn-tw" href="#">twitter</a>
+      <a class="social-btn social-btn-fb" href="#">facebook</a>
+      <a class="social-btn social-btn-yt" href="#">youtube</a>
+    </div>
+    <div class="copyright container">
+      <b>Website by</b>
+      <<img class="logo" src="img/htmlacademy-logo.png" alt="site author logo">
+    </div>
+  </footer>
+</body>
+
 </html>
