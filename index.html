@@ -13,25 +13,25 @@
 <body>
   <header class="main-header container">
 
-      <a href="index.html">
-        <img class="main-header-logo" src="img/main-header-logo.png" alt="Sedona logo">
-      </a>
-      <nav>
-        <ul class="main-menu">
-          <li class="main-menu-item align-left">
-            <a href="#">Информация</a>
-          </li>
-          <li class="main-menu-item align-left">
-            <a href="#">Фото и видео</a>
-          </li>
-          <li class="main-menu-item align-right">
-            <a href="#">Карта штата</a>
-          </li>
-          <li class="main-menu-item align-right">
-            <a href="#">Гостиницы</a>
-          </li>
-        </ul>
-      </nav>
+    <a href="index.html">
+      <img class="main-header-logo" src="img/main-header-logo.png" alt="Sedona logo">
+    </a>
+    <nav>
+      <ul class="main-menu">
+        <li class="main-menu-item align-left">
+          <a href="#">Информация</a>
+        </li>
+        <li class="main-menu-item align-left">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="main-menu-item align-right">
+          <a href="#">Карта штата</a>
+        </li>
+        <li class="main-menu-item align-right">
+          <a href="#">Гостиницы</a>
+        </li>
+      </ul>
+    </nav>
 
   </header>
   <main>
@@ -85,24 +85,24 @@
         </div>
         <div class="story story-illustrated full-height container">
           <b class="title">Там есть мост дьявола</b>
-          <b>№2</b>
+          <div>№2</div>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </section>
       <section class="row reason-row">
         <div class="story full-height container col-1">
           <b class="title">Небольшая площадь</b>
-          <b>№3</b>
+          <div>№3</div>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
         <div class="story full-height container col-1">
           <b class="title">Красивая дорога</b>
-          <b>№4</b>
+          <div>№4</div>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
         <div class="story full-height container col-1">
-          <b class="title">Мало туристов</b>
-          <b>№5</b>
+          <div class="title">Мало туристов</div>
+          <div>№5</div>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </div>
       </section>
@@ -110,41 +110,52 @@
   </main>
   <section class="booking">
     <header class="booking-header container">
-      <b class="header-title">
+      <div class="header-title">
         Заинтересовались?
-      </b>
+      </div>
       <p class="header-story">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения в Седоне
       </p>
       <button class="btn btn-show-form" id="show-search-form" type="button">
-                
+
             Поиск гостиницы в Седоне
-          
+
             </button>
     </header>
     <div class="search-form">
       <form id="hotel-search-form" action="#" method="get">
-        <label>
-                    Дата заезда:
-                    <input type="date" name="arrival-date" value="2016-10-25">
-                </label>
-        <br>
-        <label>
-                    Дата выезда:
-                    <input type="date" name="departure-date" value="2016-10-25">
-                </label>
-        <br>
-        <label>
-                    Взрослые:
-                    <input type="number" name="adults-count" min="1" value="1">
-                </label>
-        <label>
-                    Дети:
-                    <input type="number" name="children-count" min="1" value="1">
-                </label>
-        <br>
+        <div class="input-line">
+          <label class="search-form-label" for="arrival-date">
+            Дата заезда:
+          </label>
+          <input class="long" id="arrival-date" type="date" name="arrival-date" value="2016-10-25">
+          <span class="symbols icon-calendar"></span>
+        </div>
+        <div class="input-line">
+          <label class="search-form-label" for="departure-date">
+              Дата выезда:
+          </label>
+          <input class="long" id="departure-date" type="date" name="departure-date" value="2016-10-25">
+          <span class="symbols icon-calendar"></span>
+        </div>
+        <div class="input-line">
+          <label>
+              <span class="search-form-label">Взрослые:</span>
+              <span class="symbols icon-minu"></span>
+              <input class="short" id="adults-count" type="number" name="adults-count" min="1" value="1">
+              <span class="symbols icon-plus"></span>
+          </label>
+
+          <label class="search-form-label" for="children-count">
+            Дети:
+          </label>
+            <span class="symbols icon-minu"></span>
+            <input class="short" id="children-count" type="number" name="children-count" min="1" value="1">
+            <span class="symbols icon-plus"></span>
+
+        </div>
         <button class="btn btn-find" type="submit" value="Найти">
-                    Найти
-                </button>
+          Найти
+        </button>
       </form>
     </div>
     <div class="map container">
@@ -156,13 +167,13 @@
       <a href="#">#Visit sedona</a>
     </div>
     <div class="social-media container">
-      <a class="social-btn social-btn-tw" href="#">twitter</a>
-      <a class="social-btn social-btn-fb" href="#">facebook</a>
-      <a class="social-btn social-btn-yt" href="#">youtube</a>
+      <a class="symbols icon-twitter" href="#">twitter</a>
+      <a class="symbols icon-facebook" href="#">facebook</a>
+      <a class="symbols icon-youtube" href="#">youtube</a>
     </div>
     <div class="copyright container">
       <b>Website by</b>
-      <<img class="logo" src="img/htmlacademy-logo.png" alt="site author logo">
+      <img class="logo" src="img/htmlacademy-logo.png" alt="site author logo">
     </div>
   </footer>
 </body>
