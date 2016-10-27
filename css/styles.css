@@ -27,7 +27,8 @@
       min-width: 768px;
       font-family: "PTSans";
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 26px;
+      font-weight: normal;
       /*зачем оно вообще?*/
       text-transform: uppercase;
       margin-right: auto;
