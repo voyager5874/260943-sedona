@@ -1,6 +1,8 @@
 <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе
     «<a href="https://htmlacademy.ru/intensive/htmlcss">
     Базовый HTML и CSS</a>».</p>-->
+    <!-- According to the HTML 5 specification, the <b> tag should be used as a LAST resort when no other tag is more appropriate.  
+    во втором вебинаре Першин зачем то его использовал, когда показывал разметку барбершопа "круто быстро и т.д.-->
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -8,23 +10,27 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/symbols-sedona.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="main-header container">
 
     <a href="index.html">
-      <img class="main-header-logo" src="img/main-header-logo.png" alt="Sedona logo">
+      <img class="main-header-logo" src="img/main-header-logo.png" width="140" height="70" alt="Sedona logo">
+      <!-- не получается центрировать -->
     </a>
+<!--     во втором, где показывали, как размечать barbershop вебинаре nav был обернут в 
+    div.container. зачем? сам nav не достаточный контейнер? -->
     <nav>
       <ul class="main-menu">
-        <li class="main-menu-item align-left">
+        <li class="main-menu-item align-left"> <!-- класс align-left или через nth-child сделать? -->
           <a href="#">Информация</a>
         </li>
         <li class="main-menu-item align-left">
           <a href="#">Фото и видео</a>
         </li>
-        <li class="main-menu-item align-right">
+        <li class="main-menu-item align-right"> 
           <a href="#">Карта штата</a>
         </li>
         <li class="main-menu-item align-right">
@@ -35,85 +41,100 @@
 
   </header>
   <main>
+
     <div class="banner container col-3">
-      <!--<img src="img/banner-img-bg.jpg" width="768" height="300" alt="panorama of sedona mountains"> -->
-      <!-- вставить фоном через CSS?-->
+      <!--background-image: url("img/banner-img-bg.jpg") -->
 
-      <!-- <img src="img/banner-text.png" alt="welcome to the gorgeous Sedona">
-                экспортировать 4 SVG или объединить все в png?-->
-      <img class="banner-text" src="img/banner-text-img.png" alt="welcome to the gorgeous Sedona">
+        <!-- по логике классы нужно вводить для элементов, которые встречаются на странице/цах не в
+        единственном экземпляре, но Першин говорит, нужно избегать селекторов по id CSS. Почему? -->
 
 
-      <img class="banner-decoration" src="img/banner-img-decoration.png" height="60">
+      <img class="banner-text" src="img/banner-text-img.png" width="455" height="340" alt="welcome to the gorgeous Sedona">
+       <!-- может быть и декор в фон как-то засунуть, чтобы при этом соответствовать спецификации
+     background-image: url("img/banner-img-bg.jpg"), url("img/banner-img-decoration.png")
+     background-size: 100% 60px, 100% 100%
+   background-position: left bottom ,50% 30%;  -->
+
+      <!-- <img class="banner-decoration" src="img/banner-img-decoration.png" height="60"> -->
     </div>
     <article>
       <header class="reasons-header container">
         <p class="title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
         <h1 class="story">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h1>
+        <!-- Рассмотрим 5 причин... - это ведь заголовок? на мой взгляд определяет всю страницу. h1 или h2? 
+        как лучше: стараться по возможности прописывать классы в родительском объекте или указывать в элементах?
+        например здесь можно присвоить font-family font-size для header и потом переопределить, а можно
+        ничего не писать по этому поводу для header и сразу указать в потомках-->
       </header>
       <section class="row reason-row">
-        <div class="story full-height story-illustrated container col-1">
-          <b class="title">Настоящий городок</b>
-          <b>-№1&minus;</b>
-          <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+        <div class="reason-item full-height illustrated container col-1">
+          <div class="title">Настоящий городок</div>
+          <div class="story">&minus; №1 &minus;</div>
+          <!--чем лучше вставить -№1- простой знак с клавиатуры отличается от макета -->
+          <p class="story">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+          <!-- что лучше ".row p{}" без добавления класса или .row .story? 
+          последнее вроде читается легче - в html видно, как ,будет выглядеть p-->
         </div>
         <div class="full-height reason-img reason-img-1 col-2">
-          <!--<img src="img/town.img" width="500" height="200" alt="sedona town photo"> наверно CSS-> background-image: url(), background-size: cover-->
+          <!-- CSS background-image: url(img/reason-img-1.jpg)
+          в спецификации сказано: 
+          Фотографии, занимающие по две трети ширины вставляются так, чтобы обрезаться сверху и снизу 
+          при увеличении размера (ширина 66%, высота подстраивается под ширину, чтобы не нарушать пропорций, 
+          но фото не выходит за отведённую для него зону).-->
         </div>
       </section>
       <section class="row advice-row">
-        <div class="story full-height container col-1">
+        <div class="full-height container col-1">
           <img src="img/house-icon.png" alt="house icon">
-          <b class="title">Жилье</b>
-          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          <div class="title">Жилье</div>
+          <p class="story">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
-        <div class="story full-height container col-1">
+        <div class="full-height container col-1">
           <img src="img/food-icon.png" alt="food icon">
-          <b class="title">Еда</b>
-          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <div class="title">Еда</div>
+          <p class="story">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
-        <div class="story full-height container col-1">
+        <div class="full-height container col-1">
           <img src="img/souvenir-icon.png" alt="souvenir icon">
-          <b class="title">Сувениры</b>
-          <p>Не только китайского, но и местного производства!</p>
+          <div class="title">Сувениры</div>
+          <p class="story">Не только китайского, но и местного производства!</p>
         </div>
       </section>
       <section class="row reason-row">
         <div class="full-height reason-img reason-img-2 col-2">
-          <!--<img src="img/mountains.img" width="500" height="200" alt="sedona mountains photo">
-                    или фоном через CSS?-->
+          <!-- CSS background-image: url(img/reason-img-2.jpg)-->
         </div>
-        <div class="story story-illustrated full-height container">
-          <b class="title">Там есть мост дьявола</b>
-          <div>№2</div>
-          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <div class="illustrated full-height container">
+          <div class="title">Там есть мост дьявола</div>
+          <div class="story">№2</div>
+          <p class="story">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </section>
       <section class="row reason-row">
-        <div class="story full-height container col-1">
-          <b class="title">Небольшая площадь</b>
-          <div>№3</div>
-          <p>Все достопримечательности находятся очень близко</p>
+        <div class="full-height container col-1">
+          <div class="title">Небольшая площадь</div>
+          <div class="story">№3</div>
+          <p class="story">Все достопримечательности находятся очень близко</p>
         </div>
-        <div class="story full-height container col-1">
-          <b class="title">Красивая дорога</b>
-          <div>№4</div>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <div class="full-height container col-1">
+          <div class="title">Красивая дорога</div>
+          <div class="story">№4</div>
+          <p class="story">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
-        <div class="story full-height container col-1">
+        <div class="full-height container col-1">
           <div class="title">Мало туристов</div>
-          <div>№5</div>
-          <p>Большинство едет в Гранд Каньон и толпится там</p>
+          <div class="story">№5</div>
+          <p class="story">Большинство едет в Гранд Каньон и толпится там</p>
         </div>
       </section>
     </article>
-  </main>
-  <section class="booking">
+  </main> <!-- main здесь закрывать? -->
+  <section class="booking"> <!-- может article? хотя не совсем понятно, чем заинтересовались -->
     <header class="booking-header container">
-      <div class="header-title">
+      <div class="title"> <!-- как лучше: ввести класс типа header-title или использовать селектор "header p" -->
         Заинтересовались?
       </div>
-      <p class="header-story">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения в Седоне
+      <p class="story">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения в Седоне
       </p>
       <button class="btn btn-show-form" id="show-search-form" type="button">
 
@@ -123,21 +144,23 @@
     </header>
     <div class="search-form">
       <form id="hotel-search-form" action="#" method="get">
-        <div class="input-line">
+      <!-- здесь ведь не нужно дополнительного контейнера - хватит и самого form? -->
+        <div class="input-row">
           <label class="search-form-label" for="arrival-date">
             Дата заезда:
           </label>
           <input class="long" id="arrival-date" type="date" name="arrival-date" value="2016-10-25">
           <span class="symbols icon-calendar"></span>
+          <!-- собираюсь вставить символы, прилепив их к input и сделав такой же цвет фона -->
         </div>
-        <div class="input-line">
+        <div class="input-row">
           <label class="search-form-label" for="departure-date">
-              Дата выезда:
+              Дата выезда: <!-- нужно ли оборачитвать текст в что-то еще? span?-->
           </label>
           <input class="long" id="departure-date" type="date" name="departure-date" value="2016-10-25">
           <span class="symbols icon-calendar"></span>
         </div>
-        <div class="input-line">
+        <div class="input-row">
           <label>
               <span class="search-form-label">Взрослые:</span>
               <span class="symbols icon-minu"></span>
@@ -151,7 +174,7 @@
             <span class="symbols icon-minu"></span>
             <input class="short" id="children-count" type="number" name="children-count" min="1" value="1">
             <span class="symbols icon-plus"></span>
-
+                <!-- не знаю, как сверстать эти два поля вместе с их метками. в какую сторону копать? -->
         </div>
         <button class="btn btn-find" type="submit" value="Найти">
           Найти
@@ -172,7 +195,7 @@
       <a class="symbols icon-youtube" href="#">youtube</a>
     </div>
     <div class="copyright container">
-      <b>Website by</b>
+      <span>Website by</span>
       <img class="logo" src="img/htmlacademy-logo.png" alt="site author logo">
     </div>
   </footer>
