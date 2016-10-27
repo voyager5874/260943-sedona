@@ -1,7 +1,7 @@
 <!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе
     «<a href="https://htmlacademy.ru/intensive/htmlcss">
     Базовый HTML и CSS</a>».</p>-->
-    <!-- According to the HTML 5 specification, the <b> tag should be used as a LAST resort when no other tag is more appropriate.  
+<!-- According to the HTML 5 specification, the <b> tag should be used as a LAST resort when no other tag is more appropriate.
     во втором вебинаре Першин зачем то его использовал, когда показывал разметку барбершопа "круто быстро и т.д.-->
 <!DOCTYPE html>
 <html lang="ru">
@@ -15,22 +15,24 @@
 
 <body>
   <header class="main-header container">
-
-    <a href="index.html">
-      <img class="main-header-logo" src="img/main-header-logo.png" width="140" height="70" alt="Sedona logo">
-      <!-- не получается центрировать -->
-    </a>
-<!--     во втором, где показывали, как размечать barbershop вебинаре nav был обернут в 
+    <div class="main-header-logo container">
+      <a href="index.html">
+        <img src="img/main-header-logo.png" width="140" height="70" alt="Sedona logo">
+        <!-- margin:auto не работает для position:absolute -->
+      </a>
+    </div>
+    <!--     во втором, где показывали, как размечать barbershop вебинаре nav был обернут в
     div.container. зачем? сам nav не достаточный контейнер? -->
     <nav>
       <ul class="main-menu">
-        <li class="main-menu-item align-left"> <!-- класс align-left или через nth-child сделать? -->
+        <li class="main-menu-item align-left">
+          <!-- класс align-left или через nth-child сделать? -->
           <a href="#">Информация</a>
         </li>
         <li class="main-menu-item align-left">
           <a href="#">Фото и видео</a>
         </li>
-        <li class="main-menu-item align-right"> 
+        <li class="main-menu-item align-right">
           <a href="#">Карта штата</a>
         </li>
         <li class="main-menu-item align-right">
@@ -45,23 +47,19 @@
     <div class="banner container col-3">
       <!--background-image: url("img/banner-img-bg.jpg") -->
 
-        <!-- по логике классы нужно вводить для элементов, которые встречаются на странице/цах не в
+      <!-- по логике классы нужно вводить для элементов, которые встречаются на странице/цах не в
         единственном экземпляре, но Першин говорит, нужно избегать селекторов по id CSS. Почему? -->
 
 
       <img class="banner-text" src="img/banner-text-img.png" width="455" height="340" alt="welcome to the gorgeous Sedona">
-       <!-- может быть и декор в фон как-то засунуть, чтобы при этом соответствовать спецификации
-     background-image: url("img/banner-img-bg.jpg"), url("img/banner-img-decoration.png")
-     background-size: 100% 60px, 100% 100%
-   background-position: left bottom ,50% 30%;  -->
 
-      <!-- <img class="banner-decoration" src="img/banner-img-decoration.png" height="60"> -->
     </div>
     <article>
+      <!-- The <article> tag specifies independent, self-contained content.An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.-->
       <header class="reasons-header container">
         <p class="title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
         <h1 class="story">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h1>
-        <!-- Рассмотрим 5 причин... - это ведь заголовок? на мой взгляд определяет всю страницу. h1 или h2? 
+        <!-- Рассмотрим 5 причин... - это ведь заголовок? на мой взгляд определяет всю страницу. h1 или h2?
         как лучше: стараться по возможности прописывать классы в родительском объекте или указывать в элементах?
         например здесь можно присвоить font-family font-size для header и потом переопределить, а можно
         ничего не писать по этому поводу для header и сразу указать в потомках-->
@@ -72,14 +70,14 @@
           <div class="story">&minus; №1 &minus;</div>
           <!--чем лучше вставить -№1- простой знак с клавиатуры отличается от макета -->
           <p class="story">Седона - не аттракцион для туристов, там течет своя жизнь</p>
-          <!-- что лучше ".row p{}" без добавления класса или .row .story? 
+          <!-- что лучше ".row p{}" без добавления класса или .row .story?
           последнее вроде читается легче - в html видно, как ,будет выглядеть p-->
         </div>
         <div class="full-height reason-img reason-img-1 col-2">
           <!-- CSS background-image: url(img/reason-img-1.jpg)
-          в спецификации сказано: 
-          Фотографии, занимающие по две трети ширины вставляются так, чтобы обрезаться сверху и снизу 
-          при увеличении размера (ширина 66%, высота подстраивается под ширину, чтобы не нарушать пропорций, 
+          в спецификации сказано:
+          Фотографии, занимающие по две трети ширины вставляются так, чтобы обрезаться сверху и снизу
+          при увеличении размера (ширина 66%, высота подстраивается под ширину, чтобы не нарушать пропорций,
           но фото не выходит за отведённую для него зону).-->
         </div>
       </section>
@@ -118,6 +116,7 @@
         </div>
         <div class="full-height container col-1">
           <div class="title">Красивая дорога</div>
+          <!-- то, что шрифт не bold - фича или баг? -->
           <div class="story">№4</div>
           <p class="story">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
@@ -128,23 +127,26 @@
         </div>
       </section>
     </article>
-  </main> <!-- main здесь закрывать? -->
-  <section class="booking"> <!-- может article? хотя не совсем понятно, чем заинтересовались -->
+  </main>
+  <!-- main здесь закрывать? -->
+  <section class="booking">
+    <!-- может article? хотя не совсем понятно, чем заинтересовались -->
     <header class="booking-header container">
-      <div class="title"> <!-- как лучше: ввести класс типа header-title или использовать селектор "header p" -->
+      <div class="title">
+        <!-- как лучше: ввести класс типа header-title или использовать селектор "header p" -->
         Заинтересовались?
       </div>
       <p class="story">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения в Седоне
       </p>
-      <button class="btn btn-show-form" id="show-search-form" type="button">
+      <button class="btn btn-show-form title" id="show-search-form" type="button">
 
             Поиск гостиницы в Седоне
 
             </button>
     </header>
     <div class="search-form">
-      <form id="hotel-search-form" action="#" method="get">
-      <!-- здесь ведь не нужно дополнительного контейнера - хватит и самого form? -->
+      <form class="search-form-core" id="hotel-search-form" action="#" method="get">
+        <!-- здесь ведь не нужно дополнительного контейнера - хватит и самого form? -->
         <div class="input-row">
           <label class="search-form-label" for="arrival-date">
             Дата заезда:
@@ -171,12 +173,12 @@
           <label class="search-form-label" for="children-count">
             Дети:
           </label>
-            <span class="symbols icon-minu"></span>
-            <input class="short" id="children-count" type="number" name="children-count" min="1" value="1">
-            <span class="symbols icon-plus"></span>
-                <!-- не знаю, как сверстать эти два поля вместе с их метками. в какую сторону копать? -->
+          <span class="symbols icon-minu"></span>
+          <input class="short" id="children-count" type="number" name="children-count" min="1" value="1">
+          <span class="symbols icon-plus"></span>
+          <!-- не знаю, как сверстать эти два поля вместе с их метками. в какую сторону копать? -->
         </div>
-        <button class="btn btn-find" type="submit" value="Найти">
+        <button class="btn btn-find title" type="submit" value="Найти">
           Найти
         </button>
       </form>
