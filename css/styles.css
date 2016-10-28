@@ -3,25 +3,25 @@
         src: url(../fonts/ptsans.woff) format("woff"), url(../fonts/ptsans.woff2) format("woff2");
         font-weight: normal;
     }
-    
+
     @font-face {
         font-family: "PTSans";
         src: url(../fonts/ptsansbold.woff) format("woff"), url(../fonts/ptsansbold.woff2) format("woff2");
         font-weight: bold;
     }
-    
+
     * {
         /*сбросить на всякий случай, пока normalize не подключен*/
         box-sizing: border-box;
         padding: 0;
         margin: 0;
     }
-    
+
     html {
         background-color: #f2f2f2;
         /* светло-серый фон*/
     }
-    
+
     body {
         max-width: 1200px;
         min-width: 768px;
@@ -38,101 +38,102 @@
         box-shadow: 15px 5px 50px grey;
     }
     /*    .container {
-      margin-right: auto; 
-      может align-center лучше, 
+      margin-right: auto;
+      может align-center лучше,
       а класс контейнер оставить только для понятности
       margin-left: auto;
       text-align: center;
     }*/
-    
+
     .col-1 {
         width: 33.33%;
         float: left;
     }
-    
+
     .col-2 {
         width: 66.66%;
         float: left;
     }
-    
+
     .col-3 {
         width: 100%;
     }
-    
+
     .align-left {
         text-align: left;
     }
-    
+
     .align-right {
         text-align: right;
     }
-    
+
     .align-center {
         margin-right: auto;
         margin-left: auto;
         text-align: center;
     }
-    
+
     .full-height {
         height: 100%;
     }
-    
+
     .btn {
         border: none;
         color: white;
         text-align: center;
         transition-duration: 0.3s;
+        /* похоже из-за transition получается "незапланированная"" анимация*/
         background-color: #4caf50;
     }
-    
+
     .btn:hover {
         background-color: #4CAF50;
         color: white;
     }
-    
+
     input {
         border: none;
         background-color: lightgrey;
     }
-    
+
     a {
         text-decoration: none;
         color: black;
     }
-    
+
     a:hover {
         color: #aacce1;
-        /*вроде hover не очень хорошо, потому что не будет 
+        /*вроде hover не очень хорошо, потому что не будет
       работать на устройствах с сенсорным экраном*/
     }
-    
+
     .title {
         font-size: 21px;
         font-weight: bold;
     }
-    
+
     .story {
         font-size: 14px;
         font-weight: normal;
     }
-    
+
     header .title {
         /*font-size: 21px;*/
         margin-bottom: 40px;
     }
-    
+
     header .story {
         /*font-size: 14px;*/
     }
-    
+
     .row .title {
         margin-bottom: 30px;
     }
-    
+
     .row div.story {
         margin-bottom: 30px;
     }
-    
+
     header.main-header {
         position: relative;
         height: 55px;
@@ -143,7 +144,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     ul.main-menu {
         list-style-type: none;
         font-size: 0;
@@ -152,11 +153,11 @@
         padding-top: 5px;
         border: 2px solid red;
     }
-    
+
     li.main-menu-item {
         display: inline-block;
-        width: 25%;
-        /* по ТЗ - 20%. 4*20=80% +12% отступы контейнера меню от краев body 
+        width: 23%;
+        /* по ТЗ - 20%. 4*20=80% +12% отступы контейнера меню от краев body
       куда делись еще 8? 20% от header?  */
         /*  font-family: "Myriad Pro";*/
         font-size: 14px;
@@ -173,7 +174,7 @@
    .main-menu li:nth-child(4){
       text-align: right;
     }*/
-    
+
     .main-header-logo {
         position: absolute;
         width: 200px;
@@ -181,9 +182,9 @@
         left: 50%;
         z-index: 10;
     }
-    
+
     .banner {
-        /*position: relative; это было 
+        /*position: relative; это было
       для position: absolut декоративного элемента теперь без надобности*/
         height: 500px;
         background-image: url("../img/banner-img-decoration.png"), url("../img/banner-img-bg.jpg");
@@ -192,66 +193,66 @@
         background-position: left bottom, 50% 30%;
         /*ориентировался на букву о в Sedona - она около вершины*/
     }
-    
+
     .banner-text {
         margin-top: 75px;
     }
-    
+
     header.reasons-header {
         height: 210px;
         padding-top: 60px;
     }
-    
+
     .reason-row {
         background-color: #eeeeee;
         height: 250px;
     }
-    
+
     .reason-img {
         background-size: cover;
         background-position: center;
         /*background-size: 100%; не нужно вроде */
     }
-    
+
     .reason-img-1 {
         background-image: url("../img/reason-img-1.jpg");
         /*div.reason-img:nth-child(1): url("../img/reason-img-2.jpg"); вариант?
         зачем вводить класс если в каждый div вставляется свое изображение*/
     }
-    
+
     .reason-img-2 {
         background-image: url("../img/reason-img-2.jpg");
         /*div.reason-img:nth-child(2): url("../img/reason-img-2.jpg"); вариант?
         зачем вводить класс если в каждый div вставляется свое изображение*/
     }
-    
+
     .reason-item.illustrated {
         background-color: #81b3d2;
         color: white;
         padding-top: 55px;
     }
-    
+
     .advice-row {
         height: 330px;
         padding-top: 60px;
     }
-    
+
     .reason-row .container {
         padding-top: 50px;
     }
-    
+
     .advice-row img {
         display: block;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
     }
-    
+
     .booking {
         height: 760px;
         position: relative;
     }
-    
+
     .search-form {
         position: absolute;
         top: 300px;
@@ -265,17 +266,17 @@
         /*font-size: 14px; в body указано*/
         font-weight: bold;
     }
-    
+
     header.booking-header {
         height: 300px;
         padding-top: 60px;
         position: relative;
     }
-    
+
     header.booking-header .title {
         font-size: 30px;
     }
-    
+
     header.booking-header button {
         background-color: #766357;
         height: 85px;
@@ -294,43 +295,43 @@
         и main-header-logo это уходило вправо и работает без left:50%
         почему так, не понял*/
     }
-    
+
     .booking-header button:hover {
         background-color: #604E42;
     }
-    
+
     .booking .map {
         /*border: 1px solid blue;*/
         height: 460px;
         width: 100%;
         background-image: url(../img/map.jpg);
     }
-    
+
     .search-form .input-row {
         margin-bottom: 30px;
         height: 40px;
         text-align: right;
     }
-    
+
     .search-form input {
         height: 100%;
-        /*можно заменить на класс full-height  
-      height Specifies the height of an <input> element (only for type="image") 
+        /*можно заменить на класс full-height
+      height Specifies the height of an <input> element (only for type="image")
       только type="image"?? или это про <input height="pixels"> */
         /*background-color: #f2f2f2; что-то слишком светлый
       вообще это наверно общий для input класс. поднять наверх?*/
         background-color: lightgrey;
         display: inline-block;
     }
-    
+
     .search-form input.short {
         width: 50px;
     }
-    
+
     .search-form input.long {
         width: 300px;
     }
-    
+
     .search-form .btn-find {
         height: 55px;
         width: 100%;
@@ -338,11 +339,11 @@
         margin-top: 25px;
         color: white;
     }
-    
+
     .btn-find:hover {
         background-color: #669EC1;
     }
-    
+
     .search-form .search-form-label {
         display: inline-block;
         height: 100%;
@@ -355,7 +356,7 @@
     /*#hotel-search-form > div:nth-child(3) > label:nth-child(2) > span.search-form-label{
   padding-left: 40px;
 }*/
-    
+
     .search-form .search-form-core {
         width: 460px;
         margin-left: auto;
@@ -363,7 +364,7 @@
         border: 1px solid black;
         margin-top: 50px;
     }
-    
+
     .search-form .symbols {
         display: inline-block;
         vertical-align: top;
@@ -371,7 +372,7 @@
         height: 100%;
         /*как зацентрировать символы? через обращение к псевдоэлементу?*/
     }
-    
+
     footer.main-footer {
         height: 120px;
         width: 80%;
@@ -380,19 +381,19 @@
         border: 2px solid black;
     }
     /* для отладки*/
-    
+
     footer .container {
         border: 1px solid red;
         margin-top: 20px;
     }
     /* для отладки*/
-    
+
     .main-footer .contacts.container {
         display: inline-block;
         /*margin-top: 5px;*/
         width: 33%;
     }
-    
+
     .main-footer ul.social-media-links {
         display: inline-block;
         list-style-type: none;
@@ -401,43 +402,49 @@
         border: 1px solid blue;
         font-size: 0;
     }
-    
+
     .main-footer .social-media-links-item {
         display: inline-block;
         width: 50px;
         height: 45px;
         border: 1px solid green;
-        
+
         background-color: #82B3D3;
         color: white;
         margin-left: 2.5px;
         margin-right: 2.5px;
         /*ul.social-media-links:{font-size: 0;}!!*/
     }
-    
+
     .social-media-links-item:hover {
         background-color: #669EC1;
     }
-    
+
     .social-media-links-item a {
         color: white;
         font-size: 20px;
         /*vertical-align: middle;*/
     }
-    
+
     .main-footer .copyright.container {
         display: inline-block;
         width: 33%;
     }
-    
 
-    
+
+
     .copyright.container div.logo {
-        background-image: url(../img/htmlacademy-logo.png);
-        background-position: ;
+        display: inline-block;
+        height: 40px;
+        width: 50%;
+        background-image: url("../img/htmlacademy-logo-sprite.png");
+        background-repeat: no-repeat;
+
+        background-position: 50% 0% ;
     }
-    
+
     .copyright div.logo:hover {
-        background-image: url(../img/htmlacademy-logo.png);
-        background-position: ;
+        background-image: url("../img/htmlacademy-logo-sprite.png");
+        background-repeat: no-repeat;
+        background-position:50% 50% ;
     }
