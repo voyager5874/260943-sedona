@@ -47,12 +47,12 @@
 
     .col-1 {
       width: 33.33333333%;
-      float: left;
+      /*float: left;*/
     }
 
     .col-2 {
       width: 66.66666666%;
-      float: left;
+      /*float: left;*/
     }
 
     .col-3 {
@@ -435,18 +435,20 @@
 
     footer.main-footer {
       height: 120px;
-      width: 80%;
+      width: 84%;
       margin-right: auto;
       margin-left: auto;
       border: 2px solid black;
-      padding-top: 30px;
+      padding-top: 35px;
     }
 
 
     .main-footer .contacts.container {
       display: inline-block;
+      padding-left: 32px;
+      padding-top: 5px;
       /*margin-top: 5px;*/
-      width: 33.3333%;
+      /*width: 33.3333%;*/
       /*height: 100%;*/
     }
 
@@ -461,13 +463,13 @@
 
     .main-footer .social-media-links-item {
       display: inline-block;
-      width: 50px;
-      height: 45px;
-      border: 1px solid green;
-      background-color: #82B3D3;
-      color: white;
-      margin-left: 2.5px;
-      margin-right: 2.5px;
+      width: 48px;
+      height: 43px;
+      border: 2px solid black;
+      /*background-color: #82B3D3;*/
+      /*color: white;*/
+      margin-left: 0.5px;
+      margin-right: 0.5px;
       /*ul.social-media-links:{font-size: 0;}!!*/
     }
 
@@ -484,16 +486,28 @@
     .main-footer .copyright.container {
       display: inline-block;
       height: 100%;
+
+
+    }
+
+    .copyright.container span{
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding-right: 6px;
+      padding-top: 5px;
+
     }
 
     .copyright.container div.logo {
       display: inline-block;
       height: 100%;
       height: 40px;
-      width: 50%;
+      width: 120px;
+
       background-image: url("../img/htmlacademy-logo-sprite.png");
       background-repeat: no-repeat;
-      background-position: 50% 0%;
+      background-position: 40% 0%;
     }
 
     .copyright div.logo:hover {
@@ -524,4 +538,8 @@ footer .container {
 
     .float-left {
       float: left;
+    }
+
+    footer *{
+      border: 1px solid black;
     }

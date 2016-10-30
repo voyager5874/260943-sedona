@@ -81,7 +81,7 @@
         ничего не писать по этому поводу для header и сразу указать в потомках-->
       </header>
       <section class="row reason-row">
-        <div class="reason-item full-height illustrated container align-center col-1">
+        <div class="reason-item full-height illustrated container align-center col-1 float-left">
           <div class="title">
             Настоящий городок
           </div>
@@ -95,7 +95,7 @@
           <!-- что лучше ".row p{}" без добавления класса или .row .story?
           последнее вроде читается легче - в html видно, как ,будет выглядеть p-->
         </div>
-        <div class="full-height reason-img reason-img-town col-2">
+        <div class="full-height reason-img reason-img-town col-2 float-left">
           <!-- CSS background-image: url(img/reason-img-1.jpg)
           в спецификации сказано:
           Фотографии, занимающие по две трети ширины вставляются так, чтобы обрезаться сверху и снизу
@@ -105,7 +105,7 @@
 
       </section>
       <section class="row advice-row">
-        <div class="advice-item container align-center col-1">
+        <div class="advice-item container align-center col-1 float-left">
           <img src="img/house-icon.png" alt="house icon">
           <div class="title">
             Жилье
@@ -114,7 +114,7 @@
             Рекомендуем пожить в настоящем мотеле, все как в кино!
           </p>
         </div>
-        <div class="full-height container align-center col-1">
+        <div class="full-height container align-center col-1 float-left">
           <img src="img/food-icon.png" alt="food icon">
           <div class="title">
             Еда
@@ -123,7 +123,7 @@
             Всегда заказывайте фирменный бургер, вы не разочаруетесь!
           </p>
         </div>
-        <div class="full-height container align-center col-1">
+        <div class="full-height container align-center col-1 float-left">
           <img src="img/souvenir-icon.png" alt="souvenir icon">
           <div class="title">
             Сувениры
@@ -134,7 +134,7 @@
         </div>
       </section>
       <section class="row reason-row">
-        <div class="full-height reason-img reason-img-bridge col-2">
+        <div class="full-height reason-img reason-img-bridge col-2 float-left">
           <!-- CSS background-image: url(img/reason-img-2.jpg)-->
         </div>
         <div class="reason-item full-height illustrated container align-center col-1 float-right">
@@ -152,7 +152,7 @@
         </div>
       </section>
       <section class="row reason-row">
-        <div class="reason-item full-height container align-center col-1">
+        <div class="reason-item full-height container align-center col-1 float-left">
           <div class="title">
             Небольшая площадь
           </div>
@@ -161,7 +161,7 @@
           </div>
           <p class="story">Все достопримечательности находятся очень близко</p>
         </div>
-        <div class="reason-item full-height container align-center col-1">
+        <div class="reason-item full-height container align-center col-1 float-left">
           <div class="title">
             Красивая дорога
           </div>
@@ -175,7 +175,7 @@
             et, laudantium quisquam earum laborum ipsa, aspernatur rem unde obcaecati!
           </p>
         </div>
-        <div class="reason-item full-height container align-center col-1">
+        <div class="reason-item full-height container align-center col-1 float-left">
           <div class="title">
             Мало туристов</div>
           <div class="story">
@@ -263,44 +263,42 @@
     </div>
   </section>
   <footer class="footer main-footer container">
-    <div class="contacts container title align-left col-1">
+    <div class="contacts container title align-left col-1 float-left">
       <a href="#">#Visit sedona</a>
     </div>
     <!-- <div class="container align-center">  нужен ли здесь контейнер или достаточно самого ul ?-->
-    <ul class="social-media-links align-center col-1">
-      <li class="btn social-media-links-item">
+    <div class="social-media-links align-center container col-1 float-left">
+
         <a class="" href="#">
-          <div class="symbols icon-twitter  ">
+          <div class="symbols icon-twitter social-media-links-item btn ">
           </div>
         </a>
-      </li>
-      <li>
+
         <a class="" href="#">
           <div class="symbols icon-facebook social-media-links-item btn">
           </div>
         </a>
-      </li>
-      <li>
+
         <a class="" href="#">
           <div class="symbols icon-youtube social-media-links-item btn">
           </div>
         </a>
-      </li>
+
+</div>
 
 
-    </ul>
     <!--  </div> -->
-    <!-- что-то не получается нормально выравнять символы по вертикали -->
-    <div class="copyright container align-right col-1">
+    <!-- что-то не получается нормально выравнять символы по вертикали
+  почему без флоатов здесь все прыгает непонятно-->
+    <div class="copyright container col-1 float-left">
 
-      <span>Website by</span>
+
       <a href="#">
-        <!-- <img class="logo" src="img/htmlacademy-logo.png" alt="site author logo"> -->
-        <!-- здесь нужен спрайт, вставленный фоном-->
-        <div class="logo">
+        <div class="logo float-right">
           <!-- background-image: url("../img/htmlacademy-logo-sprite.png") -->
         </div>
       </a>
+      <span class="align-right float-right">Website by</span>
     </div>
   </footer>
 </body>
