@@ -94,6 +94,11 @@
       color: white;
     }
 
+    .btn:active {
+      background-color: #5496bd;
+      color: lightgrey;
+    }
+
     input {
       border: none;
       background-color: lightgrey;
@@ -242,7 +247,7 @@
       /*background-size: 100%; не нужно вроде */
     }
 
-    .reason-img-1 {
+    .reason-img-town {
       background-image: url("../img/reason-img-1.jpg");
       right: 0;
       top: 0;
@@ -250,7 +255,7 @@
         зачем вводить класс если в каждый div вставляется свое изображение*/
     }
 
-    .reason-img-2 {
+    .reason-img-bridge {
       background-image: url("../img/reason-img-2.jpg");
       left: 0;
       top: 0;
@@ -467,12 +472,12 @@
     }
 
     .social-media-links-item:hover {
-      background-color: #669EC1;
+      /*background-color: #669EC1;*/
     }
 
     .social-media-links-item a {
-      color: white;
-      font-size: 20px;
+      /*color: white;*/
+      font-size: 20px; /*кажется не работает*/
       /*vertical-align: middle;*/
     }
 
