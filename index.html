@@ -8,7 +8,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Седона</title>
+  <title>
+    HTML Academy: Седона
+  </title>
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/symbols-sedona.css" rel="stylesheet">
 </head>
@@ -27,16 +29,24 @@
       <ul class="main-menu">
         <li class="main-menu-item align-left">
           <!-- класс align-left или через nth-child сделать? -->
-          <a href="#">Информация</a>
+          <a href="#">
+            Информация
+          </a>
         </li>
         <li class="main-menu-item align-left">
-          <a href="#">Фото и видео</a>
+          <a href="#">
+            Фото и видео
+          </a>
         </li>
         <li class="main-menu-item align-right">
-          <a href="#">Карта штата</a>
+          <a href="#">
+            Карта штата
+          </a>
         </li>
         <li class="main-menu-item align-right">
-          <a href="#">Гостиницы</a>
+          <a href="#">
+            Гостиницы
+          </a>
         </li>
       </ul>
     </nav>
@@ -48,7 +58,7 @@
       <!--background-image: url("img/banner-img-bg.jpg") -->
 
       <!-- по логике классы нужно вводить для элементов, которые встречаются на странице/цах не в
-        единственном экземпляре, но Першин говорит, нужно избегать селекторов по id CSS. Почему? 
+        единственном экземпляре, но Першин говорит, нужно избегать селекторов по id CSS. Почему?
         классы могут вообще не использоваться для стилизации и назаначаться только для информации о назначениии
         -->
 
@@ -59,8 +69,12 @@
     <article>
       <!-- The <article> tag specifies independent, self-contained content.An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.-->
       <header class="reasons-header container align-center">
-        <p class="title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</p>
-        <h1 class="story">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h1>
+        <p class="title">
+          Седона - небольшой городок в Аризоне,<br> заслуживающий большего!
+        </p>
+        <h1 class="story">
+          Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+        </h1>
         <!-- Рассмотрим 5 причин... - это ведь заголовок? на мой взгляд определяет всю страницу. h1 или h2?
         как лучше: стараться по возможности прописывать классы в родительском объекте или указывать в элементах?
         например здесь можно присвоить font-family font-size для header и потом переопределить, а можно
@@ -68,10 +82,16 @@
       </header>
       <section class="row reason-row">
         <div class="reason-item full-height illustrated container align-center col-1">
-          <div class="title">Настоящий городок</div>
-          <div class="story">&minus; №1 &minus;</div>
+          <div class="title">
+            Настоящий городок
+          </div>
+          <div class="story">
+            &minus; №1 &minus;
+          </div>
           <!--чем лучше вставить -№1- простой знак с клавиатуры отличается от макета -->
-          <p class="story">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+          <p class="story">
+            Седона - не аттракцион для туристов, там течет своя жизнь
+          </p>
           <!-- что лучше ".row p{}" без добавления класса или .row .story?
           последнее вроде читается легче - в html видно, как ,будет выглядеть p-->
         </div>
@@ -82,50 +102,91 @@
           при увеличении размера (ширина 66%, высота подстраивается под ширину, чтобы не нарушать пропорций,
           но фото не выходит за отведённую для него зону).-->
         </div>
+
       </section>
       <section class="row advice-row">
-        <div class="full-height container align-center col-1">
+        <div class="advice-item container align-center col-1">
           <img src="img/house-icon.png" alt="house icon">
-          <div class="title">Жилье</div>
-          <p class="story">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          <div class="title">
+            Жилье
+          </div>
+          <p class="story">
+            Рекомендуем пожить в настоящем мотеле, все как в кино!
+          </p>
         </div>
         <div class="full-height container align-center col-1">
           <img src="img/food-icon.png" alt="food icon">
-          <div class="title">Еда</div>
-          <p class="story">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <div class="title">
+            Еда
+          </div>
+          <p class="story">
+            Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+          </p>
         </div>
         <div class="full-height container align-center col-1">
           <img src="img/souvenir-icon.png" alt="souvenir icon">
-          <div class="title">Сувениры</div>
-          <p class="story">Не только китайского, но и местного производства!</p>
+          <div class="title">
+            Сувениры
+          </div>
+          <p class="story">
+            Не только китайского, но и местного производства!
+          </p>
         </div>
       </section>
       <section class="row reason-row">
         <div class="full-height reason-img reason-img-2 col-2">
           <!-- CSS background-image: url(img/reason-img-2.jpg)-->
         </div>
-        <div class="reason-item full-height illustrated container align-center col-1">
-          <div class="title">Там есть мост дьявола</div>
-          <div class="story">№2</div>
-          <p class="story">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <div class="reason-item full-height illustrated container align-center col-1 float-right">
+          <div class="title">Там есть мост дьявола
+          </div>
+          <div class="story">
+            №2
+          </div>
+          <p class="story">
+            Да, по нему можно пройти! Если конечно вы осмелитесь Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio laborum impedit ea iusto itaque officia porro, totam blanditiis enim pariatur doloremque nisi perspiciatis voluptatem dolorem eaque temporibus
+            illo iste fugiat fugit, quibusdam. Dicta tenetur illum pariatur, sapiente nihil magni est voluptatem provident. Iure dolore pariatur repellat. Accusantium et nihil soluta temporibus nam architecto reprehenderit laboriosam! Voluptatum voluptates,
+            exercitationem, nobis numquam at natus harum non reiciendis, repudiandae autem consectetur magnam. Beatae maxime, consequatur! Minima soluta aperiam iusto! Animi, magnam aut! Et error illum, iste placeat labore, velit provident recusandae
+            quaerat rerum, mollitia aliquam ut quas quia! Dolore accusamus soluta laboriosam nulla!
+          </p>
         </div>
       </section>
       <section class="row reason-row">
-        <div class="full-height container align-center col-1">
-          <div class="title">Небольшая площадь</div>
-          <div class="story">№3</div>
+        <div class="reason-item full-height container align-center col-1">
+          <div class="title">
+            Небольшая площадь
+          </div>
+          <div class="story">
+            №3
+          </div>
           <p class="story">Все достопримечательности находятся очень близко</p>
         </div>
-        <div class="full-height container align-center col-1">
-          <div class="title">Красивая дорога</div>
+        <div class="reason-item full-height container align-center col-1">
+          <div class="title">
+            Красивая дорога
+          </div>
           <!-- то, что шрифт не bold - фича или баг? -->
-          <div class="story">№4</div>
-          <p class="story">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <div class="story">
+            №4
+          </div>
+          <p class="story">
+            Ехать в Седону из Лас-Вегаса совсем не скучно! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut praesentium culpa sed obcaecati atque! Eaque placeat repellat assumenda impedit nulla? Voluptas ad sequi cum ea tenetur fuga, illo consequatur
+            aliquam? Minima provident nobis ex, ducimus sint modi? Minima non laboriosam magni cupiditate nam, possimus ipsam cumque, quae, dignissimos perferendis voluptas consequatur? Suscipit quaerat maiores incidunt recusandae ut optio quod, explicabo
+            et, laudantium quisquam earum laborum ipsa, aspernatur rem unde obcaecati!
+          </p>
         </div>
-        <div class="full-height container align-center col-1">
-          <div class="title">Мало туристов</div>
-          <div class="story">№5</div>
-          <p class="story">Большинство едет в Гранд Каньон и толпится там</p>
+        <div class="reason-item full-height container align-center col-1">
+          <div class="title">
+            Мало туристов</div>
+          <div class="story">
+            №5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos porro dolore ipsam facere vero dolorem nihil velit. Magnam labore dolore deleniti molestiae illum sint ab quidem fugiat, nihil voluptatum vel incidunt placeat architecto exercitationem
+            in voluptatem laudantium. Nostrum corporis, impedit debitis explicabo. Dolores quos, maxime ex, fuga reiciendis dolore recusandae? Delectus nam alias illum ipsam dignissimos, laborum eaque deserunt impedit. Quas quae, perspiciatis, nam blanditiis
+            ducimus dolor eum, soluta alias facilis nulla qui magnam consequatur, quasi eligendi! Ut officiis veritatis autem, tempora quis nemo rem, cupiditate numquam consequatur veniam earum distinctio nesciunt architecto. Velit voluptas esse ipsa,
+            quos impedit non.
+          </div>
+          <p class="story">
+            Большинство едет в Гранд Каньон и толпится там
+          </p>
         </div>
       </section>
     </article>
@@ -136,78 +197,98 @@
     <header class="booking-header container align-center">
       <div class="title">
         <!-- как лучше: ввести класс типа header-title или использовать селектор "header p" -->
-        Заинтересовались?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia odio iste perspiciatis illo deserunt illum veniam! Blanditiis ex maxime aspernatur nostrum consectetur iure, enim itaque mollitia debitis aperiam quibusdam dolore iste in dolores, deserunt
+        ut totam cum, nemo nihil fugit ipsa aliquid ab. Iure, nulla ipsa. Sapiente sequi rem accusantium? Заинтересовались?
       </div>
       <p class="story">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения в Седоне
       </p>
-      <button class="btn btn-show-form title" id="show-search-form" type="button">
+      <!-- <div class="container align-center"> -->
+      <button class="btn btn-show-form align-center" id="show-search-form" type="button">
 
             Поиск гостиницы в Седоне
 
             </button>
     </header>
-    <div class="search-form">
+    <div class="search-form container">
       <form class="search-form-core" id="hotel-search-form" action="#" method="get">
         <!-- здесь ведь не нужно дополнительного контейнера - хватит и самого form? -->
         <div class="input-row">
-          <label class="search-form-label" for="arrival-date">
+          <label class="search-form-label float-left" for="arrival-date">
             Дата заезда:
           </label>
-          <input class="long" id="arrival-date" type="date" name="arrival-date" value="2016-10-25">
-          <span class="symbols icon-calendar"></span>
+          <span class="symbols icon-calendar float-right"></span>
+          <input class="long float-right" id="arrival-date" type="date" name="arrival-date" value="2016-10-25">
+
           <!-- собираюсь вставить символы, прилепив их к input и сделав такой же цвет фона. Кстати иконки ингода не загружаюся-->
         </div>
         <div class="input-row">
-          <label class="search-form-label" for="departure-date">
+          <label class="search-form-label float-left" for="departure-date">
               Дата выезда: <!-- нужно ли оборачитвать текст в что-то еще? span?-->
           </label>
-          <input class="long" id="departure-date" type="date" name="departure-date" value="2016-10-25">
-          <span class="symbols icon-calendar"></span>
+            <span class="symbols icon-calendar float-right"></span>
+          <input class="long float-right" id="departure-date" type="date" name="departure-date" value="2016-10-25">
+
         </div>
         <div class="input-row">
-          <label>
-              <span class="search-form-label">Взрослые:</span>
-              <span class="symbols icon-minus"></span>
-              <input class="short" id="adults-count" type="number" name="adults-count" min="1" value="1">
-              <span class="symbols icon-plus"></span>
+          <label class="search-form-label" for="adults-count">
+            Взрослые:
+            <span class="symbols icon-plus float-right"></span>
+            <input class="short float-right" id="adults-count" type="number" name="adults-count" min="1" value="1">
+            <span class="symbols icon-minus float-right"></span>
+
           </label>
 
-          <label class="search-form-label" for="children-count">
+
+
+          <label class="search-form-label float-right" for="children-count">
             Дети:
+            <span class="symbols icon-plus float-right"></span>
+
+
+            <input class="short float-right" id="children-count" type="number" name="children-count" min="1" value="1">
+            <span class="symbols icon-minus float-right"></span>
           </label>
-          <span class="symbols icon-minus"></span>
-          <input class="short" id="children-count" type="number" name="children-count" min="1" value="1">
-          <span class="symbols icon-plus"></span>
-          <!-- не знаю, как сверстать эти два поля вместе с их метками. в какую сторону копать? -->
+
+
         </div>
         <button class="btn btn-find title" type="submit" value="Найти">
           Найти
         </button>
       </form>
     </div>
+    <!-- </div> -->
+
     <div class="map container align-center">
       <!--<img src="img/map.jpg"> -->
     </div>
   </section>
   <footer class="footer main-footer container">
-    <div class="contacts container title align-left">
+    <div class="contacts container title align-left col-1">
       <a href="#">#Visit sedona</a>
     </div>
     <!-- <div class="container align-center">  нужен ли здесь контейнер или достаточно самого ul ?-->
-    <ul class="social-media-links align-center">
-      <li class="social-media-links-item"><a class="symbols icon-twitter" href="#"></a></li>
-      <li class="social-media-links-item"><a class="symbols icon-facebook" href="#"></a></li>
-      <li class="social-media-links-item"><a class="symbols icon-youtube" href="#"></a></li>
-     </ul>
-   <!--  </div> -->
+    <ul class="social-media-links align-center col-1">
+      <li class="social-media-links-item">
+        <a class="symbols icon-twitter" href="#"></a>
+      </li>
+      <li class="social-media-links-item">
+        <a class="symbols icon-facebook" href="#"></a>
+      </li>
+      <li class="social-media-links-item">
+        <a class="symbols icon-youtube" href="#"></a>
+      </li>
+    </ul>
+    <!--  </div> -->
     <!-- что-то не получается нормально выравнять символы по вертикали -->
-    <div class="copyright container align-right">
-      
+    <div class="copyright container align-right col-1">
+
       <span>Website by</span>
       <a href="#">
-      <!-- <img class="logo" src="img/htmlacademy-logo.png" alt="site author logo"> -->
-      <!-- здесь нужен спрайт, вставленный фоном-->
-      <div class="logo"></div>
+        <!-- <img class="logo" src="img/htmlacademy-logo.png" alt="site author logo"> -->
+        <!-- здесь нужен спрайт, вставленный фоном-->
+        <div class="logo">
+          <!-- background-image: url("../img/htmlacademy-logo-sprite.png") -->
+        </div>
       </a>
     </div>
   </footer>
