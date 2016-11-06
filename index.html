@@ -1,8 +1,3 @@
-<!--<p>Репозиторий создан для обучения на интенсивном онлайн‑курсе
-    «<a href="https://htmlacademy.ru/intensive/htmlcss">
-    Базовый HTML и CSS</a>».</p>-->
-<!-- According to the HTML 5 specification, the <b> tag should be used as a LAST resort when no other tag is more appropriate.
-    во втором вебинаре Першин зачем то его использовал, когда показывал разметку барбершопа "круто быстро и т.д.-->
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -11,296 +6,307 @@
   <title>
     HTML Academy: Седона
   </title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/symbols-sedona.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="main-header container align-center">
-    <div class="main-header-logo container">
-      <a href="index.html">
-        <img src="img/main-header-logo.png" width="140" height="70" alt="Sedona logo">
-        <!-- margin:auto не работает для position:absolute -->
-      </a>
-    </div>
-    <!--     во втором, где показывали, как размечать barbershop вебинаре nav был обернут в
-    div.container. зачем? сам nav не достаточный контейнер? -->
-    <nav>
-      <ul class="main-menu">
-        <li class="main-menu-item align-left">
-          <!-- класс align-left или через nth-child сделать? -->
-          <a href="#">
+  <div class="container wrapper">
+    <header class="main-header container">
+      <div class="main-header-logo">
+        <a href="index.html">
+          <img src="img/main-header-logo.png" width="140" height="70" alt="Sedona logo">
+
+        </a>
+      </div>
+
+      <nav>
+        <ul class="main-menu">
+          <li class="main-menu-item">
+
+            <a href="#">
             Информация
+
           </a>
-        </li>
-        <li class="main-menu-item align-left">
-          <a href="#">
+          </li>
+          <li class="main-menu-item">
+            <a href="#">
             Фото и видео
           </a>
-        </li>
-        <li class="main-menu-item align-right">
-          <a href="#">
+          </li>
+          <li class="main-menu-item">
+            <a href="#">
             Карта штата
           </a>
-        </li>
-        <li class="main-menu-item align-right">
-          <a href="#">
+          </li>
+          <li class="main-menu-item">
+            <a href="hotels.html">
             Гостиницы
           </a>
-        </li>
-      </ul>
-    </nav>
+          </li>
+        </ul>
+      </nav>
 
-  </header>
-  <main>
+    </header>
+    <main class="main-content">
 
-    <div class="banner container align-center col-3">
-      <!--background-image: url("img/banner-img-bg.jpg") -->
-
-      <!-- по логике классы нужно вводить для элементов, которые встречаются на странице/цах не в
-        единственном экземпляре, но Першин говорит, нужно избегать селекторов по id CSS. Почему?
-        классы могут вообще не использоваться для стилизации и назаначаться только для информации о назначениии
-        -->
+      <div class="main-page-banner">
 
 
-      <img class="banner-text" src="img/banner-text-img.png" width="455" height="340" alt="welcome to the gorgeous Sedona">
+        <!-- background-image: url("../img/banner-img-text.png"),
+                        url("../img/banner-img-decoration.png"),
+                        url("../img/banner-img-bg.jpg"); -->
 
-    </div>
-    <article>
-      <!-- The <article> tag specifies independent, self-contained content.An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.-->
-      <header class="reasons-header container align-center">
-        <p class="title">
-          Седона - небольшой городок в Аризоне,<br> заслуживающий большего!
-        </p>
-        <h1 class="story">
-          Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
-        </h1>
-        <!-- Рассмотрим 5 причин... - это ведь заголовок? на мой взгляд определяет всю страницу. h1 или h2?
-        как лучше: стараться по возможности прописывать классы в родительском объекте или указывать в элементах?
-        например здесь можно присвоить font-family font-size для header и потом переопределить, а можно
-        ничего не писать по этому поводу для header и сразу указать в потомках-->
-      </header>
-      <section class="row reason-row">
-        <div class="reason-item full-height illustrated container align-center col-1 float-left">
-          <div class="title">
-            Настоящий городок
-          </div>
-          <div class="story">
-            &minus; №1 &minus;
-          </div>
-          <!--чем лучше вставить -№1- простой знак с клавиатуры отличается от макета -->
-          <p class="story">
-            Седона - не аттракцион для туристов, там течет своя жизнь
-          </p>
-          <!-- что лучше ".row p{}" без добавления класса или .row .story?
-          последнее вроде читается легче - в html видно, как ,будет выглядеть p-->
-        </div>
-        <div class="full-height reason-img reason-img-town col-2 float-left">
-          <!-- CSS background-image: url(img/reason-img-1.jpg)
-          в спецификации сказано:
-          Фотографии, занимающие по две трети ширины вставляются так, чтобы обрезаться сверху и снизу
-          при увеличении размера (ширина 66%, высота подстраивается под ширину, чтобы не нарушать пропорций,
-          но фото не выходит за отведённую для него зону).-->
-        </div>
-
-      </section>
-      <section class="row advice-row">
-        <div class="advice-item container align-center col-1 float-left">
-          <img src="img/house-icon.png" alt="house icon">
-          <div class="title">
-            Жилье
-          </div>
-          <p class="story">
-            Рекомендуем пожить в настоящем мотеле, все как в кино!
-          </p>
-        </div>
-        <div class="full-height container align-center col-1 float-left">
-          <img src="img/food-icon.png" alt="food icon">
-          <div class="title">
-            Еда
-          </div>
-          <p class="story">
-            Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-          </p>
-        </div>
-        <div class="full-height container align-center col-1 float-left">
-          <img src="img/souvenir-icon.png" alt="souvenir icon">
-          <div class="title">
-            Сувениры
-          </div>
-          <p class="story">
-            Не только китайского, но и местного производства!
-          </p>
-        </div>
-      </section>
-      <section class="row reason-row">
-        <div class="full-height reason-img reason-img-bridge col-2 float-left">
-          <!-- CSS background-image: url(img/reason-img-2.jpg)-->
-        </div>
-        <div class="reason-item full-height illustrated container align-center col-1 float-right">
-          <div class="title">Там есть мост дьявола
-          </div>
-          <div class="story">
-            №2
-          </div>
-          <p class="story">
-            Да, по нему можно пройти! Если конечно вы осмелитесь Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio laborum impedit ea iusto itaque officia porro, totam blanditiis enim pariatur doloremque nisi perspiciatis voluptatem dolorem eaque temporibus
-            illo iste fugiat fugit, quibusdam. Dicta tenetur illum pariatur, sapiente nihil magni est voluptatem provident. Iure dolore pariatur repellat. Accusantium et nihil soluta temporibus nam architecto reprehenderit laboriosam! Voluptatum voluptates,
-            exercitationem, nobis numquam at natus harum non reiciendis, repudiandae autem consectetur magnam. Beatae maxime, consequatur! Minima soluta aperiam iusto! Animi, magnam aut! Et error illum, iste placeat labore, velit provident recusandae
-            quaerat rerum, mollitia aliquam ut quas quia! Dolore accusamus soluta laboriosam nulla!
-          </p>
-        </div>
-      </section>
-      <section class="row reason-row">
-        <div class="reason-item full-height container align-center col-1 float-left">
-          <div class="title">
-            Небольшая площадь
-          </div>
-          <div class="story">
-            №3
-          </div>
-          <p class="story">Все достопримечательности находятся очень близко</p>
-        </div>
-        <div class="reason-item full-height container align-center col-1 float-left">
-          <div class="title">
-            Красивая дорога
-          </div>
-          <!-- то, что шрифт не bold - фича или баг? -->
-          <div class="story">
-            №4
-          </div>
-          <p class="story">
-            Ехать в Седону из Лас-Вегаса совсем не скучно! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut praesentium culpa sed obcaecati atque! Eaque placeat repellat assumenda impedit nulla? Voluptas ad sequi cum ea tenetur fuga, illo consequatur
-            aliquam? Minima provident nobis ex, ducimus sint modi? Minima non laboriosam magni cupiditate nam, possimus ipsam cumque, quae, dignissimos perferendis voluptas consequatur? Suscipit quaerat maiores incidunt recusandae ut optio quod, explicabo
-            et, laudantium quisquam earum laborum ipsa, aspernatur rem unde obcaecati!
-          </p>
-        </div>
-        <div class="reason-item full-height container align-center col-1 float-left">
-          <div class="title">
-            Мало туристов</div>
-          <div class="story">
-            №5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos porro dolore ipsam facere vero dolorem nihil velit. Magnam labore dolore deleniti molestiae illum sint ab quidem fugiat, nihil voluptatum vel incidunt placeat architecto exercitationem
-            in voluptatem laudantium. Nostrum corporis, impedit debitis explicabo. Dolores quos, maxime ex, fuga reiciendis dolore recusandae? Delectus nam alias illum ipsam dignissimos, laborum eaque deserunt impedit. Quas quae, perspiciatis, nam blanditiis
-            ducimus dolor eum, soluta alias facilis nulla qui magnam consequatur, quasi eligendi! Ut officiis veritatis autem, tempora quis nemo rem, cupiditate numquam consequatur veniam earum distinctio nesciunt architecto. Velit voluptas esse ipsa,
-            quos impedit non.
-          </div>
-          <p class="story">
-            Большинство едет в Гранд Каньон и толпится там
-          </p>
-        </div>
-      </section>
-    </article>
-  </main>
-  <!-- main здесь закрывать? -->
-  <section class="booking">
-    <!-- может article? хотя не совсем понятно, чем заинтересовались -->
-    <header class="booking-header container align-center">
-      <div class="title">
-        <!-- как лучше: ввести класс типа header-title или использовать селектор "header p" -->
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia odio iste perspiciatis illo deserunt illum veniam! Blanditiis ex maxime aspernatur nostrum consectetur iure, enim itaque mollitia debitis aperiam quibusdam dolore iste in dolores, deserunt
-        ut totam cum, nemo nihil fugit ipsa aliquid ab. Iure, nulla ipsa. Sapiente sequi rem accusantium? Заинтересовались?
       </div>
-      <p class="story">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения в Седоне
-      </p>
-      <!-- <div class="container align-center"> -->
-      <button class="btn btn-show-form align-center" id="show-search-form" type="button">
+      <article>
+        <!-- The <article> tag specifies independent, self-contained content.An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.-->
+        <header class="tourist-info-header">
+
+          <!-- <div class="container reasons-header-text"> -->
+          <!-- внизу в подобном месте из-за кнопки показывающей форму поиска пдинги не получится использовать -->
+          <h2 class="tourist-info-header-title">
+          Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
+
+        </h2>
+          <h1 class="tourist-info-header-story">
+          Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд Каньон!
+<!-- <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dignissimos, eveniet quae provident dolor, velit rerum sit distinctio ex, ipsum quam! Amet enim saepe officia ad voluptate, voluptas officiis explicabo debitis laudantium rerum. Doloribus id tempore tempora, nesciunt fugiat sint minus reprehenderit necessitatibus odio ipsam culpa! Itaque molestiae optio sunt omnis fugiat sit hic, provident adipisci quam, iste consequuntur tempore suscipit nam a, beatae autem at magni ea aspernatur facere nisi eum dolorum minus vero veritatis. Explicabo vitae, voluptatibus ut perspiciatis. Ducimus, in voluptas voluptatum veniam accusantium, itaque! Ea soluta obcaecati libero saepe vel corrupti dolor, maiores hic repellat laborum. -->
+        </h1>
+          <!-- </div> -->
+
+        </header>
+        <section class="tourist-info-tile-row">
+          <div class="tourist-info-tile tourist-info-tile-blue">
+            <h3 class="tourist-info-tile-title">
+            Настоящий городок
+          </h3>
+            <div class="tourist-info-tile-number">
+              №1
+            </div>
+
+            <p class="tourist-info-tile-story">
+              Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течет своя жизнь
+
+            </p>
+
+          </div>
+          <div class="tourist-info-img tourist-info-img-town">
+            <!-- CSS background-image: url(img/reason-img-town.jpg)-->
+          </div>
+
+        </section>
+        <section class="tourist-info-tile-row tourist-info-tile-row-white">
+          <div class="tourist-info-tile">
+            <img class="tourist-info-tile-icon" src="img/house-icon.png" alt="house icon">
+            <h3 class="tourist-info-tile-title">
+            Жилье
+          </h3>
+            <p class="tourist-info-tile-story">
+              <!-- от себя добавлять nbsp можно? -->
+              Рекомендуем пожить в&nbsp;настоящем мотеле, все&nbsp;как в&nbsp;кино!
+            </p>
+          </div>
+          <div class="tourist-info-tile">
+            <img class="tourist-info-tile-icon" src="img/food-icon.png" alt="food icon">
+            <h3 class="tourist-info-tile-title">
+            Еда
+          </h3>
+            <p class="tourist-info-tile-story">
+              Всегда заказывайте фирменный&nbsp;бургер, вы&nbsp;не&nbsp;разочаруетесь!
+            </p>
+          </div>
+          <div class="tourist-info-tile">
+            <img class="tourist-info-tile-icon" src="img/souvenir-icon.png" alt="souvenir icon">
+            <h3 class="tourist-info-tile-title">
+            Сувениры
+          </h3>
+            <p class="tourist-info-tile-story">
+              Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!
+            </p>
+          </div>
+        </section>
+        <section class="tourist-info-tile-row">
+          <div class="tourist-info-img tourist-info-img-bridge">
+            <!-- CSS background-image: url(img/reason-img-bridge.jpg)-->
+          </div>
+          <div class="tourist-info-tile tourist-info-tile-blue float-right">
+            <!-- float-right! (первым идет изображение) position:absolute чтобы див не схлопнулся -->
+            <h3 class="tourist-info-tile-title">
+            Там есть мост&nbsp;дьявола
+          </h3>
+            <div class="tourist-info-tile-number">
+              №2
+            </div>
+            <p class="tourist-info-tile-story">
+              Да, по&nbsp;нему можно пройти! Если конечно вы&nbsp;осмелитесь </p>
+          </div>
+        </section>
+        <section class="tourist-info-tile-row">
+          <div class="tourist-info-tile tourist-info-tile-grey">
+            <h3 class="tourist-info-tile-title">
+            Небольшая площадь
+          </h3>
+            <div class="tourist-info-tile-number">
+              №3
+            </div>
+            <p class="tourist-info-tile-story">
+              Все достопримеча&shy;тельности находятся очень близко
+            </p>
+          </div>
+          <div class="tourist-info-tile tourist-info-tile-grey">
+            <h3 class="tourist-info-tile-title">
+            Красивая дорога
+          </h3>
+            <!-- то, что шрифт не bold - фича или баг? -->
+            <div class="tourist-info-tile-number">
+              №4
+            </div>
+            <p class="tourist-info-tile-story">
+              Ехать в&nbsp;Седону из&nbsp;Лас&#8209;Вегаса совсем не&nbsp;скучно!
+
+            </p>
+          </div>
+          <div class="tourist-info-tile tourist-info-tile-grey">
+            <h3 class="tourist-info-tile-title">
+            Мало туристов
+          </h3>
+            <div class="tourist-info-tile-number">
+              №5
+            </div>
+            <p class="tourist-info-tile-story">
+              <!-- типограф добавляет неразрывный пробел между и и толпится
+            в макете не так -->
+              Большинство едет в&nbsp;Гранд Каньон и толпится там
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+    <!-- main здесь закрывать? -->
+    <section class="booking">
+      <!-- может article? хотя не совсем понятно, чем заинтересовались -->
+      <header class="booking-header">
+
+        <!-- <div class="container header-text"> -->
+        <h2 class="booking-header-title">
+       Заинтересовались?
+<!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit praesentium maiores iusto soluta qui! Vel nemo quod, facilis deleniti, dolor nisi beatae voluptatem adipisci quis mollitia quam. Quas, harum. Dignissimos numquam blanditiis pariatur optio accusamus sed quisquam voluptatibus assumenda asperiores aut ducimus illum aliquam, iste delectus minus, vel recusandae temporibus fugiat tempora. Alias quia soluta deserunt eveniet, accusantium earum dicta nulla, sapiente quo quisquam consectetur distinctio! Ipsum deleniti eos quos hic quam! Deleniti fuga, ab illum accusamus molestias culpa facilis, cumque adipisci vel voluptas rerum. Corporis sint perferendis tempora vitae, necessitatibus, ut exercitationem nobis, iure at tempore, deserunt modi id. -->
+     </h2>
+        <!-- в фотошопе рамка 636 но форматирование тогда не получается
+в принципе оно всеравно не особо получается - я напихал неразрывных пробелов -->
+        <h2 class="booking-header-story">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие&nbsp;предложения гостиниц&nbsp;в&nbsp;Седоне
+      </h2>
+        <!-- </div> -->
+        <button class="btn btn-show-form" id="show-search-form" type="button">
 
             Поиск гостиницы в Седоне
-
+<!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro facere itaque ullam eveniet voluptatum assumenda consequuntur at corporis minima libero! -->
             </button>
-    </header>
-    <div class="search-form container">
-      <form class="search-form-core" id="hotel-search-form" action="#" method="get">
-        <!-- здесь ведь не нужно дополнительного контейнера - хватит и самого form? -->
-        <div class="input-row">
-          <label class="search-form-label float-left" for="arrival-date">
-            Дата заезда:
-          </label>
-          <span class="symbols icon-calendar float-right"></span>
-          <input class="long float-right" id="arrival-date" type="date" name="arrival-date" value="2016-10-25">
+      </header>
 
-          <!-- собираюсь вставить символы, прилепив их к input и сделав такой же цвет фона. Кстати иконки ингода не загружаюся-->
+      <!-- </div> -->
+
+      <div class="map">
+        <div class="search-form container">
+          <form class="search-form-core" id="hotel-search-form" action="#" method="get">
+            <!-- здесь ведь не нужно дополнительного контейнера - хватит и самого form? -->
+            <div class="input-row">
+              <label class="search-form-label float-left" for="arrival-date">
+              Дата заезда:
+            </label>
+              <span class="symbols icon-calendar float-right"></span>
+              <input class="long float-right" id="arrival-date" type="text" name="arrival-date" value="24 апреля 2016">
+
+
+            </div>
+            <div class="input-row">
+              <label class="search-form-label float-left" for="departure-date">
+                Дата выезда: <!-- нужно ли оборачитвать текст в что-то еще? span?-->
+            </label>
+              <span class="symbols icon-calendar float-right"></span>
+              <input class="long float-right" id="departure-date" type="text" name="departure-date" value="4 июля 2016">
+
+            </div>
+            <div class="input-row">
+              <label class="search-form-label" for="adults-count">
+              Взрослые:
+              <span class="symbols icon-plus float-right"></span>
+              <input class="short float-right" id="adults-count" type="text" name="adults-count" value="1">
+              <span class="symbols icon-minus float-right"></span>
+
+            </label>
+
+
+
+              <label class="search-form-label float-right" for="children-count">
+              Дети:
+              <span class="symbols icon-plus float-right"></span>
+
+
+              <input class="short float-right" id="children-count" type="text" name="children-count" value="1">
+              <span class="symbols icon-minus float-right"></span>
+            </label>
+
+
+            </div>
+            <button class="btn btn-find-hotel" type="submit">
+            Найти
+          </button>
+          </form>
         </div>
-        <div class="input-row">
-          <label class="search-form-label float-left" for="departure-date">
-              Дата выезда: <!-- нужно ли оборачитвать текст в что-то еще? span?-->
-          </label>
-            <span class="symbols icon-calendar float-right"></span>
-          <input class="long float-right" id="departure-date" type="date" name="departure-date" value="2016-10-25">
+
+
+
+        <!--<img src="img/map.jpg"> -->
+      </div>
+    </section>
+    <footer class="footer main-footer">
+      <div class="container">
+        <div class="main-footer-contacts">
+          <!-- если ховер срабатывает на расстоянии от букв, надо исправлять?
+
+    -->
+          <a href="#">#Visit&nbsp;sedona</a>
+        </div>
+        <!-- <div class="container align-center">  нужен ли здесь контейнер или достаточно самого ul ?-->
+        <!-- в группе кто-то написал, что тконочные шрифты больше не используются -->
+        <div class="social-media-links container">
+
+          <a class="" href="#">
+            <div class="symbols icon-twitter social-media-links-item btn ">
+            </div>
+          </a>
+
+          <a class="" href="#">
+            <div class="symbols icon-facebook social-media-links-item btn">
+            </div>
+          </a>
+
+          <a class="" href="#">
+            <div class="symbols icon-youtube social-media-links-item btn">
+            </div>
+          </a>
 
         </div>
-        <div class="input-row">
-          <label class="search-form-label" for="adults-count">
-            Взрослые:
-            <span class="symbols icon-plus float-right"></span>
-            <input class="short float-right" id="adults-count" type="number" name="adults-count" min="1" value="1">
-            <span class="symbols icon-minus float-right"></span>
-
-          </label>
 
 
-
-          <label class="search-form-label float-right" for="children-count">
-            Дети:
-            <span class="symbols icon-plus float-right"></span>
-
-
-            <input class="short float-right" id="children-count" type="number" name="children-count" min="1" value="1">
-            <span class="symbols icon-minus float-right"></span>
-          </label>
-
-
-        </div>
-        <button class="btn btn-find title" type="submit" value="Найти">
-          Найти
-        </button>
-      </form>
-    </div>
-    <!-- </div> -->
-
-    <div class="map container align-center">
-      <!--<img src="img/map.jpg"> -->
-    </div>
-  </section>
-  <footer class="footer main-footer container">
-    <div class="contacts container title align-left col-1 float-left">
-      <a href="#">#Visit sedona</a>
-    </div>
-    <!-- <div class="container align-center">  нужен ли здесь контейнер или достаточно самого ul ?-->
-    <div class="social-media-links align-center container col-1 float-left">
-
-        <a class="" href="#">
-          <div class="symbols icon-twitter social-media-links-item btn ">
-          </div>
-        </a>
-
-        <a class="" href="#">
-          <div class="symbols icon-facebook social-media-links-item btn">
-          </div>
-        </a>
-
-        <a class="" href="#">
-          <div class="symbols icon-youtube social-media-links-item btn">
-          </div>
-        </a>
-
-</div>
-
-
-    <!--  </div> -->
-    <!-- что-то не получается нормально выравнять символы по вертикали
+        <!--  </div> -->
+        <!-- что-то не получается нормально выравнять символы по вертикали
   почему без флоатов здесь все прыгает непонятно-->
-    <div class="copyright container col-1 float-left">
+        <div class="site-copyright container">
 
-
-      <a href="#">
-        <div class="logo float-right">
-          <!-- background-image: url("../img/htmlacademy-logo-sprite.png") -->
+          <span class="">Website by</span>
+          <a href="#">
+            <div class="site-copyright-logo">
+              <!-- background-image: url("../img/htmlacademy-logo-sprite.png") -->
+            </div>
+          </a>
         </div>
-      </a>
-      <span class="align-right float-right">Website by</span>
-    </div>
-  </footer>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>

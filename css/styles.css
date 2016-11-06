@@ -1,107 +1,79 @@
-    @font-face {
+    /*@font-face {
       font-family: "PTSans";
-      src: url(../fonts/ptsans.woff) format("woff"), url(../fonts/ptsans.woff2) format("woff2");
       font-weight: normal;
+
+      src: url(../fonts/ptsans.woff) format("woff"), url(../fonts/ptsans.woff2) format("woff2");
     }
 
     @font-face {
       font-family: "PTSans";
-      src: url(../fonts/ptsansbold.woff) format("woff"), url(../fonts/ptsansbold.woff2) format("woff2");
       font-weight: bold;
-    }
+
+      src: url(../fonts/ptsansbold.woff) format("woff"), url(../fonts/ptsansbold.woff2) format("woff2");
+    }*/
 
     * {
-      /*сбросить на всякий случай, пока normalize не подключен*/
+      /*linter пишет, что селектор медленный, не обращать внимания?*/
       box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-
-    html {
-      background-color: #f2f2f2;
-      /* светло-серый фон*/
+      /*margin: 0;
+         padding: 0;*/
     }
 
     body {
-      max-width: 1200px;
-      min-width: 768px;
-      font-family: "PTSans";
-      font-size: 14px;
-      line-height: 26px;
-      font-weight: normal;
-      /*зачем оно вообще?*/
-      text-transform: uppercase;
-      /*что-то в хроме не везде шрифт преобразуется: на кнопках например*/
       margin-right: auto;
       margin-left: auto;
-      background-color: white;
+      text-transform: uppercase;
+      font-family: 'PT Sans', sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      /*если sпереопределять свои же стили плохо,
+      то зачем это прописывать в body шрифт
+      line-height font-weight?*/
+      /*webkit default line-height
+      больше всего 21px. хотя в фотошопе вроде
+      line-leading а height*/
+      line-height: 21px;
+    }
+
+    .wrapper {
+      min-width: 768px;
+      max-width: 1200px;
       box-shadow: 15px 5px 50px grey;
     }
-    /*    .container {
-      margin-right: auto;
-      может align-center лучше,
-      а класс контейнер оставить только для понятности
-      margin-left: auto;
-      text-align: center;
-    }*/
 
-    .col-1 {
-      width: 33.33333333%;
-      /*float: left;*/
-    }
-
-    .col-2 {
-      width: 66.66666666%;
-      /*float: left;*/
-    }
-
-    .col-3 {
-      width: 100%;
-    }
-
-    .align-left {
-      text-align: left;
-    }
-
-    .align-right {
-      text-align: right;
-    }
-
-    .align-center {
+    .container {
       margin-right: auto;
       margin-left: auto;
-      text-align: center;
     }
-    /*.full-height {
-      height: 100%;
-    }*/
 
     .btn {
-      border: none;
-      color: white;
+      /*transition-duration: 0.3s;*/
       text-align: center;
-      font-family: "PTSans";
+      /*inline-block по дефолту*/
+      vertical-align: bottom;
+      text-transform: uppercase;
+      color: white;
+      border: none;
+      background-color: #82B3D3;
+      /*синий*/
+      font-family: 'PT Sans', sans-serif;
       font-size: 21px;
       font-weight: bold;
-      text-transform: uppercase;
-      transition-duration: 0.3s;
-      /* похоже из-за transition получается "незапланированная"" анимация*/
-      background-color: #82B3D3;
     }
 
     .btn:hover {
-      background-color: #669EC1;
       color: white;
+      background-color: #669EC1;
     }
 
     .btn:active {
-      background-color: #5496bd;
       color: lightgrey;
+      background-color: #5496bd;
     }
 
-    input {
+    input[type=text] {
       border: none;
-      background-color: lightgrey;
+      background-color: #f2f2f2;
     }
 
     a {
@@ -111,11 +83,113 @@
 
     a:hover {
       color: #aacce1;
-      /*вроде hover не очень хорошо, потому что не будет
-      работать на устройствах с сенсорным экраном*/
     }
 
-    .title {
+    a:active {
+      color: #a4978f;
+    }
+    /*main menu down - это наверно visited
+    main menu active down, main menu active hover - это о чем?*/
+
+    .main-header {
+      /*итоговая высота в исходном состоянии 55px
+      в webkit есть margin before/after 1em по умолчанию
+      но вроде получается 55 без обнуления margin top/bottom*/
+      position: relative;
+      padding-right: 6%;
+      padding-left: 6%;
+    }
+
+    .main-menu {
+      width: 100%;
+      /*line-height из фотошопа.
+      (55-26)/2*/
+      line-height: 26px;
+      padding-top: 14.5px;
+      padding-bottom: 14.5px;
+      /*в webkit какой-то padding-start 40px
+        отменяю*/
+      padding-left: 0;
+      list-style-type: none;
+      font-size: 0;
+      /*иначе дополнительные зазоры между li.
+        это место, зарезервированное для маркеров вроде,
+        но,я так понял, с обычными строчными блоками будет тоже,
+        если не извращаться с форматированием html или
+        не сделать тоже самое для контейра с
+        блочно-строчными элементами*/
+      /*outline: 2px solid red;*/
+    }
+
+    .main-menu-item {
+      display: inline-block;
+      vertical-align: middle;
+      /*line-height= ul.main-menu height,
+        если бы высота ul.mainmenu была известна*/
+      width: 20%;
+      /*нужно помнить о ul.main-menu {font-size: 0;}*/
+      font-size: 14px;
+      font-weight: bold;
+      /*outline: 1px solid black;*/
+    }
+
+    .main-menu li:nth-child(1) {
+      text-align: left;
+    }
+
+    .main-menu li:nth-child(2) {
+      text-align: left;
+      margin-right: 10%;
+      padding-left: 30px;
+    }
+
+    .main-menu li:nth-child(3) {
+      text-align: right;
+      margin-left: 10%;
+      padding-right: 30px;
+    }
+
+    .main-menu li:nth-child(4) {
+      text-align: right;
+    }
+
+    .main-header-logo {
+      position: absolute;
+      z-index: 10;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .main-page-banner {
+      height: 510px;
+      background-image: url("../img/banner-img-text.png"), url("../img/banner-img-decoration.png"), url("../img/banner-img-bg.jpg");
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: center 75px, left bottom, 50% 30%;
+      background-size: auto, 100% 60px, 100%;
+      width: 100%;
+      /*margin-bottom с учетом высоты строки->
+       выровнял, наложив изображение  */
+      margin-bottom: 58px;
+
+    }
+
+    .hotel-picker-form{
+      height: 510px;
+      /*background-image: url("../img/banner-img-bg.jpg");*/
+      background: filter(url(../img/banner-img-bg.jpg), blur(5px));
+      /*filter: blur(5px);*/
+      background-repeat: no-repeat;
+      background-position: 50% 30%;
+      background-size: auto;
+
+      width: 100%;
+      margin-bottom: 20px;
+      height:200px;
+
+
+    }
+
+    /*.title {
       font-size: 21px;
       font-weight: bold;
     }
@@ -123,400 +197,442 @@
     .story {
       font-size: 14px;
       font-weight: normal;
-    }
+      line-height: 20px;
+    }*/
 
-    header .title {
-      /*font-size: 21px;*/
-      margin-bottom: 40px;
+    .tourist-info-header {
+      text-align: center;
+      /*в фотошопе рамка с текстом шириной 636px,
+        но с такой шириной текст выглядит не так, как в макете,
+        даже после типографа -> 620px
+        форматирование не меняется при 768 ->
+        задам фиксированную ширину
+      */
     }
+    /*.reasons-header-text {
+        width: 620px;
+        text-align: center;
+        margin-bottom: 45px;
+        line-height: 26px;
+    }*/
+    /*отступы слева и справа или див с шириной? но внизу в
+    хедере кнопка может помещать задать отступы*/
 
-    header .story {
-      /*font-size: 14px;*/
-    }
-
-    .row .title {
+    .tourist-info-header-title {
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: bold;
       margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      width:620px;
+      background-color: #dee686;
     }
 
-    .row .story {
-      margin-top: 30px;
-      /*margin-bottom: 30px;*/
+    .tourist-info-header-story {
+      line-height: 26px;
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 640px;
+      background-color: #9ade9d;
     }
 
-    .row {
-      overflow: auto;
-      /*border: 1px solid black;*/
+    .tourist-info-tile-row {
+      /*overflow: auto; /* или clearfix??*/
+      background-color: #eeeeee; /*grey*/
+      position: relative;
       /*width: 100%;*/
     }
 
-    header.main-header {
-      position: relative;
-      height: 55px;
-      /*здесь можно оставить фикс высоту?*/
-      padding-left: 6%;
-      /*ТЗ*/
-      padding-right: 6%;
-      /*ТЗ*/
-      margin-left: auto;
-      margin-right: auto;
+    .tourist-info-tile-row::after{
+      content:"";
+      display: table;
+      clear: both;
     }
 
-    ul.main-menu {
-      list-style-type: none;
-      font-size: 0;
-      /* как убрать пробелы между элементами меню?*/
-      width: 100%;
-      padding-top: 10px;
-      /*margin отталкивает body от верхнео края*/
-      /*border: 2px solid red;*/
+    .tourist-info-tile-row-white {
+      background-color: #ffffff;
+      /*чтобы не заморачиваться с
+      растягиванием коротких колонок*/
+
     }
 
-    li.main-menu-item {
-      display: inline-block;
-      width: 20%;
-      /* по ТЗ - 20%. 4*20=80% +12% отступы контейнера меню от краев body
-      куда делись еще 8? 20% от header?  */
-      /*  font-family: "Myriad Pro";*/
-      font-size: 14px;
-      /*нужно помнить о ul.main-menu {font-size: 0;}*/
-      font-weight: bold;
-      /*border: 1px solid black;*/
-    }
+    .tourist-info-img {
 
-    .main-menu li:nth-child(2) {
-      margin-right: 10%;
-      padding-left: 25px;
-    }
-
-    .main-menu li:nth-child(3) {
-      margin-left: 10%;
-      padding-right: 30px;
-    }
-
-    .main-header-logo {
-      position: absolute;
-      width: 200px;
-      margin-left: -100px;
-      left: 50%;
-      z-index: 10;
-    }
-
-    .banner {
-      /*position: relative; это было
-      для position: absolute декоративного элемента теперь без надобности*/
-      height: 510px;
-      background-image: url("../img/banner-img-decoration.png"), url("../img/banner-img-bg.jpg");
-      background-repeat: no-repeat, no-repeat;
-      background-size: 100% 60px, 100%;
-      background-position: left bottom, 50% 30%;
-      /* если накладывать макет на страницу,
-      то видно что для точного позиционирования
-      надо чтобы каждя строка была отдельным элементом */
-    }
-
-    .banner-text {
-      margin-top: 75px;
-    }
-
-    header.reasons-header {
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-
-    .reason-row {
-      background-color: #eeeeee;
-      /*хак нашел - этот показался самым простым,
-      не противоречит критериям?
-      С флексами похоже проще.
-      inline блоков наделать как вариант*/
-      /*overflow: hidden; в хаке почему-то hidden
-      почему не авто - в row сейчас задано авто*/
-      position: relative;
-      width: 100%
-    }
-
-    .reason-img {
-      background-size: cover;
-      background-position: center;
       /*хак - самый понятный и простой способ,
       который нашел, чтобы растянуть див без содержимого
       по высоте контейнера (который растягивается
       содержимым первого див с текстом)*/
-      height: 100%;
       position: absolute;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      width: 66.66666666666666666%;
       /*background-size: 100%; не нужно вроде */
     }
 
-    .reason-img-town {
-      background-image: url("../img/reason-img-1.jpg");
+    .tourist-info-img-town {
+      top: 0;
       right: 0;
-      top: 0;
-      /*div.reason-img:nth-child(1): url("../img/reason-img-2.jpg"); вариант?
-        зачем вводить класс если в каждый div вставляется свое изображение*/
+      background-image: url("../img/reason-img-town.jpg");
     }
 
-    .reason-img-bridge {
-      background-image: url("../img/reason-img-2.jpg");
+    .tourist-info-img-bridge {
+      top: 0;
       left: 0;
-      top: 0;
-      /*div.reason-img:nth-child(2): url("../img/reason-img-2.jpg"); вариант?
-        зачем вводить класс если в каждый div вставляется свое изображение*/
+      background-image: url("../img/reason-img-bridge.jpg");
     }
 
-    .reason-item {
-      padding-top: 50px;
-      padding-bottom: 65px;
-      padding-left: 48px;
-      padding-right: 48px;
+    .tourist-info-tile {
+      text-align: center;
+      width: 33.33333333333333333%;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      /*текст про сувениры ниже остальных из-за иконки*/
+      /*в одном месте, обязательно margin для story?*/
+      padding-right: 4%;
+      padding-left: 4%;
+      /*бургер гад*/
+      /*line-height: 21px;*/
+      /*прописал для title, story и number*/
+      background-color: #ffffff; /*белый*/
+      text-align: center;
+      float: left;
+      outline: 1px solid black;
+
+
     }
 
-    .reason-item.illustrated {
+    .tourist-info-tile-blue {
+      padding-top: 55px;
+      padding-bottom: 55px;
       background-color: #81b3d2;
       color: white;
-      padding-top: 60px;
+
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+
+    .tourist-info-tile-grey {
+      padding-top: 45px;
       padding-bottom: 60px;
+      background-color: #eeeeee;
+      /*hyphens:auto;*/
+      padding-left: 5%;
+      padding-right: 5%;
+      /*растягивать короткие или просто закрасит родительский элемент?*/
     }
 
-    .advice-row {
-      /*height: 330px;*/
-      padding-top: 60px;
-      padding-bottom: 88px;
-    }
-
-    .advice-row .container {
-      padding-left: 58px;
-      padding-right: 58px;
-    }
-
-    .advice-row img {
-      display: block;
+    .tourist-info-tile-title {
+      /*text-align: center;*/
+      /*webkit style -> margin after/before:1em
+      или не трогать?*/
+      width: 150px;
+      margin-top: 0;
+      margin-bottom: 25px;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 30px;
+      line-height: 21px;
+      font-size: 21px;
+      font-weight: bold;
+      background-color: #ff99ff;
+
+
     }
 
-    .booking {
+    .tourist-info-tile-number {
+      margin-bottom: 20px;
+      line-height: 21px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80px;
+      background-color: #92c48b;
+    }
+
+    .tourist-info-tile-story {
+      /*padding-left: 50px;
+      padding-right: 50px;*/
+/*webkit -> 1em marginafter/before*/
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 21px;
+      font-size: 14px;
+      font-weight: normal;
+      background-color: #ffbf80;
+
+    }
+
+
+
+    .tourist-info-tile-number::before, .tourist-info-tile-number::after {
+      content: "—";
+    }
+    /*почему именно песевдо элементы?*/
+
+    .tourist-info-tile-icon {
+      outline: 1px solid red;
+      margin-bottom: 20px; /* иконки разного размера -
+      из-зи этого текст в плитках не выровнен
+      по высоте при одинаковом количестве строк
+      если задать одинаковый размер картинки
+      деформируются
+      можно вставить фоном и отступ
+      для тексат от верхней границы контейнера */
+    }
+
+    .main-content{
+      outline: 2px solid green;
+      margin-bottom: 60px;
+    }
+
+     .booking {
       position: relative;
       /*для позиционирования формы поиска
       относительно нижней границы этого блока*/
     }
 
+
+
     .booking-header {
-      padding-top: 60px;
-      border: 1px solid red;
-      padding-bottom: 0;
+      text-align: center;
+      /*padding-top: 60px;*/
+      /*в див обернуть текст?*/
+
     }
 
-    .booking-header .title {
+    .booking-header-title {
       font-size: 30px;
+      margin-bottom: 30px;
+      line-height: 24px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      background-color: lightpink;
     }
 
-    .booking-header .story {
-      margin-top: 40px;
-      margin-bottom: 55px;
-      /*там p параграф*/
-    }
+    .booking-header-story {
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 45px;
+      line-height: 24px;
+      margin-left: auto;
+      margin-right: auto;
+      width:500px;
+      /*padding-left: 34%;
+      padding-right: 34%;*/
+      background-color: bisque;
 
-    .booking-header button {
-      background-color: #766357;
-      height: 85px;
+    }
+    /*кнопки тоже могут переполняться текстом??*/
+
+    .btn-show-form {
       width: 570px;
+      padding-top: 30.5px;
+      padding-bottom: 30.5px;
+      margin-bottom: 0;
       color: #ffffff;
-      /*font-size: 21px;*/
-      margin-bottom: 0px;
+      background-color: #766357;
     }
 
-    .booking-header button:hover {
+    .btn-show-form:hover {
       background-color: #604E42;
     }
 
     .search-form {
       position: absolute;
-      bottom: 60px;
-      /*высота дива с картой ведь не будет меняться*/
-      height: 400px;
-      width: 570px;
       z-index: 10;
-      margin-left: -285px;
-      /*почему-то теперь не -275*/
+      top: 0;
       left: 50%;
+      transform: translateX(-50%);
+      width: 570px;
+      height: 400px;
       background-color: white;
       /*font-size: 14px; в body указано*/
       font-weight: bold;
     }
 
-    .booking .map {
-      /*border: 1px solid blue;*/
-      height: 460px;
+    .map {
+      position: relative;
       width: 100%;
-      background-image: url(../img/map.jpg);
+      height: 470px;
+      background-image: url("../img/map.jpg");
     }
 
     .search-form .input-row {
-      margin-bottom: 30px;
-      height: 40px;
-      /*text-align: right;*/
-      border: 2px solid red;
+      height: 36px;
+      margin-bottom: 32px;
+      line-height: 36px;
+      /*outline: 1px solid red;*/
     }
 
     .search-form input {
       height: 100%;
-      /*можно заменить на класс full-height
-      height Specifies the height of an <input> element (only for type="image")
-      только type="image"?? или это про <input height="pixels"> */
-      /*background-color: #f2f2f2; что-то слишком светлый
-      вообще это наверно общий для input класс. поднять наверх?*/
-      background-color: lightgrey;
-      display: inline-block;
+      /*display: inline-block;*/
       padding-left: 15px;
-      font-family: "Myriad Pro"; /*надо подключить*/
-      font-weight: bold; /*regular -> normal?*/
+      background-color: #f2f2f2;
+      /*видимо из-за того, что через value*/
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding-right: 5px;
     }
 
     .search-form input.short {
-      width: 68px;
-      text-align: center;
-     /*vertical-align: bottom;*/
+      width: 45px;
+      text-align: left;
     }
 
     .search-form input.long {
-      width: 320px;
+      width: 305px;
     }
 
-    .search-form .btn-find {
-      height: 55px;
+    .btn-find-hotel {
       width: 100%;
-      background-color: #82B3D3;
-      margin-top: 25px;
+      height: 55px;
+      margin-top: 25px;/* margin bottom для short?*/
       color: white;
+      background-color: #82B3D3;
     }
 
     .btn-find:hover {
       background-color: #669EC1;
     }
 
-    .search-form .search-form-label {
+    .search-form-label {
       display: inline-block;
+      /*надо разобраться с vertical-align и line-height*/
+
       height: 100%;
       /*full-height*/
-
       /*  margin-right: 20px;*/
-      border: 1px solid black;
+      /*outline: 1px solid black;*/
     }
-    /* для тестов*/
+    /*может все кроме трех меток (даты и взрослые) в отдельный див*/
 
-    /*#hotel-search-form>div:nth-child(1)>label,
-    #hotel-search-form>div:nth-child(2)>label,
-#hotel-search-form > div:nth-child(3) > label:nth-child(1) {
-      float: left;
-    }*/
-/*может все кроме трех меток (даты и взрослые) в отдельный див*/
-.icon-minus{
-  margin-left: 42px;
-}
-/* для тестов*/
-    .search-form .search-form-core {
+    .icon-minus {
+      margin-left: 40px;
+      /*как-то не очень способ выравнивания*/
+    }
+
+    .search-form-core {
       width: 460px;
-      margin-left: auto;
+      padding-top: 55px;
       margin-right: auto;
-      border: 1px solid black;
-      margin-top: 50px;
+      margin-left: auto;
+      outline: 1px solid black;
     }
 
     .search-form .symbols {
-      display: inline-block;
-
-      background-color: lightgrey;
       height: 100%;
-      /*как зацентрировать символы? через обращение к псевдоэлементу?
-      не выравниваются короткие поля
-      */
+      padding-right: 7px;
+      padding-left: 7px;
+      color: lightgrey;
+
+      /*display: inline-block;*/
+      background-color: #f2f2f2;
+    }
+    span.icon-calendar{
+      font-size: 21px;
+
     }
 
-    footer.main-footer {
-      height: 120px;
-      width: 84%;
-      margin-right: auto;
-      margin-left: auto;
-      border: 2px solid black;
-      padding-top: 35px;
+    .main-footer {
+      text-align: center;
+      /*padding-right: 5%;
+      padding-left: 5%;*/
+      /*(120-45)/2*/
+      padding-top: 37.5px;
+      padding-bottom: 37.5px;
+      /*background-color: #d1ccc7;*/
+
     }
 
-
-    .main-footer .contacts.container {
+    .main-footer-contacts {
       display: inline-block;
-      padding-left: 32px;
-      padding-top: 5px;
-      /*margin-top: 5px;*/
-      /*width: 33.3333%;*/
-      /*height: 100%;*/
+      vertical-align: middle;
+      /*что-то похожее но наверно надо как-то очевиднее без подборов*/
+      width: 36%;
+      padding-left: 4%;
+      text-align: left;
+
+
+      font-size: 21px;
+      font-weight: bold;
+
+      line-height: 21px;
+      /*background-color: gold;*/
+
     }
 
-    .main-footer ul.social-media-links {
+    .main-footer .social-media-links {
       display: inline-block;
-      list-style-type: none;
-      height: 100%;
-      /*откуда отступ снизу между item и ul*/
-      border: 1px solid blue;
+      vertical-align: middle;
+      /*outline: 1px solid blue;*/
       font-size: 0;
+      width:160px;
+
     }
 
-    .main-footer .social-media-links-item {
+    .social-media-links-item {
       display: inline-block;
+      line-height: 45px;
       width: 48px;
-      height: 43px;
-      border: 2px solid black;
-      /*background-color: #82B3D3;*/
-      /*color: white;*/
-      margin-left: 0.5px;
-      margin-right: 0.5px;
+      height: 45px;
+      margin-right: 2px;
+      margin-left: 2px;
+      /*outline: 2px solid black;*/
       /*ul.social-media-links:{font-size: 0;}!!*/
     }
 
-    .social-media-links-item:hover {
-      /*background-color: #669EC1;*/
-    }
 
-    .social-media-links-item a {
-      /*color: white;*/
-      font-size: 20px; /*кажется не работает*/
-      /*vertical-align: middle;*/
-    }
-
-    .main-footer .copyright.container {
+    .site-copyright {
       display: inline-block;
-      height: 100%;
-
-
+      width: 36%;
+      vertical-align: middle;
+      /*background-color: gold;*/
+      text-align: right;
+      padding-right: 1%;
     }
 
-    .copyright.container span{
+    .site-copyright span {
       display: inline-block;
       width: auto;
       height: auto;
-      padding-right: 6px;
-      padding-top: 5px;
-
+      line-height: 40px;
+      margin-right: 2px;
+      /*outline: 1px solid black;*/
     }
 
-    .copyright.container div.logo {
-      display: inline-block;
-      height: 100%;
-      height: 40px;
-      width: 120px;
 
+    .site-copyright-logo {
+      width: 120px;
+      display: inline-block;
+      vertical-align: top;
+      height: 40px;
       background-image: url("../img/htmlacademy-logo-sprite.png");
       background-repeat: no-repeat;
       background-position: 40% 0%;
+      outline: 1px solid black;
     }
 
-    .copyright div.logo:hover {
+    .site-copyright-logo:hover {
       background-image: url("../img/htmlacademy-logo-sprite.png");
       background-repeat: no-repeat;
-      background-position: 50% 51%;
+      background-position: 40% 51%;
     }
+
+    .site-copyright-logo:active {
+      background-image: url("../img/htmlacademy-logo-sprite.png");
+      background-repeat: no-repeat;
+      background-position: 40% 101.282047109%;
+    }
+    /* ОТЛАДКА*/
     /*.container {
-      border: 1px solid black;
+      outline: 1px solid black;
     }*/
     /*.container {
       display: inline-block;
@@ -524,13 +640,6 @@
     /*сделать что-то вроде illustrated-left/illustrated-right
 или убрать из col-* и добавить каждому float right/left
 через класс*/
-
-/* для отладки*/
-
-footer .container {
-  border: 1px solid red;
-}
-/* для отладки*/
 
     .float-right {
       float: right;
@@ -540,6 +649,34 @@ footer .container {
       float: left;
     }
 
-    footer *{
-      border: 1px solid black;
+
+header{
+  /*background-color: #a06eb5;*/
+  /*outline: 4px solid #2918ec;*/
+}
+/*hover срабатывает на расстоянии от букв - дело в line-height */
+.main-footer-contacts>a{
+line-height: 21px; /*высота все равно не изменяется*/
+display: inline-block;
+/*background-color: teal;*/
+
+  /*outline: 2px solid red;*/
+}
+
+/*.main-footer>.container{
+  outline: 1px solid red;
+}*/
+    /*.text-left {
+      text-align: left;
     }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .text-center {
+      text-align: center;
+    }*/
+    /*  header * {
+        outline: 1px solid black;
+    }*/
