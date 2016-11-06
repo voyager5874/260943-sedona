@@ -173,21 +173,35 @@
 
     }
 
+
+
+
     .hotel-picker-form{
-      height: 510px;
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      color: white;
       /*background-image: url("../img/banner-img-bg.jpg");*/
-      background: filter(url(../img/banner-img-bg.jpg), blur(5px));
+      /*фильтр надо применить только к изображению - у меня размываются и соседи*/
+      /*background: filter(url("../img/banner-img-bg.jpg"), blur(5px)); /*не работает*/*/
       /*filter: blur(5px);*/
-      background-repeat: no-repeat;
+      /*background-repeat: no-repeat;
       background-position: 50% 30%;
-      background-size: auto;
+      background-size: auto;*/
 
       width: 100%;
-      margin-bottom: 20px;
-      height:200px;
+
 
 
     }
+    .hotel-picker-form img{
+    position: absolute;
+    left: 0;
+    top: -300px;
+    z-index: -1;
+    filter: blur(5px);
+    }
+
 
     /*.title {
       font-size: 21px;
