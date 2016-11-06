@@ -178,9 +178,12 @@
 
     .hotel-picker-form{
       position: relative;
-      height: 220px;
+
+      /*height: 220px;*/
       overflow: hidden;
       color: white;
+      padding-left: 50px;
+      padding-top: 50px;
       /*background-image: url("../img/banner-img-bg.jpg");*/
       /*фильтр надо применить только к изображению - у меня размываются и соседи*/
       /*background: filter(url("../img/banner-img-bg.jpg"), blur(5px)); /*не работает*/*/
@@ -190,19 +193,42 @@
       background-size: auto;*/
 
       width: 100%;
-
-
-
+    }
+    .hotel-picker-form ul{
+      list-style-type: none;
+      outline: 1px solid yellow;
     }
     .hotel-picker-form img{
+
     position: absolute;
     left: 0;
     top: -300px;
     z-index: -1;
     filter: blur(5px);
     }
+.infrastructure,
+.hotel-type,
+.price-range
+{
+  display: inline-block;
+  margin-right: 50px;
+  /*outline: 2px solid black;*/
+  vertical-align: top;
+}
 
+.btn-filter-hotels{
+  display: block;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
 
+.price-range{
+
+}
     /*.title {
       font-size: 21px;
       font-weight: bold;
@@ -213,7 +239,18 @@
       font-weight: normal;
       line-height: 20px;
     }*/
+.result-view-options *{
+  display: inline-block;
 
+}
+.result-view-options{
+  border-bottom: 1px solid black;
+}
+
+.found-place-main,
+.place-rating-box{
+  display: inline-block;
+}
     .tourist-info-header {
       text-align: center;
       /*в фотошопе рамка с текстом шириной 636px,

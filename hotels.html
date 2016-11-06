@@ -53,14 +53,126 @@
     <main class="main-content">
       <div>
 
-      <div class="hotel-picker-form">
-        <img src="../img/banner-img-bg.jpg" alt="">
+        <div class="hotel-picker-form">
+          <img src="../img/banner-img-bg.jpg" alt="">
+          <form class="" action="index.html" method="post">
+            <fieldset class="infrastructure">
+              <legend>Инфраструктура</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="pull" value="Бассейн">
+                  <label>Бассейн</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="pull" value="Парковка">
+                  <label>Парковка</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="pull" value="Парковка">
+                  <label>WiFi</label>
+
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="hotel-type">
+              <legend>тип жилья</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="pull" value="Бассейн">
+                  <label>Гостиница</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="pull" value="Парковка">
+                  <label>Мотель</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="pull" value="Парковка">
+                  <label>Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="price-range">
+              <legend>стоимость в сутки (P):</legend>
+              <div>
+                <label for="price-from">от</label>
+                <input id="price-from" type="number" name="name" value="">
+                <label for="price-to">до</label>
+                <input id="price-to" type="number" name="name" value="">
+              </div>
+              <div>
+                <input type="range" multiple name="name" value="" min="0" max="10000" step="10">
+
+              </div>
+
+
+            </fieldset>
+            <button class="btn btn-filter-hotels" type="submit">показать</button>
+          </form>
 
 
 
-      </div>
+
+        </div>
+
+        <div class="search-result">
+          <div class="result-view-options">
+            <div>найдено:</div>
+            <div>сортировка:</div>
+            <ul>
+              <li>
+                <button class="btn btn-sort">по цене</button>
+              </li>
+              <li>
+                <button class="btn btn-sort">по типу</button>
+              </li>
+              <li>
+                <button class="btn btn-sort">по рейтингу</button>
+              </li>
+            </ul>
+            <div class="sort-direction">
+              <button class="btn icon-up-dir" type="button" name="button"></button>
+              <button class="btn icon-down-dir" type="button" name="button"></button>
+            </div>
+          </div>
+        </div>
+        <section class="found-places-list">
+          <div class="found-place-item">
+
+            <div class="found-place-info">
+              <img src="img/amara-resort.jpg" alt="" />
+              <div class="found-place-main">
+                <h3>amara resort &amp; spa</h3>
+                <div class="place-desc">
+                  <div class="place-type">
+                    Гостиница
+                  </div>
+                  <div class="place-price">
+                    от 3500 р.
+                  </div>
+                </div>
+                <button class="btn" type="button" name="button">подробнее</button>
+                <button class="btn" type="button" name="button">забронировать</button>
+              </div>
+              <div class="place-rating-box">
+                <div class="stars">
+                  <span class="icon-star"></span>
+                </div>
+                <div class="place-rating">
+                  рейтинг: 8,5
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
 
     </main>
+
+
+
     <footer class="footer main-footer">
       <div class="container">
         <div class="main-footer-contacts">
@@ -100,7 +212,7 @@
       </div>
     </footer>
 
-  </div>
+    </div>
 </body>
 
 </html>
