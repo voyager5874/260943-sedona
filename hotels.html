@@ -18,14 +18,11 @@
       <div class="main-header-logo">
         <a href="index.html">
           <img src="img/main-header-logo.png" width="140" height="70" alt="Sedona logo">
-
         </a>
       </div>
-
       <nav>
         <ul class="main-menu">
           <li class="main-menu-item">
-
             <a href="#">
             Информация
 
@@ -48,15 +45,11 @@
           </li>
         </ul>
       </nav>
-
     </header>
     <main class="main-content">
-
-
       <div class="hotel-picker-form">
-        <img class="hotel-picker-form-bg" src="../img/banner-img-bg.jpg" alt="">
+        <img class="hotel-picker-form-bg" src="img/banner-img-bg.jpg" alt="">
         <form class="hotel-picker-form-core" action="index.html" method="post">
-
           <fieldset class="infrastructure">
             <legend>Инфраструктура</legend>
             <ul>
@@ -71,7 +64,6 @@
               <li>
                 <input type="checkbox" name="pull" value="Парковка">
                 <label>WiFi</label>
-
               </li>
             </ul>
           </fieldset>
@@ -99,7 +91,6 @@
                 <label for="price-from">от</label>
                 <input id="price-from" type="number" name="name" value="">
               </div>
-
               <div class="price-range-end">
                 <label for="price-to">до</label>
                 <input id="price-to" type="number" name="name" value="">
@@ -112,148 +103,124 @@
             <!-- не подходит к этому fieldset, но пока пусть будет здесь -->
             <button class="btn btn-filter-hotels" type="submit">показать</button>
           </fieldset>
-
         </form>
-
       </div>
-
       <div class="search-result">
-
         <div class="result-view-options">
-          <div class="found-places-count">
-            найдено: 3
-          </div>
-          <div class="sort-options">
-            <div class="sort-options-caption">сортировка:</div>
-            <ul class="sort-options-ls">
-              <li class="sort-option-item">
-                <button class="btn btn-sort">по цене</button>
-              </li>
-              <li class="sort-option-item">
-                <button class="btn btn-sort">по типу</button>
-              </li>
-              <li class="sort-option-item">
-                <button class="btn btn-sort">по рейтингу</button>
-              </li>
-            </ul>
-
+          <div class="sort-param-choice">
+            <div class="found-places-count">
+              найдено: 3
+            </div>
+            <div class="sort-params">
+              <div class="sort-params-caption">сортировка:</div>
+              <ul class="sort-params-ls">
+                <li class="sort-param">
+                  <button class="btn btn-sort">по цене</button>
+                </li>
+                <li class="sort-param">
+                  <button class="btn btn-sort">по типу</button>
+                </li>
+                <li class="sort-param">
+                  <button class="btn btn-sort">по рейтингу</button>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="sort-direction">
             <button class="btn icon-up-dir" type="button" name="button"></button>
             <button class="btn icon-down-dir" type="button" name="button"></button>
           </div>
-
         </div>
-
         <section class="found-places-list">
           <div class="found-place-item">
+            <!--  <div class="found-place-info"> -->
+            <div class="found-place-main">
+              <img src="img/amara-resort.jpg" alt="amara-resort &amp; SPA" />
+              <div class="found-place-desc">
+                <h3 class="found-place-name">
+                  amara resort &amp; spa
+                </h3>
 
-            <div class="found-place-info">
-
-              <div class="found-place-main">
-                <img src="img/amara-resort.jpg" alt="" />
-                <div class="found-place-desc">
-                  <h3>amara resort &amp; spa
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni a doloremque. Quaerat, mollitia. Esse doloribus corporis, laborum minus voluptatibus.
-                  </h3>
-                  <div class="desc-row">
-                    <div class="place-type">
-                      Гостиница
-                    </div>
-                    <div class="place-price">
-                      от 3500 р.
-                    </div>
+                <div class="found-place-desc-row">
+                  <div class="found-place-type">
+                    Гостиница
                   </div>
-                  <button class="btn" type="button" name="button">подробнее</button>
-                  <button class="btn" type="button" name="button">забронировать</button>
-                </div>
-              </div>
-              <div class="place-rating-box">
-                <div class="stars">
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                </div>
-                <div class="place-rating">
-                  рейтинг: 8,5
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="found-place-item">
-
-            <div class="found-place-info">
-
-              <div class="found-place-main">
-                <img src="img/amara-resort.jpg" alt="" />
-                <div class="found-place-desc">
-                  <h3 class="found-place-name">amara resort &amp; spa</h3>
-                  <div class="desc-row">
-                    <div class="place-type">
-                      Гостиница
-                    </div>
-                    <div class="place-price">
-                      от 3500 р.
-                    </div>
+                  <div class="found-place-price">
+                    от 3500 р.
                   </div>
-                  <button class="btn" type="button" name="button">подробнее</button>
-                  <button class="btn" type="button" name="button">забронировать</button>
+                </div>
+                <div class="found-place-desc-row">
+                  <button class="btn btn-found-place-action" type="button" name="button">
+                   подробнее
+                  </button>
+                  <button class="btn btn-found-place-action" type="button" name="button">
+                   забронировать
+                  </button>
                 </div>
               </div>
-              <div class="place-rating-box">
-                <div class="stars">
-                  <span class="icon-star"></span>
-                </div>
-                <div class="place-rating">
-                  рейтинг: 8,5
-                </div>
-              </div>
-
             </div>
-
+            <div class="place-rating-box">
+              <div class="stars">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+              </div>
+              <div class="place-rating">
+                рейтинг: 8,5
+              </div>
+            </div>
+            <!--  </div> -->
           </div>
-
-
-
+          <!--                     <div class="found-place-item">
+                        <div class="found-place-main">
+                            <img src="img/amara-resort.jpg" alt="" />
+                            <div class="found-place-desc-row">
+                                <h3 class="found-place-name">amara resort &amp; spa</h3>
+                                <div class="desc-row">
+                                    <div class="found-place-type">
+                                        Гостиница lorem10mmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                                    </div>
+                                    <div class="place-price">
+                                        от 3500 р.
+                                    </div>
+                                </div>
+                                <button class="btn" type="button" name="button">подробнее</button>
+                                <button class="btn" type="button" name="button">забронировать</button>
+                            </div>
+                        </div>
+                        <div class="place-rating-box">
+                            <div class="stars">
+                                <span class="icon-star"></span>
+                            </div>
+                            <div class="place-rating">
+                                рейтинг: 8,5
+                            </div>
+                        </div>
+                    </div> -->
         </section>
       </div>
-
     </main>
-
-
-
     <footer class="footer main-footer">
       <div class="container">
         <div class="main-footer-contacts">
-
           <a href="#">#Visit&nbsp;sedona</a>
         </div>
-
         <div class="social-media-links container">
-
           <a class="" href="#">
             <div class="symbols icon-twitter social-media-links-item btn ">
             </div>
           </a>
-
           <a class="" href="#">
             <div class="symbols icon-facebook social-media-links-item btn">
             </div>
           </a>
-
           <a class="" href="#">
             <div class="symbols icon-youtube social-media-links-item btn">
             </div>
           </a>
-
         </div>
-
-
         <div class="site-copyright container">
-
           <span class="">Website by</span>
           <a href="#">
             <div class="site-copyright-logo">
@@ -263,7 +230,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni a dolore
         </div>
       </div>
     </footer>
-
   </div>
 </body>
 
