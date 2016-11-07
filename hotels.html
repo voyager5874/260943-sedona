@@ -51,107 +51,157 @@
 
     </header>
     <main class="main-content">
-      <div>
 
-        <div class="hotel-picker-form">
-          <img src="../img/banner-img-bg.jpg" alt="">
-          <form class="" action="index.html" method="post">
-            <fieldset class="infrastructure">
-              <legend>Инфраструктура</legend>
-              <ul>
-                <li>
-                  <input type="checkbox" name="pull" value="Бассейн">
-                  <label>Бассейн</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="pull" value="Парковка">
-                  <label>Парковка</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="pull" value="Парковка">
-                  <label>WiFi</label>
 
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="hotel-type">
-              <legend>тип жилья</legend>
-              <ul>
-                <li>
-                  <input type="checkbox" name="pull" value="Бассейн">
-                  <label>Гостиница</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="pull" value="Парковка">
-                  <label>Мотель</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="pull" value="Парковка">
-                  <label>Апартаменты</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="price-range">
-              <legend>стоимость в сутки (P):</legend>
-              <div>
+      <div class="hotel-picker-form">
+        <img class="hotel-picker-form-bg" src="../img/banner-img-bg.jpg" alt="">
+        <form class="hotel-picker-form-core" action="index.html" method="post">
+
+          <fieldset class="infrastructure">
+            <legend>Инфраструктура</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pull" value="Бассейн">
+                <label>Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="pull" value="Парковка">
+                <label>Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="pull" value="Парковка">
+                <label>WiFi</label>
+
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="place-type">
+            <legend>тип жилья</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pull" value="Бассейн">
+                <label>Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="pull" value="Парковка">
+                <label>Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="pull" value="Парковка">
+                <label>Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="price-range">
+            <legend>стоимость в сутки (P):</legend>
+            <div class="price-range-numbers">
+              <div class="price-range-start">
                 <label for="price-from">от</label>
                 <input id="price-from" type="number" name="name" value="">
+              </div>
+
+              <div class="price-range-end">
                 <label for="price-to">до</label>
                 <input id="price-to" type="number" name="name" value="">
               </div>
-              <div>
-                <input type="range" multiple name="name" value="" min="0" max="10000" step="10">
-
-              </div>
-
-
-            </fieldset>
+            </div>
+            <div class="prace-range-slider">
+              <input type="range" multiple name="name" value="0" min="0" max="9990" step="10">
+              <input type="range" multiple name="name" value="3000" min="10" max="10000" step="10">
+            </div>
+            <!-- не подходит к этому fieldset, но пока пусть будет здесь -->
             <button class="btn btn-filter-hotels" type="submit">показать</button>
-          </form>
+          </fieldset>
 
+        </form>
 
+      </div>
 
+      <div class="search-result">
 
-        </div>
-
-        <div class="search-result">
-          <div class="result-view-options">
-            <div>найдено:</div>
-            <div>сортировка:</div>
-            <ul>
-              <li>
+        <div class="result-view-options">
+          <div class="found-places-count">
+            найдено: 3
+          </div>
+          <div class="sort-options">
+            <div class="sort-options-caption">сортировка:</div>
+            <ul class="sort-options-ls">
+              <li class="sort-option-item">
                 <button class="btn btn-sort">по цене</button>
               </li>
-              <li>
+              <li class="sort-option-item">
                 <button class="btn btn-sort">по типу</button>
               </li>
-              <li>
+              <li class="sort-option-item">
                 <button class="btn btn-sort">по рейтингу</button>
               </li>
             </ul>
-            <div class="sort-direction">
-              <button class="btn icon-up-dir" type="button" name="button"></button>
-              <button class="btn icon-down-dir" type="button" name="button"></button>
-            </div>
+
           </div>
+          <div class="sort-direction">
+            <button class="btn icon-up-dir" type="button" name="button"></button>
+            <button class="btn icon-down-dir" type="button" name="button"></button>
+          </div>
+
         </div>
+
         <section class="found-places-list">
           <div class="found-place-item">
 
             <div class="found-place-info">
-              <img src="img/amara-resort.jpg" alt="" />
+
               <div class="found-place-main">
-                <h3>amara resort &amp; spa</h3>
-                <div class="place-desc">
-                  <div class="place-type">
-                    Гостиница
+                <img src="img/amara-resort.jpg" alt="" />
+                <div class="found-place-desc">
+                  <h3>amara resort &amp; spa
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magni a doloremque. Quaerat, mollitia. Esse doloribus corporis, laborum minus voluptatibus.
+                  </h3>
+                  <div class="desc-row">
+                    <div class="place-type">
+                      Гостиница
+                    </div>
+                    <div class="place-price">
+                      от 3500 р.
+                    </div>
                   </div>
-                  <div class="place-price">
-                    от 3500 р.
-                  </div>
+                  <button class="btn" type="button" name="button">подробнее</button>
+                  <button class="btn" type="button" name="button">забронировать</button>
                 </div>
-                <button class="btn" type="button" name="button">подробнее</button>
-                <button class="btn" type="button" name="button">забронировать</button>
+              </div>
+              <div class="place-rating-box">
+                <div class="stars">
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                </div>
+                <div class="place-rating">
+                  рейтинг: 8,5
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="found-place-item">
+
+            <div class="found-place-info">
+
+              <div class="found-place-main">
+                <img src="img/amara-resort.jpg" alt="" />
+                <div class="found-place-desc">
+                  <h3 class="found-place-name">amara resort &amp; spa</h3>
+                  <div class="desc-row">
+                    <div class="place-type">
+                      Гостиница
+                    </div>
+                    <div class="place-price">
+                      от 3500 р.
+                    </div>
+                  </div>
+                  <button class="btn" type="button" name="button">подробнее</button>
+                  <button class="btn" type="button" name="button">забронировать</button>
+                </div>
               </div>
               <div class="place-rating-box">
                 <div class="stars">
@@ -166,8 +216,10 @@
 
           </div>
 
-        </section>
 
+
+        </section>
+      </div>
 
     </main>
 
@@ -212,7 +264,7 @@
       </div>
     </footer>
 
-    </div>
+  </div>
 </body>
 
 </html>

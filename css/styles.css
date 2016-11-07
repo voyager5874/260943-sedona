@@ -57,7 +57,7 @@
       background-color: #82B3D3;
       /*синий*/
       font-family: 'PT Sans', sans-serif;
-      font-size: 21px;
+      /*font-size: 14px;*/
       font-weight: bold;
     }
 
@@ -170,65 +170,202 @@
       /*margin-bottom с учетом высоты строки->
        выровнял, наложив изображение  */
       margin-bottom: 58px;
-
     }
 
-
-
-
-    .hotel-picker-form{
+    .hotel-picker-form {
       position: relative;
-
-      /*height: 220px;*/
       overflow: hidden;
       color: white;
-      padding-left: 50px;
-      padding-top: 50px;
-      /*background-image: url("../img/banner-img-bg.jpg");*/
-      /*фильтр надо применить только к изображению - у меня размываются и соседи*/
-      /*background: filter(url("../img/banner-img-bg.jpg"), blur(5px)); /*не работает*/*/
-      /*filter: blur(5px);*/
-      /*background-repeat: no-repeat;
-      background-position: 50% 30%;
-      background-size: auto;*/
-
-      width: 100%;
+      padding-left: 4%;
+      padding-right: 4%;
+      /*временно*/
+      padding-top: 20px;
     }
-    .hotel-picker-form ul{
+
+    .hotel-picker-form ul {
       list-style-type: none;
       outline: 1px solid yellow;
+      padding-left: 0;
     }
-    .hotel-picker-form img{
 
-    position: absolute;
-    left: 0;
-    top: -300px;
-    z-index: -1;
-    filter: blur(5px);
+    .infrastructure li {
+      margin-bottom: 20px;
+      background-color: rgba(163, 136, 252, 0.3);
     }
-.infrastructure,
-.hotel-type,
-.price-range
-{
+
+    .place-type li {
+      margin-bottom: 20px;
+      background-color: rgba(163, 136, 252, 0.3);
+    }
+
+    .price-range {
+      float: right;
+      width: 330px;
+      margin-bottom: 20px;
+    }
+
+    .hotel-picker-form-bg {
+      position: absolute;
+      left: 0;
+      top: -300px;
+      z-index: -1;
+      filter: blur(5px);
+    }
+
+    .infrastructure, .hotel-type {
+      display: inline-block;
+      margin-right: 50px;
+      /*outline: 2px solid black;*/
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .price-range-numbers {
+      text-align: center;
+      border: 2px solid white;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      height: 30px;
+    }
+
+    .price-range input[type=number] {
+      width: 50px;
+      background-color: rgba(221, 96, 23, 0.4);
+      border: none;
+      font-size: 14px;
+      color: white;
+    }
+
+    .price-range input[type=range] {
+      width: 300px;
+      display: inline-block;
+      /*наложить один на другой? absolute?*/
+    }
+
+    .price-range-start, .price-range-end {
+      display: inline-block;
+      width: 45%;
+      /*outline: 1px solid blue;*/
+      vertical-align: middle;
+      height: 16px;
+      line-height: 16px;
+    }
+    /*как нарисовать разграничитель между полями?*/
+
+    .price-range-start {
+      border-right: 1px solid white;
+    }
+
+    .btn-filter-hotels {
+      display: block;
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 3px;
+      margin-left: auto;
+      margin-right: auto;
+      /*margin-bottom: 20px;*/
+    }
+    /*.result-view-options * {
+      display: inline-block;
+    }*/
+
+    .search-result {
+      padding-left: 4%;
+      padding-right: 4%;
+      /*main-content*/
+    }
+
+    .result-view-options {
+      width: 100%;
+
+
+      border-bottom: 1px solid black;
+      background-color: lightgrey;
+    }
+
+    .found-places-count {
+      font-size: 21px;
+      font-weight: bold;
+      display: inline-block;
+    }
+.sort-options{
   display: inline-block;
-  margin-right: 50px;
-  /*outline: 2px solid black;*/
-  vertical-align: top;
+  outline: 1px solid black;
+  width: auto;
+}
+.sort-options-ls{
+  background-color: rgb(95, 201, 47);
+  display: inline-block;
+}
+.sort-option-item{
+  display: inline-block;
 }
 
-.btn-filter-hotels{
-  display: block;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 3px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+.sort-options-caption{
+  display: inline-block;
+  background-color: rgb(58, 66, 176);
 }
-
-.price-range{
-
+    /*.icon-up-dir, .icon-down-dir {
+      float: right;
+    }*/
+.sort-direction{
+  /*display: inline-block;
+  vertical-align: middle;*/
+  outline: 1px solid red;
+  /*width: 50%;*/
+  /*overflow: auto;*/
+  float: right;
 }
+    .found-place-main, .place-rating-box {
+      display: inline-block;
+      outline: 1px solid green;
+      vertical-align: middle;
+    }
+
+    .found-place-main {
+      width: 425px;
+      background-color: rgb(117, 189, 103);
+      /*margin-left: 30px;*/
+    }
+
+    .found-place-desc {
+      display: inline-block;
+      background-color: rgb(114, 129, 163);
+      width: 250px;
+      vertical-align: middle;
+    }
+
+    .found-place-item {
+      outline: 1px solid red;
+      vertical-align: middle;
+      /*padding-left: 4%;
+      padding-right: 4%;*/
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .found-place-item img {
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    .place-rating-box {
+      width: auto;
+      /*float: right;*/
+      text-align: right;
+      width: 50%;
+
+    }
+
+    .place-type, .place-price {
+      display: inline-block;
+    }
+
+    .stars {
+      margin-bottom: 50px;
+      color: blue;
+    }
     /*.title {
       font-size: 21px;
       font-weight: bold;
@@ -239,18 +376,7 @@
       font-weight: normal;
       line-height: 20px;
     }*/
-.result-view-options *{
-  display: inline-block;
 
-}
-.result-view-options{
-  border-bottom: 1px solid black;
-}
-
-.found-place-main,
-.place-rating-box{
-  display: inline-block;
-}
     .tourist-info-header {
       text-align: center;
       /*в фотошопе рамка с текстом шириной 636px,
@@ -276,7 +402,7 @@
       margin-bottom: 30px;
       margin-left: auto;
       margin-right: auto;
-      width:620px;
+      width: 620px;
       background-color: #dee686;
     }
 
@@ -293,13 +419,14 @@
 
     .tourist-info-tile-row {
       /*overflow: auto; /* или clearfix??*/
-      background-color: #eeeeee; /*grey*/
+      background-color: #eeeeee;
+      /*grey*/
       position: relative;
       /*width: 100%;*/
     }
 
-    .tourist-info-tile-row::after{
-      content:"";
+    .tourist-info-tile-row::after {
+      content: "";
       display: table;
       clear: both;
     }
@@ -308,11 +435,9 @@
       background-color: #ffffff;
       /*чтобы не заморачиваться с
       растягиванием коротких колонок*/
-
     }
 
     .tourist-info-img {
-
       /*хак - самый понятный и простой способ,
       который нашел, чтобы растянуть див без содержимого
       по высоте контейнера (который растягивается
@@ -349,12 +474,11 @@
       /*бургер гад*/
       /*line-height: 21px;*/
       /*прописал для title, story и number*/
-      background-color: #ffffff; /*белый*/
+      background-color: #ffffff;
+      /*белый*/
       text-align: center;
       float: left;
       outline: 1px solid black;
-
-
     }
 
     .tourist-info-tile-blue {
@@ -362,7 +486,6 @@
       padding-bottom: 55px;
       background-color: #81b3d2;
       color: white;
-
       padding-left: 4%;
       padding-right: 4%;
     }
@@ -390,8 +513,6 @@
       font-size: 21px;
       font-weight: bold;
       background-color: #ff99ff;
-
-
     }
 
     .tourist-info-tile-number {
@@ -406,17 +527,14 @@
     .tourist-info-tile-story {
       /*padding-left: 50px;
       padding-right: 50px;*/
-/*webkit -> 1em marginafter/before*/
+      /*webkit -> 1em marginafter/before*/
       margin-top: 0;
       margin-bottom: 0;
       line-height: 21px;
       font-size: 14px;
       font-weight: normal;
       background-color: #ffbf80;
-
     }
-
-
 
     .tourist-info-tile-number::before, .tourist-info-tile-number::after {
       content: "—";
@@ -425,7 +543,8 @@
 
     .tourist-info-tile-icon {
       outline: 1px solid red;
-      margin-bottom: 20px; /* иконки разного размера -
+      margin-bottom: 20px;
+      /* иконки разного размера -
       из-зи этого текст в плитках не выровнен
       по высоте при одинаковом количестве строк
       если задать одинаковый размер картинки
@@ -434,24 +553,21 @@
       для тексат от верхней границы контейнера */
     }
 
-    .main-content{
+    .main-content {
       outline: 2px solid green;
       margin-bottom: 60px;
     }
 
-     .booking {
+    .booking {
       position: relative;
       /*для позиционирования формы поиска
       относительно нижней границы этого блока*/
     }
 
-
-
     .booking-header {
       text-align: center;
       /*padding-top: 60px;*/
       /*в див обернуть текст?*/
-
     }
 
     .booking-header-title {
@@ -471,16 +587,16 @@
       line-height: 24px;
       margin-left: auto;
       margin-right: auto;
-      width:500px;
+      width: 500px;
       /*padding-left: 34%;
       padding-right: 34%;*/
       background-color: bisque;
-
     }
     /*кнопки тоже могут переполняться текстом??*/
 
     .btn-show-form {
       width: 570px;
+      font-size: 21px;
       padding-top: 30.5px;
       padding-bottom: 30.5px;
       margin-bottom: 0;
@@ -542,9 +658,11 @@
     }
 
     .btn-find-hotel {
+      font-size: 21px;
       width: 100%;
       height: 55px;
-      margin-top: 25px;/* margin bottom для short?*/
+      margin-top: 25px;
+      /* margin bottom для short?*/
       color: white;
       background-color: #82B3D3;
     }
@@ -556,7 +674,6 @@
     .search-form-label {
       display: inline-block;
       /*надо разобраться с vertical-align и line-height*/
-
       height: 100%;
       /*full-height*/
       /*  margin-right: 20px;*/
@@ -582,13 +699,12 @@
       padding-right: 7px;
       padding-left: 7px;
       color: lightgrey;
-
       /*display: inline-block;*/
       background-color: #f2f2f2;
     }
-    span.icon-calendar{
-      font-size: 21px;
 
+    span.icon-calendar {
+      font-size: 21px;
     }
 
     .main-footer {
@@ -599,7 +715,6 @@
       padding-top: 37.5px;
       padding-bottom: 37.5px;
       /*background-color: #d1ccc7;*/
-
     }
 
     .main-footer-contacts {
@@ -609,14 +724,10 @@
       width: 36%;
       padding-left: 4%;
       text-align: left;
-
-
       font-size: 21px;
       font-weight: bold;
-
       line-height: 21px;
       /*background-color: gold;*/
-
     }
 
     .main-footer .social-media-links {
@@ -624,11 +735,11 @@
       vertical-align: middle;
       /*outline: 1px solid blue;*/
       font-size: 0;
-      width:160px;
-
+      width: 160px;
     }
 
     .social-media-links-item {
+      font-size: 21px;
       display: inline-block;
       line-height: 45px;
       width: 48px;
@@ -638,7 +749,6 @@
       /*outline: 2px solid black;*/
       /*ul.social-media-links:{font-size: 0;}!!*/
     }
-
 
     .site-copyright {
       display: inline-block;
@@ -657,7 +767,6 @@
       margin-right: 2px;
       /*outline: 1px solid black;*/
     }
-
 
     .site-copyright-logo {
       width: 120px;
@@ -700,21 +809,20 @@
       float: left;
     }
 
+    header {
+      /*background-color: #a06eb5;*/
+      /*outline: 4px solid #2918ec;*/
+    }
+    /*hover срабатывает на расстоянии от букв - дело в line-height */
 
-header{
-  /*background-color: #a06eb5;*/
-  /*outline: 4px solid #2918ec;*/
-}
-/*hover срабатывает на расстоянии от букв - дело в line-height */
-.main-footer-contacts>a{
-line-height: 21px; /*высота все равно не изменяется*/
-display: inline-block;
-/*background-color: teal;*/
-
-  /*outline: 2px solid red;*/
-}
-
-/*.main-footer>.container{
+    .main-footer-contacts>a {
+      line-height: 21px;
+      /*высота все равно не изменяется*/
+      display: inline-block;
+      /*background-color: teal;*/
+      /*outline: 2px solid red;*/
+    }
+    /*.main-footer>.container{
   outline: 1px solid red;
 }*/
     /*.text-left {
