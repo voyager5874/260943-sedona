@@ -183,6 +183,9 @@
         padding-top: 20px;
     }
 
+
+/*если вставить фоном, не получается ногрмально размыть
+не годится для IE10+?*/
     .hotel-picker-form-bg {
         position: absolute;
         left: 0;
@@ -194,18 +197,43 @@
     .hotel-picker-form ul {
         list-style-type: none;
         outline: 1px solid yellow;
-        padding-left: 0;
+        /*padding-left: 0;*/ /*в отступ вставляется кастомный checkbox*/
     }
 
-    .infrastructure li {
-        margin-bottom: 20px;
-        background-color: rgba(163, 136, 252, 0.3);
+
+.hotel-picker-form li{
+	margin-bottom: 20px;
+	background-color: rgba(163, 136, 252, 0.3);
+
+}
+
+/*    .infrastructure li {
+        
     }
 
     .place-type li {
-        margin-bottom: 20px;
-        background-color: rgba(163, 136, 252, 0.3);
+       
+    }*/
+
+
+        .infrastructure,
+    .place-type {
+        display: inline-block;
+        margin-right: 50px;
+        vertical-align: top;
+        /*text-align: left;*/
+        /*не работает для родителя*/
     }
+
+.ifrastructure-options-ls input[type=checkbox]:checked{
+
+
+}
+
+.place-type-options-ls input[type=checkbox]:checked{
+	
+	
+}
 
     .price-range {
         float: right;
@@ -213,15 +241,7 @@
         margin-bottom: 20px;
     }
 
-    .infrastructure,
-    .place-type {
-        display: inline-block;
-        margin-right: 50px;
-        /*outline: 2px solid black;*/
-        vertical-align: top;
-        /*text-align: left;*/
-        /*не работает для родителя*/
-    }
+
 
     .price-range-numbers {
         text-align: center;
@@ -242,7 +262,8 @@
     .price-range input[type=range] {
         width: 300px;
         display: inline-block;
-        /*наложить один на другой? absolute?*/
+        /*наложить один на другой? absolute?
+        говорят "сделать на дивах"   */
     }
 
     .price-range-start,
@@ -254,7 +275,8 @@
         height: 16px;
         line-height: 16px;
     }
-    /*как нарисовать разграничитель между полями?*/
+    /*как нарисовать разграничитель между полями?
+    псевдоэлемент?*/
 
     .price-range-start {
         border-right: 1px solid white;
@@ -267,39 +289,58 @@
         border-radius: 3px;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
         /*margin-bottom: 20px;*/
     }
+
     /*.result-view-options * {
       display: inline-block;
     }*/
     /*опции отображения результатов поиска*/
 
-    .search-result {
+    .place-search-result {
         padding-left: 4%;
         padding-right: 4%;
         /*main-content*/
     }
 
+
+
+
+
+/*в строке с опциями показа результата поиска
+    все прижать к правому краю*/
+
     .result-view-options {
         width: 100%;
-        text-align: right;
+        /*text-align: right;*/
         overflow: auto;
         border-bottom: 1px solid black;
         background-color: lightgrey;
         padding-top: 10px;
         padding-bottom: 10px;
+        position: relative; /*опять позиционирую абсолютно??*/
     }
-    /*.result-view-options::after{
+    
+
+    /*
+    .result-view-options::after{
   content: "";
   display: table;
   clear: both;
 }
 */
-    /*все кроме стрелочек*/
+
+    /*в строке с опциями показа результата поиска
+    все кроме стрелочек отправить влево*/
 
     .sort-param-choice {
         float: left;
         background-color: coral;
+        width: auto; /*525 в макете - надо убрать лишние пробелы*/
+        text-align: left;
+        min-width: 525px;
     }
 
     .found-places-count {
@@ -307,38 +348,63 @@
         font-weight: bold;
         display: inline-block;
         vertical-align: middle;
-        /*float: left;*/
+        background-color: tan;
+        
     }
 
     .sort-params {
         display: inline-block;
         vertical-align: middle;
         outline: 1px solid black;
-        /*width: auto;*/
-        /*float: left;*/
-    }
+        min-width: 400px;
 
-    .sort-params-ls {
-        background-color: rgb(95, 201, 47);
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .sort-param {
-        display: inline-block;
-        vertical-align: middle;
+        
+        
     }
 
     .sort-params-caption {
         display: inline-block;
         vertical-align: middle;
-        background-color: rgb(58, 66, 176);
+        outline: 1px solid black;
     }
+
+    .sort-params-ls {
+        background-color: gold;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 70%;
+
+    }
+
+    .sort-params-ls li{
+    	background-color: tan;
+    }
+
+    .sort-param {
+        display: inline-block;
+        vertical-align: middle;
+        min-width: 20%;
+        max-width: 40%;
+        font-size: 14px;
+        margin-left: 2px;
+        margin-right: 5px;
+        height: auto;
+        /*word-wrap: break-word;*/
+    }
+
+.btn-sort{
+	/*display: block;*/
+	width: 100%;
+}
 
     .icon-up-dir,
     .icon-down-dir {
         vertical-align: middle;
-        background-color: transparent;
+        /*background-color: transparent;*/
         color: #82B3D3;
         height: 21px;
         font-size: 21px;
@@ -349,18 +415,42 @@
     /*очему поднимается к верхней границе?*/
 
     .sort-direction {
-        display: inline-block;
-        vertical-align: bottom;
+        /*display: inline-block;*/
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        right:0;
         outline: 1px solid red;
         width: 100px;
-        height: 21px;
-        /*overflow: auto;*/
+        text-align: right;
+        /*height: 21px;*/
+        /*line-height: 21px;*/
+        /*vertical-align: middle; */
+        /*не реагирует даже на bottom*/
+        
     }
+
+/*для проверки, как будет работать vertical-align*/
+
+/*.test{
+	display: inline-block;
+	width: 200px;
+	height: 400px;
+	background-color: green;
+}
+*/
+
+
     /*найденные места отдыха*/
 
     .found-place-item {
         text-align: right;
         outline: 1px solid red;
+        width: 100%;
+        font-size: 0;
+        /*word-spacing: 0;*/
+        white-space:: nowrap;
         /*vertical-align: middle;*/
         /*padding-left: 4%;
       padding-right: 4%;*/
@@ -368,19 +458,29 @@
         padding-bottom: 30px;
         overflow: auto;
         background-color: peru;
+
     }
 
     .found-place-main {
-        width: auto;
-
+        /*width: 450px; */
+        /*425*/
+        width: 50%;
+        min-width: 425px;
+        display: inline-block;
+        vertical-align: middle;
+        
+        /*float: left;*/
+        text-align: left;
         background-color: gold;
-        float: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .found-place-desc {
+    	font-size: 14px;
         display: inline-block;
         background-color: rgb(114, 129, 163);
-        width: auto;
+        width: 260px;
         vertical-align: middle;
         text-align: left;
     }
@@ -400,14 +500,21 @@
     .place-rating-box {
         display: inline-block;
         vertical-align: middle;
-        /*не реагирует*/
+        font-size: 14px;
+        /*не реагирует когда в строке кроме него только float. 
+        baseline родительского где-то не там?*/
+        width: 50%;
+
+        
+        /* хорошо, пока не уменьшаешь окно			
+        как заставить не уходить на следующую строку*/
         text-align: right;
         background-color: orchid;
     }
 
 
     .found-place-desc-row{
-       width: 300px;
+       /*width: 300px;*/
        background-color: salmon;
        margin-bottom: 5px;
 
@@ -419,14 +526,15 @@
 
     .found-place-type {
         display: inline-block;
-        background-color: plum;
         width: 45%;
-        text-align: left;
+        outline: 1px solid black;
+        
     }
 
     .found-place-price {
         display: inline-block;
         width: 45%;
+        outline: 1px solid black;
     }
     /*почему не увеличивается высота? текст вылезает вправо*/
 
