@@ -181,8 +181,8 @@
       margin-bottom: 30px;
       position: relative;
       color: white;
-      padding-left: 6%;
-      padding-right: 6%;
+      padding-left: 5%;
+      padding-right: 5%;
       /*временно*/
       padding-top: 25px;
     }
@@ -332,8 +332,8 @@
     все прижать к правому краю*/
 
     .result-view-options-bar {
-      padding-left: 6%;
-      padding-right: 6%;
+      padding-left: 5%;
+      padding-right: 5%;
       font-size: 0;
       text-align: left;
       /*overflow: auto;*/
@@ -468,8 +468,8 @@
     /*найденные места отдыха*/
 
     .found-place-item {
-      padding-left: 6%;
-      padding-right: 6%;
+      padding-left: 5%;
+      padding-right: 5%;
       text-align: left;
       /*outline: 1px solid red;*/
       width: 100%;
@@ -487,8 +487,8 @@
       /*425*/
       /*width: 50%;*/
       /*min-height: 120px;*/
-      min-width: 450px;
-      max-width: 540px;
+      /*min-width: 450px;
+      max-width: 540px;*/
       display: inline-block;
       /*vertical-align: middle;*/
       /*float: left;*/
@@ -523,6 +523,7 @@
       background-color: tan;
       margin: 0;
       margin-bottom: 8px;
+      max-width:400px;
     }
 
     .found-place-moreinfo, .found-place-book {
@@ -530,25 +531,30 @@
       background-color: salmon;
     }
 .found-place-moreinfo{
-  /*width: 110px;*/
+  max-width: 200px;
   margin-right: 2px;
+}
+.found-place-book{
+  max-width: 200px;
 }
 
 
     .found-place-type {
-      margin-bottom: 17px;
+      margin-bottom: 15px;
     }
 
     .found-place-price {
-      margin-bottom: 17px;
+      margin-bottom: 15px;
     }
 
     .btn-found-place-action {
-      /*margin: 0;*/
-      padding-top: 4px;
-      padding-bottom: 4px;
+      margin: 0;
+      display: block;
+      padding-top: 3px;
+      padding-bottom: 3px;
       padding-right: 17px;
       padding-left: 17px;
+
     }
 
     .found-place-price {
