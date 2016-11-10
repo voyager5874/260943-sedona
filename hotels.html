@@ -48,44 +48,24 @@
     </header>
     <main class="main-content">
       <div class="hotel-picker-form">
-        <img class="hotel-picker-form-bg" src="img/banner-img-bg.jpg" alt="">
         <form class="hotel-picker-form-core" action="index.html" method="post">
           <fieldset class="infrastructure">
             <legend>Инфраструктура</legend>
-            <ul class="ifrastructure-options-ls">
-              <li>
-                <label>
-                                    <input class="ifrastructure-option" type="checkbox" name="pull" value="Бассейн"> Бассейн
-                                </label>
-              </li>
-              <li>
-                <label>
-                                    <input class="ifrastructure-option" type="checkbox" name="pull" value="Парковка"> Парковка
-                                </label>
-              </li>
-              <li>
-                <label>
-                                    <input class="ifrastructure-option" type="checkbox" name="pull" value="Парковка"> WiFi
-                                </label>
-              </li>
-            </ul>
+            <input id="pool" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="pool">
+            <label for="pool">Бассейн</label>
+            <input id="carpark" class="infrastructure-option" type="checkbox" name="ifrastructure-option" value="carpark">
+            <label for="carpark">Парковка</label>
+            <input id="wifi" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="wifi">
+            <label for="wifi">WiFi</label>
           </fieldset>
           <fieldset class="place-type">
             <legend>тип жилья</legend>
-            <ul class="place-type-options-ls">
-              <li>
-                <input type="checkbox" name="pull" value="Бассейн">
-                <label>Гостиница</label>
-              </li>
-              <li>
-                <input type="checkbox" name="pull" value="Парковка">
-                <label>Мотель</label>
-              </li>
-              <li>
-                <input type="checkbox" name="pull" value="Парковка">
-                <label>Апартаменты</label>
-              </li>
-            </ul>
+            <input id="place-type-hotel" type="checkbox" name="place-type" value="hotel">
+            <label for="place-type-hotel">Гостиница</label>
+            <input id="place-type-motel" type="checkbox" name="place-type" value="motel">
+            <label for="place-type-motel">Мотель</label>
+            <input id="place-type-apartment" type="checkbox" name="place-type" value="apartment">
+            <label for="place-type-apartment">Апартаменты</label>
           </fieldset>
           <fieldset class="price-range">
             <legend>стоимость в сутки (P):</legend>
@@ -99,55 +79,52 @@
                 <input id="price-to" type="number" name="name" value="">
               </div>
             </div>
-            <div class="prace-range-slider">
-              <!-- multiple не работает похоже -->
-              <input type="range" multiple name="name" value="0" min="0" max="9990" step="10">
-              <input type="range" multiple name="name" value="3000" min="10" max="10000" step="10">
+            <div class="price-range-slider">
+              <div class="price-range-slider-bar">
+              </div>
+              <div class="price-range-slider-cursor">
+              </div>
             </div>
             <!-- не подходит к этому fieldset, но пока пусть будет здесь -->
-            <button class="btn btn-filter-hotels" type="submit">показать</button>
+            <button class="btn btn-filter-hotels" type="submit">
+              показать
+            </button>
           </fieldset>
         </form>
       </div>
       <div class="place-search-result">
-        <div class="result-view-options">
-          <div class="sort-param-choice">
-            <div class="found-places-count">
-              найдено: 3
-            </div>
-            <div class="sort-params">
-              <div class="sort-params-caption">
-                сортировка:
-              </div>
-              <ul class="sort-params-ls">
-                <li class="sort-param">
-                  <button class="btn btn-sort">
-                                        по цене
-                                    </button>
-                </li>
-                <li class="sort-param">
-                  <button class="btn btn-sort">
-                                        по типу
-                                    </button>
-                </li>
-                <li class="sort-param">
-                  <button class="btn btn-sort">
-                                        по рейтингу
-
-                                    </button>
-                </li>
-              </ul>
-            </div>
+        <div class="result-view-options-bar clearfix">
+          <div class="found-places-count">
+            найдено: 3
           </div>
-          <!--           <div class="test">
-
-          </div> -->
+          <div class="sort-params">
+            <div class="sort-params-caption">
+              сортировка:
+            </div>
+            <ul class="sort-params-ls">
+              <li>
+                <a class="sort-param">
+                    по цене
+                  </a>
+              </li>
+              <li>
+                <a class="sort-param">
+                  по типу
+                  </a>
+              </li>
+              <li>
+                <a class="sort-param">
+                  по рейтингу
+                </a>
+              </li>
+            </ul>
+          </div>
           <div class="sort-direction">
-            <button class="btn icon-up-dir" type="button" name="button"></button>
-            <button class="btn icon-down-dir" type="button" name="button"></button>
+            <a class="btn icon-up-dir"></a>
+            <a class="btn icon-down-dir"></a>
           </div>
         </div>
-        <section class="found-places-list">
+        <section class="found-places-ls">
           <div class="found-place-item">
             <!--  <div class="found-place-info"> -->
             <div class="found-place-main">
@@ -156,21 +133,21 @@
                 <h3 class="found-place-name">
                   amara resort &amp; spa
                 </h3>
-                <div class="found-place-desc-row">
+                <div class="found-place-moreinfo">
                   <div class="found-place-type">
                     Гостиница
                   </div>
+                  <a class="btn btn-found-place-action">
+                    подробнее
+                  </a>
+                </div>
+                <div class="found-place-book">
                   <div class="found-place-price">
                     от 3500 р.
                   </div>
-                </div>
-                <div class="found-place-desc-row">
-                  <button class="btn btn-found-place-action" type="button" name="button">
-                                        подробнее
-                                    </button>
-                  <button class="btn btn-found-place-action" type="button" name="button">
-                                        забронировать
-                                    </button>
+                  <a class="btn btn-found-place-action">
+                    забронировать
+                  </a>
                 </div>
               </div>
             </div>
@@ -185,15 +162,96 @@
                 рейтинг: 8,5
               </div>
             </div>
-            <div class="justify-hack">
-
-            </div>
-            <!--  </div> -->
+                <!--  </div> -->
           </div>
-
+          <div class="found-place-item">
+            <!--  <div class="found-place-info"> -->
+            <div class="found-place-main">
+              <img src="img/desert-quail-inn.jpg" alt="desert quail inn" />
+              <div class="found-place-desc">
+                <h3 class="found-place-name">
+                  desert quail inn
+                </h3>
+                <div class="found-place-moreinfo">
+                  <div class="found-place-type">
+                    Гостиница
+                  </div>
+                  <a class="btn btn-found-place-action">
+                    подробнее
+                  </a>
+                </div>
+                <div class="found-place-book">
+                  <div class="found-place-price">
+                    от 2000 р.
+                  </div>
+                  <a class="btn btn-found-place-action">
+                    забронировать
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="place-rating-box">
+              <div class="stars">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+              </div>
+              <div class="place-rating">
+                рейтинг: 8,9
+              </div>
+            </div>
+                <!--  </div> -->
+          </div>
+          <div class="found-place-item">
+            <!--  <div class="found-place-info"> -->
+            <div class="found-place-main">
+              <img src="img/villas-at-poco.jpg" alt="villas at poco diablo" />
+              <div class="found-place-desc">
+                <h3 class="found-place-name">
+                  Villas at Poco Diablo
+                  <!-- поведение не правильно -
+                  почему-то не растет в высоту,
+                  происходит перенос на новую строку -->
+                  <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, delectus. -->
+                </h3>
+                <div class="found-place-moreinfo">
+                  <div class="found-place-type">
+                    Гостиница
+                  </div>
+                  <a class="btn btn-found-place-action">
+                    подробнее
+                  </a>
+                </div>
+                <div class="found-place-book">
+                  <div class="found-place-price">
+                    от 4000 р.
+                  </div>
+                  <a class="btn btn-found-place-action">
+                    забронировать
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="place-rating-box">
+              <div class="stars">
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+              </div>
+              <div class="place-rating">
+                рейтинг: 9,2
+              </div>
+            </div>
+                <!--  </div> -->
+          </div>
         </section>
       </div>
     </main>
+
+
+
     <footer class="footer main-footer">
       <div class="container">
         <div class="main-footer-contacts">
