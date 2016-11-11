@@ -9,6 +9,7 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+<!--   Б2. К страницам подключён один стилевой файл (с учётом normalize.css к каждой странице могут быть подключены два файла). !!! -->
   <link href="css/symbols-sedona.css" rel="stylesheet">
 </head>
 
@@ -39,7 +40,7 @@
           </a>
           </li>
           <li class="main-menu-item">
-            <a href="hotels.html">
+            <a class="current" href="hotels.html">
             Гостиницы
           </a>
           </li>
@@ -80,10 +81,10 @@
               </div>
             </div>
             <div class="price-range-slider">
-              <div class="price-range-slider-bar">
-              </div>
-              <div class="price-range-slider-cursor">
-              </div>
+              <div class="price-range-slider-bar"><!-- полоска --></div>
+              <div id="price-range-slider-cursor-min" class="price-range-slider-cursor"></div>
+               <div id="price-range-slider-cursor-max" class="price-range-slider-cursor"></div>
+
             </div>
             <!-- не подходит к этому fieldset, но пока пусть будет здесь -->
             <button class="btn btn-filter-hotels" type="submit">
@@ -103,25 +104,25 @@
             </div>
             <ul class="sort-params-ls">
               <li>
-                <a class="sort-param">
+                <a id="sort-param-place-price" class="sort-param sort-param-active" href="#">
                     по цене
                   </a>
               </li>
               <li>
-                <a class="sort-param">
+                <a id="sort-param-place-type" class="sort-param" href="#">
                   по типу
                   </a>
               </li>
               <li>
-                <a class="sort-param">
+                <a is="sort-param-place-rating" class="sort-param" href="#">
                   по рейтингу
                 </a>
               </li>
             </ul>
           </div>
           <div class="sort-direction">
-            <a class="btn icon-up-dir"></a>
-            <a class="btn icon-down-dir"></a>
+            <a class="icon-up-dir"></a>
+            <a class="icon-down-dir"></a>
           </div>
         </div>
         <section class="found-places-ls">
