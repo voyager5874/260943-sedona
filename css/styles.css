@@ -526,8 +526,7 @@
         color: #82B3D3;
     }
 
-    .icon-up-dir,
-    .icon-down-dir {
+    .icon-dir {
         display: inline-block;
         vertical-align: bottom;
         background-color: transparent;
@@ -544,15 +543,21 @@
         outline: 1px solid orchid;
     }
 
-    .icon-up-dir:hover,
-    .icon-down-dir:hover{
+    .icon-dir:hover {
       color: black;
     }
 
-    .icon-up-dir:active,
-    .icon-down-dir:active{
+    .icon-dir:active{
       color: #81b3d2;
     }
+
+.icon-dir.current,
+.icon-dir.current:hover,
+.icon-dir.current:active{
+    color: #81b3d2;
+    cursor: default;
+}
+
 
     /*нужно как-то сделать вертикальное выранивание
     как это сделать с флоатом, если не флоат, то как правильно задать ширину*/
@@ -649,6 +654,7 @@
         max-width: 200px;
     }
 
+
     .found-place-type {
         margin-bottom: 15px;
     }
@@ -665,6 +671,13 @@
         padding-right: 17px;
         padding-left: 17px;
     }
+
+    .found-place-book .btn-found-place-action{
+      background-color: #766357;
+    }
+.found-place-book .btn-found-place-action:hover{
+  background-color: #604e43;
+}
 
     .found-place-price {
         /*display: inline-block;*/
