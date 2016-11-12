@@ -51,16 +51,16 @@
       <div class="hotel-picker-form">
         <form class="hotel-picker-form-core" action="index.html" method="post">
           <fieldset class="infrastructure">
-            <legend>Инфраструктура</legend>
+            <legend>Инфраструктура:</legend>
             <input id="pool" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="pool">
             <label for="pool">Бассейн</label>
             <input id="carpark" class="infrastructure-option" type="checkbox" name="ifrastructure-option" value="carpark">
             <label for="carpark">Парковка</label>
             <input id="wifi" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="wifi">
-            <label for="wifi">WiFi</label>
+            <label for="wifi">Wi-Fi</label>
           </fieldset>
           <fieldset class="place-type">
-            <legend>тип жилья</legend>
+            <legend>тип жилья:</legend>
             <input id="place-type-hotel" type="checkbox" name="place-type" value="hotel">
             <label for="place-type-hotel">Гостиница</label>
             <input id="place-type-motel" type="checkbox" name="place-type" value="motel">
@@ -73,11 +73,11 @@
             <div class="price-range-numbers">
               <div class="price-range-start">
                 <label for="price-from">от</label>
-                <input id="price-from" type="number" name="name" value="">
+                <input id="price-from" type="text" name="name" value="0" >
               </div>
               <div class="price-range-end">
                 <label for="price-to">до</label>
-                <input id="price-to" type="number" name="name" value="">
+                <input id="price-to" type="text" name="name" value="3000" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">
               </div>
             </div>
             <div class="price-range-slider">
@@ -104,7 +104,7 @@
             </div>
             <ul class="sort-params-ls">
               <li>
-                <a id="sort-param-place-price" class="sort-param sort-param-active" href="#">
+                <a id="sort-param-place-price" class="sort-param current" href="#">
                     по цене
                   </a>
               </li>
@@ -114,7 +114,7 @@
                   </a>
               </li>
               <li>
-                <a is="sort-param-place-rating" class="sort-param" href="#">
+                <a id="sort-param-place-rating" class="sort-param" href="#">
                   по рейтингу
                 </a>
               </li>
