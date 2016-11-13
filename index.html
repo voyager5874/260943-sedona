@@ -203,60 +203,46 @@
                 <div class="search-form container">
                     <form class="search-form-core" id="hotel-search-form" action="#" method="get">
 
-                        <div class="input-row arrival-date-row">
+                        <!--  в label завернуть вместо дивов, но тогда текст меток надо будет в спаны
+- наверно нет смысла. ховер работает. cursor? возможно ли будет производить
+действия при клике именно на значке?  -->
 
-                            <label class="search-form-label" for="arrival-date">
-                              Дата заезда:
-                            </label>
+
+                        <label class="input-row arrival-date-row">
+                              <span class="search-form-label">Дата заезда: </span>
+
 
                             <input class="long" id="arrival-date" type="text" name="arrival-date" value="24 апреля 2016">
                             <span class="symbols icon-calendar"></span>
 
-                        </div>
-                        <div class="input-row departure-date-row">
-                            <label class="search-form-label" for="departure-date">
-                              Дата выезда:
-                            </label>
+                        </label>
+
+                        <label class="input-row departure-date-row">
+                              <span class="search-form-label">Дата выезда:</span>
+
 
                             <input class="long" id="departure-date" type="text" name="departure-date" value="4 июля 2016">
                             <span class="symbols icon-calendar"></span>
-                        </div>
+                        </label>
                         <div class="input-row people-count-row">
 
-                     <div class="adults-count">
+                            <label class="adults-count-halfrow">
+                            <span class="search-form-label"> Взрослые:</span>
 
-                            <label class="search-form-label adults-count-input-caption" for="adults-count">
-                              Взрослые:
-                            </label>
                             <span class="symbols icon-minus"></span>
                             <input class="short" id="adults-count" type="text" name="adults-count" value="1">
                             <span class="symbols icon-plus"></span>
-                    </div>
-                   <div class="children-count">
+                          </label>
 
-                            <label class="search-form-label children-count-input-caption" for="children-count">
-                              Дети:
-                            </label>
+
+                          <label class="children-count-halfrow" for="children-count">
+                            <span class="search-form-label"> Дети:</span>
+
 
                             <span class="symbols icon-minus"></span>
                             <input class="short" id="children-count" type="text" name="children-count" value="1">
                             <span class="symbols icon-plus"></span>
-                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                          </label>
 
                         </div>
                         <button class="btn btn-find-hotel" type="submit">

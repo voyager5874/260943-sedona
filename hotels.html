@@ -71,17 +71,22 @@
           <fieldset class="price-range">
             <legend>стоимость в сутки (P):</legend>
             <div class="price-range-numbers">
-              <div class="price-range-start">
-                <label for="price-from">от</label>
+
+                <label for="price-from" class="price-range-start">
+                  от
                 <input id="price-from" type="text" name="name" value="0" >
-              </div>
-              <div class="price-range-end">
-                <label for="price-to">до</label>
-                <input id="price-to" type="text" name="name" value="3000" onkeydown="this.style.width = ((this.value.length + 1) * 8) + 'px';">
-              </div>
+              </label>
+
+                <label for="price-to" class="price-range-end">
+                  до
+                <input id="price-to" type="text" name="name" value="3000">
+                </label>
+
             </div>
             <div class="price-range-slider">
-              <div class="price-range-slider-bar"><!-- полоска --></div>
+              <div class="price-range-slider-bar">
+                <div class="price-range-slider-bar-filled"></div>
+              </div>
               <div id="price-range-slider-cursor-min" class="price-range-slider-cursor"></div>
                <div id="price-range-slider-cursor-max" class="price-range-slider-cursor"></div>
 
