@@ -200,11 +200,11 @@
         padding-top: 28px;
     }
 
-.hotel-picker-form-core{
-  /*background-color: rgba(104, 221, 119, 0.55);*/
-}
+    .hotel-picker-form-core {
+        /*background-color: rgba(104, 221, 119, 0.55);*/
+    }
+    /**/
 
-/**/
     .hotel-picker-form input[type=checkbox] {
         display: none;
     }
@@ -215,9 +215,8 @@
         margin-bottom: 20px;
     }
 
-    .infrastructure,
-    .place-type {
-        margin:0;
+    .infrastructure, .place-type {
+        margin: 0;
         display: inline-block;
         vertical-align: top;
         padding-left: 0;
@@ -231,11 +230,10 @@
     }
 
     .infrastructure {
-       /* margin-right: 5%;*/
+        /* margin-right: 5%;*/
     }
 
-    .infrastructure label,
-    .place-type label {
+    .infrastructure label, .place-type label {
         position: relative;
         display: block;
         padding-left: 40px;
@@ -243,9 +241,7 @@
         margin-bottom: 25px;
     }
 
-    .infrastructure label:last-child,
-    .place-type label:last-child {
-
+    .infrastructure label:last-child, .place-type label:last-child {
         margin-bottom: 0;
     }
 
@@ -271,8 +267,7 @@
         height: 22px;
     }
 
-    .infrastructure label:hover,
-    .place-type label:hover {
+    .infrastructure label:hover, .place-type label:hover {
         cursor: pointer;
         /*background-color: plum;*/
     }
@@ -286,15 +281,14 @@
         /*margin-bottom: 20px;*/
     }
 
-.price-range legend {
-  margin-bottom: 10px;
-}
-
+    .price-range legend {
+        margin-bottom: 10px;
+    }
 
     .price-range-numbers {
-    	/*margin-top: -12px;*/
+        /*margin-top: -12px;*/
         font-size: 0;
-      margin-left: 10px;
+        margin-left: 10px;
         text-align: center;
         border: 2px solid white;
         border-radius: 2px;
@@ -303,32 +297,24 @@
         padding-top: 7px;
     }
 
-
-
-        .price-range-start,
-        .price-range-end {
-          /*margin: 0;
+    .price-range-start, .price-range-end {
+        /*margin: 0;
           padding: 0;*/
-
-            display: inline-block;
-
-
-            font-size: 14px;
-            width: 50%;
-            /*outline: 1px solid blue;*/
-            /*vertical-align: middle;*/
-            height: 20px;
-            line-height: 20px;
-        }
-        /*как нарисовать разграничитель между полями?
+        display: inline-block;
+        font-size: 14px;
+        width: 50%;
+        /*outline: 1px solid blue;*/
+        /*vertical-align: middle;*/
+        height: 20px;
+        line-height: 20px;
+    }
+    /*как нарисовать разграничитель между полями?
         псевдоэлемент?*/
 
-        .price-range-start {
-            border-right: 2px solid white;
-        }
-
-
-/*здесь наверно надо поле ввода
+    .price-range-start {
+        border-right: 2px solid white;
+    }
+    /*здесь наверно надо поле ввода
 по длине изменять, чтобы в середину вставала*/
 
     .price-range-numbers input {
@@ -356,7 +342,6 @@
     }
 
     .price-range-slider-bar {
-
         height: 2px;
         background-color: white;
     }
@@ -379,8 +364,7 @@
     .price-range-slider-cursor:hover {
         background: #36638e;
     }
-
-/*по критериям нельзя стилизовать по id но здесь ведь нет смысла по классу?*/
+    /*по критериям нельзя стилизовать по id но здесь ведь нет смысла по классу?*/
 
     #price-range-slider-cursor-min {
         left: 0;
@@ -417,7 +401,6 @@
     .place-search-result {
         /*main-content*/
     }
-
 
     .result-view-options-bar {
         padding-left: 6%;
@@ -501,14 +484,14 @@
         margin: 0;
         padding: 0;
         vertical-align: bottom;
-        color: #b2b2b2;
+        /*color: #b2b2b2;*/
         border-bottom: 1px dotted blue;
         /*display: block;*/
         /*width: 100%;*/
     }
 
     .sort-param:hover {
-        color: #82B3D3;
+        /*color: #82B3D3;*/
         cursor: pointer;
         border-bottom: 1px dotted #82B3D3;
     }
@@ -518,9 +501,7 @@
         border: none;
     }
 
-    .sort-param.current,
-    .sort-param.current:hover,
-    .sort-param.current:active {
+    .sort-param.current, .sort-param.current:hover, .sort-param.current:active {
         /*как-то сылку деактивировать совсем*/
         cursor: default;
         border: none;
@@ -535,7 +516,6 @@
         /*height: 21px;*/
         font-size: 21px;
         line-height: 25px;
-
         line-height: 25px;
         width: 22px;
         padding: 0;
@@ -545,30 +525,24 @@
     }
 
     .icon-dir:hover {
-      color: black;
+        color: black;
     }
 
-    .icon-dir:active{
-      color: #81b3d2;
+    .icon-dir:active {
+        color: #81b3d2;
     }
 
-.icon-dir.current,
-.icon-dir.current:hover,
-.icon-dir.current:active{
-    color: #81b3d2;
-    cursor: default;
-}
-
-
+    .icon-dir.current, .icon-dir.current:hover, .icon-dir.current:active {
+        color: #81b3d2;
+        cursor: default;
+    }
     /*нужно как-то сделать вертикальное выранивание
     как это сделать с флоатом, если не флоат, то как правильно задать ширину*/
     /*очему поднимается к верхней границе?*/
 
     .sort-direction {
-
         outline: 1px solid red;
         height: 25px;
-
         text-align: right;
         float: right;
         width: 60px;
@@ -598,15 +572,8 @@
     }
 
     .found-place-main {
-        /*width: 450px; */
-        /*425*/
-        /*width: 50%;*/
-        /*min-height: 120px;*/
-        /*min-width: 450px;
-      max-width: 540px;*/
         display: inline-block;
         /*vertical-align: middle;*/
-        /*float: left;*/
         text-align: left;
         /*background-color: gold;*/
     }
@@ -640,8 +607,7 @@
         max-width: 400px;
     }
 
-    .found-place-moreinfo,
-    .found-place-book {
+    .found-place-moreinfo, .found-place-book {
         display: inline-block;
         /*background-color: salmon;*/
     }
@@ -654,7 +620,6 @@
     .found-place-book {
         max-width: 200px;
     }
-
 
     .found-place-type {
         margin-bottom: 15px;
@@ -673,18 +638,18 @@
         padding-left: 17px;
     }
 
-    .found-place-book .btn-found-place-action{
-      background-color: #766357;
+    .found-place-book .btn-found-place-action {
+        background-color: #766357;
     }
-.found-place-book .btn-found-place-action:hover{
-  background-color: #604e43;
-}
+
+    .found-place-book .btn-found-place-action:hover {
+        background-color: #604e43;
+    }
 
     .found-place-price {
         /*display: inline-block;*/
         /*outline: 1px solid black;*/
     }
-    /*почему не увеличивается высота? текст вылезает вправо*/
 
     .place-rating-box {
         padding: 0;
@@ -757,7 +722,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 620px;
-        background-color: #dee686;
+        /*background-color: #dee686;*/
     }
 
     .tourist-info-header-story {
@@ -768,7 +733,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 640px;
-        background-color: #9ade9d;
+        /*background-color: #9ade9d;*/
     }
 
     .tourist-info-tile-row {
@@ -800,6 +765,7 @@
         background-position: center;
         background-size: cover;
         width: 66.66666666666666666%;
+        /*66.67+33.33???*/
         /*background-size: 100%; не нужно вроде */
     }
 
@@ -830,7 +796,7 @@
         /*белый*/
         text-align: center;
         float: left;
-        outline: 1px solid black;
+        /*outline: 1px solid black;*/
     }
 
     .tourist-info-tile-blue {
@@ -863,7 +829,7 @@
         line-height: 21px;
         font-size: 21px;
         font-weight: bold;
-        background-color: #ff99ff;
+        /*background-color: #ff99ff;*/
     }
 
     .tourist-info-tile-number {
@@ -872,7 +838,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 80px;
-        background-color: #92c48b;
+        /*background-color: #92c48b;*/
     }
 
     .tourist-info-tile-story {
@@ -884,17 +850,16 @@
         line-height: 21px;
         font-size: 14px;
         font-weight: normal;
-        background-color: #ffbf80;
+        /*background-color: #ffbf80;*/
     }
 
-    .tourist-info-tile-number::before,
-    .tourist-info-tile-number::after {
+    .tourist-info-tile-number::before, .tourist-info-tile-number::after {
         content: "—";
     }
     /*почему именно песевдо элементы?*/
 
     .tourist-info-tile-icon {
-        outline: 1px solid red;
+        /*outline: 1px solid red;*/
         margin-bottom: 20px;
     }
 
@@ -921,7 +886,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 400px;
-        background-color: lightpink;
+        /*background-color: lightpink;*/
     }
 
     .onmap-hotel-search-header-story {
@@ -932,9 +897,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 500px;
-        /*padding-left: 34%;
-      padding-right: 34%;*/
-        background-color: bisque;
+        /*background-color: bisque;*/
     }
 
     .btn-show-form {
@@ -950,8 +913,6 @@
     .btn-show-form:hover {
         background-color: #604E42;
     }
-
-
 
     .map {
         position: relative;
@@ -983,24 +944,34 @@
         /*outline: 1px solid black;*/
     }
 
-
     .search-form .input-row {
-        margin: 0;
-        padding: 0;
+        position: relative;
+        /*margin: 0;
+        padding: 0;*/
         height: 36px;
         width: 460px;
-
         margin-bottom: 32px;
         line-height: 36px;
         /*outline: 1px solid red;*/
     }
-/*не совсем разобрался во взаимозависимостях свойств -
+.adults-count, .children-count{
+
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    /*outline: 1px solid blue;*/
+    height: 100%;
+}
+
+
+
+    /*не совсем разобрался во взаимозависимостях свойств -
 могу лишних понаписать*/
+
     .search-form input {
         height: 100%;
-
         display: inline-block;
-        line-height: 36px;
+        /*line-height: 36px;*/
         vertical-align: top;
         padding-left: 13px;
         background-color: #f2f2f2;
@@ -1009,32 +980,41 @@
         font-family: 'PT Sans', sans-serif;
         font-size: 14px;
         text-transform: uppercase;
-        padding-right: 5px;
-        /*float: right;*/
+        padding-right: 30px;
+        text-overflow: ellipsis;
+
+    }
+
+    .search-form input:hover {
+        background-color: #ebebeb;
+    }
+
+    .search-form input:focus {
+        background-color: white;
+        outline: 2px solid #eeeeee;
     }
 
     .search-form input.short {
-        width: 11%;
-        padding-left: 20px;
+        width: 50%;
+        text-align: center;
+        padding-left: 29px;
 
         /*text-align: left;*/
     }
 
     .search-form input.long {
-
-        width: 65%;
+        width: 75%;
     }
 
     .search-form-label {
-      display: inline-block;
-
-      margin: 0;
-      padding: 0;
-      line-height: 36px;
-      vertical-align: top;
-      /*почему не middle*/
-      text-align: left;
-      font-size: 14px;
+        display: inline-block;
+        /*margin: 0;
+        padding: 0;*/
+        line-height: 36px;
+        vertical-align: top;
+        /*почему не middle*/
+        text-align: left;
+        font-size: 14px;
         /*float:left;*/
         /*display: inline-block;*/
         height: 100%;
@@ -1042,50 +1022,68 @@
         /*  margin-right: 20px;*/
         /*outline: 2px solid black;*/
     }
+    /*значки надо вставлять абсолютно
+иначе как заставить их быть в рамке активного инпута*/
+
+      .people-count-row label{
+        width: 50%;
+      }
+
+
+
 
     .search-form .symbols {
-
         display: inline-block;
         height: 100%;
-        /*padding-right: 7px;*/
-        /*padding-left: 7px;*/
         color: #a9a9a9;
-       background-color: #f2f2f2;
-       /*background-color: gold;*/
-
-
+        /*background-color: #f2f2f2;*/
+        /*background-color: gold;*/
         /*float: right;*/
     }
 
-    .icon-calendar {
+    .search-form .symbols:hover {
+        color: black;
+    }
+
+    .search-form .symbols:active {
+        color: #81b3d2;
+    }
+
+    .search-form .icon-calendar {
+        position: absolute;
+        /*height: 21px;
+      width: 21px;*/
+        /*line-height: 36px; =height:100%*/
+        /*vertical-align: middle;*/
+        right: 0;
         font-size: 21px;
         width: 10%;
         padding-right: 7px;
     }
 
-.icon-minus,
-.icon-plus{
-width: 7%;
-font-size: 14px;
-/*padding-left: 5px*/
+    .search-form .icon-minus, .search-form .icon-plus {
+        position: absolute;
+        top: 0;
+        width: 7%;
+        font-size: 14px;
+    }
 
-}
+    .icon-minus {
+        left: 125px;
+    }
 
-.icon-minus{
-  text-align: right;
-  padding-right: 5px;
-}
 
-.icon-plus{
-  /*padding: 0;
-  margin: 0;*/
-  text-align: left;
-  /*padding-right: 10px;*/
-}
-.children-count-input-caption{
-  text-align: right;
-  padding-right: 26px;
-}
+
+    .icon-plus {
+        right: 15px;
+    }
+
+
+
+    .children-count-input-caption {
+        text-align: right;
+        padding-right: 26px;
+    }
 
     .btn-find-hotel {
         font-size: 21px;
@@ -1102,12 +1100,6 @@ font-size: 14px;
     .btn-find:hover {
         background-color: #669EC1;
     }
-
-
-
-
-
-
 
     .main-footer {
         min-height: 120px;
