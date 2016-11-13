@@ -104,7 +104,7 @@
             Жилье
           </h3>
             <p class="tourist-info-tile-story">
-              
+
               Рекомендуем пожить в&nbsp;настоящем мотеле, все&nbsp;как в&nbsp;кино!
             </p>
           </div>
@@ -212,43 +212,65 @@
       <div class="map">
         <div class="search-form container">
           <form class="search-form-core" id="hotel-search-form" action="#" method="get">
-            
+
             <div class="input-row">
-              <label class="search-form-label float-left" for="arrival-date">
+
+              <label class="search-form-label" for="arrival-date">
               Дата заезда:
             </label>
-              <span class="symbols icon-calendar float-right"></span>
-              <input class="long float-right" id="arrival-date" type="text" name="arrival-date" value="24 апреля 2016">
 
+              <input class="long" id="arrival-date" type="text" name="arrival-date" value="24 апреля 2016">
+              <span class="symbols icon-calendar"></span>
 
             </div>
             <div class="input-row">
-              <label class="search-form-label float-left" for="departure-date">
+              <label class="search-form-label" for="departure-date">
                 Дата выезда: <!-- нужно ли оборачитвать текст в что-то еще? span?-->
             </label>
-              <span class="symbols icon-calendar float-right"></span>
-              <input class="long float-right" id="departure-date" type="text" name="departure-date" value="4 июля 2016">
 
+              <input class="long" id="departure-date" type="text" name="departure-date" value="4 июля 2016">
+                <span class="symbols icon-calendar"></span>
             </div>
             <div class="input-row">
-              <label class="search-form-label" for="adults-count">
-              Взрослые:
-              <span class="symbols icon-plus float-right"></span>
-              <input class="short float-right" id="adults-count" type="text" name="adults-count" value="1">
-              <span class="symbols icon-minus float-right"></span>
 
-            </label>
+            <!-- <div class="children-count-input"> -->
+
+            <label class="search-form-label adults-count-input-caption" for="adults-count">Взрослые: </label>
+              <span class="symbols icon-minus"></span>
+              <input class="short" id="adults-count" type="text" name="adults-count" value="1">
+              <span class="symbols icon-plus"></span>
+
+              <label class="search-form-label children-count-input-caption" for="children-count">Дети:  </label>
+
+              <span class="symbols icon-minus"></span>
+              <input class="short" id="children-count" type="text" name="children-count" value="1">
+              <span class="symbols icon-plus"></span>
+
+
+            <!-- </div> -->
+            <!-- <div class="adults-count-input"> -->
+
+
+            <!-- </div> -->
 
 
 
-              <label class="search-form-label float-right" for="children-count">
-              Дети:
-              <span class="symbols icon-plus float-right"></span>
 
 
-              <input class="short float-right" id="children-count" type="text" name="children-count" value="1">
-              <span class="symbols icon-minus float-right"></span>
-            </label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             </div>
@@ -269,10 +291,10 @@
           <!-- если ховер срабатывает на расстоянии от букв, надо исправлять?
 
     -->
-          <a href="#">#Visit&nbsp;sedona</a>
+          <a href="#">#visitsedona</a>
         </div>
-        
-        
+
+
         <div class="social-media-links container">
 
           <a class="" href="#">
