@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 <!--   Б2. К страницам подключён один стилевой файл (с учётом normalize.css к каждой странице могут быть подключены два файла). !!! -->
-  <link href="css/symbols-sedona.css" rel="stylesheet">
+  <!-- <link href="css/symbols-sedona.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -52,7 +52,7 @@
         <form class="hotel-picker-form-core" action="index.html" method="post">
           <fieldset class="infrastructure">
             <legend>Инфраструктура:</legend>
-            <input id="pool" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="pool">
+            <input id="pool" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="pool" disabled>
             <label for="pool">Бассейн</label>
             <input id="carpark" class="infrastructure-option" type="checkbox" name="ifrastructure-option" value="carpark">
             <label for="carpark">Парковка</label>
@@ -63,7 +63,7 @@
             <legend>тип жилья:</legend>
             <input id="place-type-hotel" type="checkbox" name="place-type" value="hotel">
             <label for="place-type-hotel">Гостиница</label>
-            <input id="place-type-motel" type="checkbox" name="place-type" value="motel">
+            <input id="place-type-motel" type="checkbox" name="place-type" value="motel" disabled checked>
             <label for="place-type-motel">Мотель</label>
             <input id="place-type-apartment" type="checkbox" name="place-type" value="apartment">
             <label for="place-type-apartment">Апартаменты</label>
@@ -200,8 +200,6 @@
               <div class="stars">
                 <span class="icon-star"></span>
                 <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
               </div>
               <div class="place-rating">
                 рейтинг: 8,9
@@ -216,8 +214,8 @@
               <div class="found-place-desc">
                 <h3 class="found-place-name">
                   <a href="#">Villas at Poco Diablo</a>
-               
-                 
+
+
                 </h3>
                 <div class="found-place-moreinfo">
                   <div class="found-place-type">
@@ -226,7 +224,7 @@
                   </div>
                   <a class="btn btn-found-place-action" href="#">
                     подробнее
-                    
+
                   </a>
                 </div>
                 <div class="found-place-book">
@@ -241,7 +239,6 @@
             </div>
             <div class="place-rating-box">
               <div class="stars">
-                <span class="icon-star"></span>
                 <span class="icon-star"></span>
                 <span class="icon-star"></span>
                 <span class="icon-star"></span>
