@@ -338,6 +338,10 @@ main menu active down*/
         background-position: -211px -1px;
     }
 
+    .hotel-picker-form input[type=checkbox]:disabled+label:hover {
+        cursor: default;
+    }
+
     .hotel-picker-form input[type=checkbox]:checked+label::before {
         content: "";
         background-image: url("../img/sprite-all.png");
@@ -405,9 +409,10 @@ main menu active down*/
         /*padding-left: 65px;*/
         height: 100%;
         /*outline: 1px solid blue;*/
-        vertical-align: top;
+        /*vertical-align: bottom;*/
         /*какие здесь параметры должны быть*/
-        line-height: 34px;
+        /*в моем случае высота контентной области внутри label= 32px*/
+        line-height: 32px;
         cursor: pointer;
     }
 
@@ -419,10 +424,11 @@ main menu active down*/
         padding-left: 6%;
     }
     /*здесь наверно надо поле ввода
-по длине изменять, чтобы в середину вставала наверно*/
+по длине изменять, чтобы в середину вставала*/
 
     .price-range-numbers input {
         font-family: inherit;
+        /*от label*/
         font-size: inherit;
         line-height: inherit;
         color: inherit;
@@ -504,6 +510,7 @@ main menu active down*/
         padding-top: 8px;
         padding-bottom: 8px;
         min-width: 135px;
+        max-height: 95%;
         /*margin-bottom: 20px;*/
     }
 
@@ -534,6 +541,12 @@ main menu active down*/
       padding-bottom: 10px;*/
     }
 
+    .result-view-options::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
     .found-places-count {
         font-size: 21px;
         line-height: 26px;
@@ -545,13 +558,6 @@ main menu active down*/
         margin-right: 15px;
         /*width: 20%;*/
     }
-    /*
-    .result-view-options::after{
-  content: "";
-  display: table;
-  clear: both;
-}
-*/
 
     .sort-params {
         font-size: 0;
@@ -772,7 +778,7 @@ main menu active down*/
     }
 
     .stars {
-         min-height: 20px;
+        min-height: 20px;
         /*background-color: lightgrey;*/
         font-size: 0;
         margin-bottom: 46px;
@@ -781,10 +787,10 @@ main menu active down*/
     }
 
     .icon-star {
-      text-align: center;
-      font-size: 18px;
-      display: inline-block;
-      vertical-align: bottom;
+        text-align: center;
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: bottom;
         padding: 0;
         margin: 0;
         width: 23px;
@@ -879,6 +885,7 @@ main menu active down*/
       по высоте контейнера (который растягивается
       содержимым первого див с текстом)*/
         position: absolute;
+        /*min-height: 260px;*/
         height: 100%;
         background-position: center;
         background-size: cover;
@@ -1052,7 +1059,7 @@ main menu active down*/
         left: 50%;
         transform: translateX(-50%);
         width: 570px;
-        min-height: 400px;
+        /*min-height: 400px;*/
         max-height: 500px;
         background-color: white;
         font-size: 14px;
@@ -1242,6 +1249,7 @@ main menu active down*/
         /*height: 55px;*/
         padding-top: 17px;
         padding-bottom: 17px;
+        margin-bottom: 55px;
         /*margin-top: 25px;*/
         /* margin bottom для short?*/
         /*color: white;*/
@@ -1341,6 +1349,44 @@ main menu active down*/
         background-repeat: no-repeat;
         background-position: 40% 101.282047109%;
     }
+
+    /*@keyframes form-appear {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -400px);
+        }
+        20% {
+            opacity: 0.2;
+            transform: translate(-50%, -300px);
+        }
+        50% {
+            opacity: 0.5;
+            transform: translate(-50%, -200px);
+        }
+        70% {
+            transform: translate(-50%, -100px);
+        }
+        100% {opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    }*/
+
+    .hidden {
+        /*visibility: hidden;*/
+        max-height: 0;
+
+        overflow: hidden;
+    }
+
+    .show-invisible {
+        visibility: visible;
+        max-height: 500px;
+        transition: max-height 0.75s ease-in;
+        /*animation-name: form-appear;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;*/
+    }
     /* ОТЛАДКА*/
     /*.container {
       outline: 1px solid black;
@@ -1362,10 +1408,6 @@ main menu active down*/
         display: table;
         clear: both;
     }
-    /*hover срабатывает на расстоянии от букв - дело в line-height? */
-    /*.main-footer>.container{
-  outline: 1px solid red;
-}*/
     /*.text-left {
       text-align: left;
     }
