@@ -9,6 +9,7 @@
     <link href="css/normalize-dist.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/styles-dist.css" rel="stylesheet">
+    <!-- <link href="css/styles.css" rel="stylesheet"> -->
     <!-- <link href="css/symbols-sedona.css" rel="stylesheet"> -->
 </head>
 
@@ -116,8 +117,10 @@
                     <div class="tourist-info-img tourist-info-img-bridge">
                         <!-- CSS background-image: url(img/reason-img-bridge.jpg)-->
                     </div>
-                    <div class="tourist-info-tile tourist-info-tile-blue float-right">
-                        <!-- float-right! (первым идет изображение) position:absolute -->
+                    <div class="tourist-info-tile tourist-info-tile-blue">
+                        <!-- float-right!
+
+                        (первым идет изображение) position:absolute -->
                         <h3 class="tourist-info-tile-title">
                           Там есть мост&nbsp;дьявола
                         </h3>
@@ -180,7 +183,7 @@
                   Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие&nbsp;предложения гостиниц&nbsp;в&nbsp;Седоне
                 </h2>
                 <!-- </div> -->
-                <button class="btn btn-brown btn-show-form" id="show-search-form" type="button">
+                <button class="btn btn-brown btn-show-form" id="show-onmap-search-form" type="button">
                   Поиск гостиницы в Седоне
                 </button>
             </header>
@@ -193,26 +196,26 @@
 
                         <label class="input-row arrival-date-row">
                               <span class="onmap-search-form-label">Дата заезда: </span>
-                            <input class="long" id="arrival-date" type="text" name="arrival-date" value="24 апреля 2016">
-                            <span class="symbols icon-calendar"></span>
+                            <input class="long" id="arrival-date" type="text" name="arrival-date">
+                            <span class="symbols icon-calendar" id="set-arrival-date"></span>
                         </label>
                         <label class="input-row departure-date-row">
                               <span class="onmap-search-form-label">Дата выезда:</span>
-                            <input class="long" id="departure-date" type="text" name="departure-date" value="4 июля 2016">
-                            <span class="symbols icon-calendar"></span>
+                            <input class="long" id="departure-date" type="text" name="departure-date" placeholder="4 июля 2016">
+                            <span class="symbols icon-calendar" id="set-departure-date"></span>
                         </label>
                         <div class="input-row people-count-row">
                             <label class="adults-count-halfrow">
                             <span class="onmap-search-form-label"> Взрослые:</span>
-                            <span class="symbols icon-minus"></span>
+                            <span class="symbols icon-minus" id="minus-one-adult"></span>
                             <input class="short" id="adults-count" type="text" name="adults-count" value="1">
-                            <span class="symbols icon-plus"></span>
+                            <span class="symbols icon-plus" id="plus-one-adult"></span>
                           </label>
                           <label class="children-count-halfrow" for="children-count">
                             <span class="onmap-search-form-label"> Дети:</span>
-                            <span class="symbols icon-minus"></span>
+                            <span class="symbols icon-minus" id="minus-one-child"></span>
                             <input class="short" id="children-count" type="text" name="children-count" value="1">
-                            <span class="symbols icon-plus"></span>
+                            <span class="symbols icon-plus" id="plus-one-child"></span>
                           </label>
                         </div>
                         <button class="btn btn-find-hotel" type="submit">

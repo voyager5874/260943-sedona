@@ -142,7 +142,8 @@
     }
 
     .btn:active {
-        color: #88B5D2;
+        /*color: #88B5D2;*/
+        color: rgba(255, 255, 255, 0.6);
         /*похоже надо полупрозрачный*/
         background-color: #5496bd;
     }
@@ -156,7 +157,7 @@
     }
 
     .btn-brown:active {
-        color: #8A796F;
+        /*color: #8A796F;*/
         background-color: #503E32;
     }
 
@@ -178,7 +179,7 @@
         color: #a4978f;
     }
     /*main menu down - эвидимо актив
-    main menu active down, main menu active hover - это о чем?
+    main menu active down -
     hover и актив на текущей странице?*/
 
     .main-header {
@@ -318,6 +319,11 @@ main menu active down*/
         margin-bottom: 25px;
     }
 
+    .infrastructure label:hover, .place-type label:hover {
+        cursor: pointer;
+        /*background-color: plum;*/
+    }
+
     .infrastructure label:last-child, .place-type label:last-child {
         margin-bottom: 0;
     }
@@ -358,10 +364,7 @@ main menu active down*/
         background-position: -211px -29px;
     }
 
-    .infrastructure label:hover, .place-type label:hover {
-        cursor: pointer;
-        /*background-color: plum;*/
-    }
+
 
     .price-range {
         float: right;
@@ -409,7 +412,7 @@ main menu active down*/
         /*padding-left: 65px;*/
         height: 100%;
         /*outline: 1px solid blue;*/
-        /*vertical-align: bottom;*/
+        /*vertical-align: top;*/
         /*какие здесь параметры должны быть*/
         /*в моем случае высота контентной области внутри label= 32px*/
         line-height: 32px;
@@ -434,7 +437,7 @@ main menu active down*/
         color: inherit;
         font-weight: normal;
         display: inline-block;
-        vertical-align: top;
+        vertical-align: bottom;
         height: 100%;
         width: 50px;
         /*margin: 0;*/
@@ -889,7 +892,8 @@ main menu active down*/
         height: 100%;
         background-position: center;
         background-size: cover;
-        width: 66.66666666666666666%;
+        /*width: 66.66666666666666666%;*/
+        width: 66.67%;
         /*66.67+33.33???*/
         /*background-size: 100%; не нужно вроде */
     }
@@ -908,7 +912,8 @@ main menu active down*/
 
     .tourist-info-tile {
         text-align: center;
-        width: 33.33333333333333333%;
+        /*width: 33.33333333333333333%;*/
+        width: 33.33%;
         padding-top: 55px;
         padding-bottom: 80px;
         /*в одном месте, обязательно margin для story?*/
@@ -923,6 +928,13 @@ main menu active down*/
         float: left;
         /*outline: 1px solid black;*/
     }
+
+
+.tourist-info-img-bridge+.tourist-info-tile-blue{
+    float: right;
+}
+
+
 
     .tourist-info-tile-blue {
         padding-top: 55px;
@@ -1156,7 +1168,7 @@ main menu active down*/
         /*background-color: gold;*/
         /*text-align: left;*/
     }
-    /*.arrival-date-row::before {
+    /*.arrival-date-row::after {
         content: "";
         position: absolute;
         width: 24px;
@@ -1332,22 +1344,31 @@ main menu active down*/
         display: inline-block;
         vertical-align: top;
         height: 40px;
-        background-image: url("../img/htmlacademy-logo-sprite.png");
+        /*background-image: url("../img/htmlacademy-logo-sprite.png");*/
+        /*background-position: 40% 0%;*/
+        background-image: url("../img/sprite-all.png");
+        background-position: -240px 0px;
         background-repeat: no-repeat;
-        background-position: 40% 0%;
+
         /*outline: 1px solid black;*/
     }
 
     .site-copyright-logo:hover {
-        background-image: url("../img/htmlacademy-logo-sprite.png");
+        /*background-image: url("../img/htmlacademy-logo-sprite.png");*/
+        /*background-position: 40% 51%;*/
+        background-image: url("../img/sprite-all.png");
+        background-position: -240px -57px;
         background-repeat: no-repeat;
-        background-position: 40% 51%;
+
     }
 
     .site-copyright-logo:active {
-        background-image: url("../img/htmlacademy-logo-sprite.png");
+        /*background-image: url("../img/htmlacademy-logo-sprite.png");*/
+        /*background-position: 40% 101.282047109%;*/
+        background-image: url("../img/sprite-all.png");
+        background-position: -240px -114px;
         background-repeat: no-repeat;
-        background-position: 40% 101.282047109%;
+
     }
 
     /*@keyframes form-appear {
@@ -1371,6 +1392,26 @@ main menu active down*/
         }
     }*/
 
+/*        @keyframes form-appear {
+        0% {
+
+            max-height: 0;
+        }
+        20% {
+
+            max-height: 100px;;
+        }
+        50% {
+            max-height: 300px;;
+        }
+        70% {
+            max-height: 250px;;
+        }
+        100% {
+            max-height: 500px;;
+        }
+    }*/
+
     .hidden {
         /*visibility: hidden;*/
         max-height: 0;
@@ -1378,14 +1419,21 @@ main menu active down*/
         overflow: hidden;
     }
 
-    .show-invisible {
-        visibility: visible;
+   .slowly-hide{
+    /*overflow: hidden;*/
+     max-height: 0px;
+     transition: max-height 0.3s ease-out;
+   }
+
+
+    .show-hidden {
+        /*visibility: visible;*/
         max-height: 500px;
-        transition: max-height 0.75s ease-in;
-        /*animation-name: form-appear;
+        transition: max-height 0.4s ease-out;
+/*        animation-name: form-appear;
         animation-duration: 1s;
-        animation-fill-mode: forwards;
-        animation-timing-function: linear;*/
+        animation-fill-mode: forwards;*/
+        /*animation-timing-function: linear;*/
     }
     /* ОТЛАДКА*/
     /*.container {
