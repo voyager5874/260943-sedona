@@ -1064,6 +1064,10 @@ main menu active down*/
         background-image: url("../img/map.jpg");
     }
 
+    .googlemap{
+      width: 100%;
+    }
+
     .onmap-search-form {
         position: absolute;
         z-index: 1;
