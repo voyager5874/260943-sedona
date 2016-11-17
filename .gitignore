@@ -9,4 +9,9 @@ Thumbs.db
 *.pdf
 prepros.cfg
 *.cfg
-*.editconfig
+.editconfig
+*.json
+.htmlhintrc
+.stylelintrc
+.editorconfig
+*.eslintrc
