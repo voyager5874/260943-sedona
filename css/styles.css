@@ -178,7 +178,7 @@
     a:active {
         color: #a4978f;
     }
-    /*main menu down - эвидимо актив
+    /*main menu down - это видимо :active
     main menu active down -
     hover и актив на текущей странице?*/
 
@@ -263,7 +263,7 @@ main menu active down*/
         /*margin-bottom с учетом высоты строки->
        выровнял, наложив изображение  */
         margin-bottom: 58px;
-        background-image: url("../img/banner-img-text.png"), url("../img/banner-img-decoration.png"), url("../img/banner-img-bg.jpg");
+        background-image: url("../img/index-banner-img.text.png"), url("../img/index-banner-img.decoration.png"), url("../img/index-banner-img.bg.jpg");
         background-repeat: no-repeat, no-repeat, no-repeat;
         background-position: center 75px, left bottom, 50% 30%;
         background-size: auto, 100% 60px, 100%;
@@ -307,9 +307,9 @@ main menu active down*/
         /*не работает для родителя*/
     }
 
-    .infrastructure {
+    /*.infrastructure {*/
         /* margin-right: 5%;*/
-    }
+    /*}*/
 
     .infrastructure label, .place-type label {
         position: relative;
@@ -361,7 +361,7 @@ main menu active down*/
     }
 
     .hotel-picker-form input[type=checkbox]:checked:disabled+label::before {
-        background-position: -211px -29px;
+        background-position: -211px -28px;
     }
 
     .price-range {
@@ -483,7 +483,8 @@ main menu active down*/
     .price-range-slider-cursor:hover {
         background: #36638e;
     }
-    /*по критериям нельзя стилизовать по id но здесь ведь нет смысла по классу?*/
+    /*по критериям нельзя стилизовать по id,
+    но здесь ведь нет смысла по классу? да и не стили это*/
 
     #price-range-slider-cursor-min {
         left: 0;
@@ -501,7 +502,7 @@ main menu active down*/
 
     .btn-filter-hotels {
         min-width: 135px;
-        max-height: 95%;
+        max-width: 95%;
         margin-right: auto;
         margin-left: auto;
         padding-top: 8px;
@@ -899,13 +900,13 @@ main menu active down*/
     .tourist-info-img-town {
         top: 0;
         right: 0;
-        background-image: url("../img/reason-img-town.jpg");
+        background-image: url("../img/tourist-info-img.town.jpg");
     }
 
     .tourist-info-img-bridge {
         top: 0;
         left: 0;
-        background-image: url("../img/reason-img-bridge.jpg");
+        background-image: url("../img/tourist-info-img.bridge.jpg");
     }
 
     .tourist-info-tile {
@@ -997,6 +998,7 @@ main menu active down*/
 
     .main-content {
         margin-bottom: 60px;
+        /*между плитками и хедером поиска отеля на карте*/
     }
 
     .onmap-hotel-search {
@@ -1043,14 +1045,6 @@ main menu active down*/
         /*color: white;*/
         /*background-color: #766357;*/
     }
-    /*хотя в стайлгайде нет ничего для этой кнопки*/
-    /*    .btn-show-form:hover {
-        background-color: #604E42;
-    }
-
-      .btn-show-form:active {
-        background-color: #503E32;
-    }*/
 
     .map {
         position: relative;
@@ -1062,6 +1056,7 @@ main menu active down*/
     .googlemap {
         width: 100%;
         height: 100%;
+        border: none;
     }
 
     .onmap-search-form {
@@ -1243,7 +1238,7 @@ main menu active down*/
 
     .onmap-search-form .icon-minus, .onmap-search-form .icon-plus {
         top: 0;
-        width: 7%;
+        width: 14px;
         font-size: 14px;
     }
 
@@ -1427,6 +1422,10 @@ main menu active down*/
         animation-duration: 1s;
         animation-fill-mode: forwards;*/
         /*animation-timing-function: linear;*/
+    }
+
+    .empty-input{
+      outline: 2px solid red;
     }
     /* ОТЛАДКА*/
     /*.container {

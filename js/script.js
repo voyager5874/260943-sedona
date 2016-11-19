@@ -2,121 +2,110 @@ var showBtn = document.querySelector("#show-onmap-search-form");
 var formContainer = document.querySelector(".onmap-search-form");
 var form = formContainer.querySelector("form");
 
+formContainer.classList.add("hidden");
 
 
-
-// топорненько как-то через this может
-var plusOneChild = form.querySelector("#plus-one-child");
-var minusOneChild = form.querySelector("#minus-one-child");
-var plusOneAdult = form.querySelector("#plus-one-adult");
-var minusOneAdult = form.querySelector("#minus-one-adult");
-var SetArrivalDate = form.querySelector("#set-arrival-date");
-var SetDepartureDate = form.querySelector("#set-departure-date");
-
-
-
+// var SetArrivalDate = form.querySelector("#set-arrival-date");
+// var SetDepartureDate = form.querySelector("#set-departure-date");
 
 var arrivalDate = form.querySelector("[name=arrival-date]");
 var departureDate = form.querySelector("[name=departure-date]");
 var adultsCount = form.querySelector("[name=adults-count]");
 var childrenCount = form.querySelector("[name=children-count]");
 
+var today = new Date();
+var tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 1);
+// var dateDisplayMode = { day: "numeric", month: "long", year: "numeric"};
+var dateDisplayMode = {
+  day: "numeric",
+  month: "long"
+};
 
-var today = new Date;
+var todayDate = today.toLocaleDateString("ru-RU", dateDisplayMode);
+var tomorrowDate = tomorrow.toLocaleDateString("ru-RU", dateDisplayMode);
 
-
-// arrivalDate.value = today.toLocaleString()
-arrivalDate.value = today.toLocaleDateString();
-
-// arrivalDate.value = today.toDateString();
-
-formContainer.classList.add("hidden");
+arrivalDate.value = todayDate + " " + today.getFullYear();
+departureDate.value = tomorrowDate + " " + today.getFullYear();
 
 
 
-localStorage.getItem("adultsCount", adultsCount.value);
-localStorage.getItem("childrenCount", childrenCount.value);
+// alert(localStorage.getItem("adults-count").value);
 
-// showBtn.addEventListener("click", function(event) {
-//     // event.preventDefault();
-//     formContainer.classList.toggle("show-hidden");
-
-//     // if (storage) {
-//     //   adultsCount.value = storage;
-//     //   childrenCount.value = storage;
-//     // password.focus();
-//     // } else {
-//     // login.focus();
-//     // }
-
-// });
+// localStorage.getItem("adults-count").value, adultsCount.value);
+// localStorage.getItem("childrenCount", childrenCount.value);
 
 
 showBtn.addEventListener("click", function(event) {
-
-    if (formContainer.classList.contains("show-hidden")) {
-
-        formContainer.classList.add("slowly-hide");
-
-        formContainer.classList.remove("show-hidden");
-    } else {
+  // alert(localStorage.getItem("adults-count"));
+  if (formContainer.classList.contains("show-hidden")) {
+    formContainer.classList.add("slowly-hide");
+    formContainer.classList.remove("show-hidden");
+  } else {
 
 
-        // if (storage) {
-        //     adultsCount.value = storage;
-        //     childrenCount.value = storage;
-        // }
-        formContainer.classList.add("show-hidden");
 
-        formContainer.classList.remove("slowly-hide");
+    if (localStorage) {
+      //  var inputs = form.querySelectorAll("input");
+      //  for (i = 0; i < inputs.length; i++) {
+      //    if (localStorage.getItem(inputs[i]) || localStorage.getItem(inputs[i]) !== 0) {
+      //     inputs[i].value = localStorage.getItem(inputs[i].id);
+      //    }
+      //  }
+      adultsCount.value = localStorage.getItem("adults-count");
+
+      childrenCount.value = localStorage.getItem("children-count");
 
     }
+    formContainer.classList.add("show-hidden");
+    formContainer.classList.remove("slowly-hide");
+
+  }
 
 });
 
 
-plusOneChild.addEventListener("click", function(event) {
+var peopleCount = form.querySelector(".people-count-row");
 
-    childrenCount.value = +childrenCount.value + 1;
+peopleCount.addEventListener("click", function(event) {
+  if (event.target.classList.contains("icon-plus")) {
+    event.target.parentNode.querySelector("input").value++;
+
+  }
+  if (event.target.classList.contains("icon-minus") &&
+    event.target.parentNode.querySelector("input").value > 0) {
+    event.target.parentNode.querySelector("input").value--;
+
+  }
+  if (isNaN(++event.target.parentNode.querySelector("input").value) ||
+    isNaN(--event.target.parentNode.querySelector("input").value)) {
+    event.target.parentNode.querySelector("input").value = 1;
+  }
 });
-
-minusOneChild.addEventListener("click", function(event) {
-
-    if (+childrenCount.value > 0) {
-
-        childrenCount.value = +childrenCount.value - 1;
-    }
-});
-
-plusOneAdult.addEventListener("click", function(event) {
-
-    adultsCount.value = +adultsCount.value + 1;
-});
-
-minusOneAdult.addEventListener("click", function(event) {
-
-    if (+adultsCount.value > 0) {
-
-        adultsCount.value = +adultsCount.value - 1;
-    }
-});
-
 
 
 form.addEventListener("submit", function(event) {
-    if (!arrivalDate.value || !departureDate.value || !adultsCount.value || !childrenCount.value) {
-        event.preventDefault();
-        alert("введите даты и количество человек");
-        // form.classList.remove("form-data-error");
-        // form.offsetWidth = popup.offsetWidth;
-        // form.classList.add("form-data-error");
+  var inputs = form.querySelectorAll("input");
+  if (adultsCount.value == 0) {
+    event.preventDefault();
+    adultsCount.classList.add("empty-input");
+  }
+  for (i = 0; i < inputs.length; i++) {
+    if (!inputs[i].value) {
+      event.preventDefault();
+      inputs[i].classList.add("empty-input");
     } else {
-        localStorage.setItem("adultsCount", adultsCount.value);
-        localStorage.setItem("childrenCount", childrenCount.value);
+      // alert(inputs[i].id);
+      localStorage.setItem(inputs[i].id, inputs[i].value);
+
     }
+  }
+
 });
 
-
+form.addEventListener("click", function(event) {
+  event.target.classList.remove("empty-input");
+  // event.stopPropagation();
+});
 
 
 
@@ -129,26 +118,6 @@ form.addEventListener("submit", function(event) {
 //       }
 //     }
 //   };
-
-
-
-
-
-
-
-// 
-// window.onclick = function(event) {
-//   if (!event.target.matches(".onmap-search-form") || !event.target.matches("#show-onmap-search-form") ) {
-
-//   	    if (formContainer.classList.contains("show-hidden")) {
-
-//         formContainer.classList.add("slowly-hide");
-
-//         formContainer.classList.remove("show-hidden");
-
-//   }
-//   }
-// };
 
 
 
