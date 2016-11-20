@@ -1,291 +1,255 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <title>
-    HTML Academy: Седона
-  </title>
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
-  <!-- <link href="css/styles.css" rel="stylesheet"> -->
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      HTML Academy: Седона
+    </title>
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+    <!-- <link href="css/styles.css" rel="stylesheet"> -->
+  </head>
 
-<body>
-  <div class="container wrapper">
-    <header class="main-header container">
-      <div class="main-header-logo">
-        <a href="index.html">
-          <img src="img/main-header-logo.png" width="140" height="70" alt="Sedona logo">
-        </a>
-      </div>
-      <nav>
-        <ul class="main-menu">
-          <li class="main-menu-item">
-            <a href="#">
-            Информация
+  <body>
+    <div class="container wrapper">
+      <header class="main-header container">
+        <div class="main-header-logo">
+          <a href="index.html">
+            <img src="img/main-header-logo.png" width="140" height="70" alt="Sedona logo">
+          </a>
+        </div>
+        <nav>
+          <ul class="main-menu">
+            <li class="main-menu-item">
+              <a href="#">Информация</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#">Фото и видео</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#">Карта штата</a>
+            </li>
+            <li class="main-menu-item">
+              <a class="current" href="hotels.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-          </a>
-          </li>
-          <li class="main-menu-item">
-            <a href="#">
-            Фото и видео
-          </a>
-          </li>
-          <li class="main-menu-item">
-            <a href="#">
-            Карта штата
-          </a>
-          </li>
-          <li class="main-menu-item">
-            <a class="current" href="hotels.html">
-            Гостиницы
-          </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main-content">
-      <div class="hotel-picker-form">
-        <form class="hotel-picker-form-core" action="index.html" method="post">
-          <fieldset class="infrastructure">
-            <legend>Инфраструктура:</legend>
-            <input id="pool" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="pool" disabled>
-            <label for="pool">Бассейн</label>
-            <input id="carpark" class="infrastructure-option" type="checkbox" name="ifrastructure-option" value="carpark">
-            <label for="carpark">Парковка</label>
-            <input id="wifi" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="wifi">
-            <label for="wifi">Wi-Fi</label>
-          </fieldset>
-          <fieldset class="place-type">
-            <legend>тип жилья:</legend>
-            <input id="place-type-hotel" type="checkbox" name="place-type" value="hotel">
-            <label for="place-type-hotel">Гостиница</label>
-            <input id="place-type-motel" type="checkbox" name="place-type" value="motel" disabled checked>
-            <label for="place-type-motel">Мотель</label>
-            <input id="place-type-apartment" type="checkbox" name="place-type" value="apartment">
-            <label for="place-type-apartment">Апартаменты</label>
-          </fieldset>
-          <fieldset class="price-range">
-            <legend>стоимость в сутки (P):</legend>
-            <div class="price-range-numbers">
-
+      <main class="hotels-main-content">
+        <div class="hotel-picker-form">
+          <form class="hotel-picker-form-core" action="index.html" method="post">
+            <fieldset class="infrastructure">
+              <legend>Инфраструктура:</legend>
+              <input id="pool" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="pool" disabled>
+              <label for="pool">Бассейн</label>
+              <input id="carpark" class="infrastructure-option" type="checkbox" name="ifrastructure-option" value="carpark">
+              <label for="carpark">Парковка</label>
+              <input id="wifi" class="infrastructure-option" type="checkbox" name="infrastructure-option" value="wifi">
+              <label for="wifi">Wi-Fi</label>
+            </fieldset>
+            <fieldset class="place-type">
+              <legend>тип жилья:</legend>
+              <input id="place-type-hotel" type="checkbox" name="place-type" value="hotel">
+              <label for="place-type-hotel">Гостиница</label>
+              <input id="place-type-motel" type="checkbox" name="place-type" value="motel" disabled checked>
+              <label for="place-type-motel">Мотель</label>
+              <input id="place-type-apartment" type="checkbox" name="place-type" value="apartment">
+              <label for="place-type-apartment">Апартаменты</label>
+            </fieldset>
+            <fieldset class="price-range">
+              <legend>стоимость в сутки (P):</legend>
+              <div class="price-range-numbers">
                 <label for="price-from" class="price-range-start">
                   от
-                <input id="price-from" type="text" name="name" value="0" >
-              </label>
-
+                  <input id="price-from" type="text" name="name" value="0" >
+                </label>
                 <label for="price-to" class="price-range-end">
                   до
-                <input id="price-to" type="text" name="name" value="3000">
+                  <input id="price-to" type="text" name="name" value="3000">
                 </label>
-
-            </div>
-            <div class="price-range-slider">
-              <div class="price-range-slider-bar">
-                <div class="price-range-slider-bar-filled"></div>
               </div>
-              <div id="price-range-slider-cursor-min" class="price-range-slider-cursor"></div>
-               <div id="price-range-slider-cursor-max" class="price-range-slider-cursor"></div>
-
+              <div class="price-range-slider">
+                <div class="price-range-slider-bar">
+                  <div class="price-range-slider-bar-filled"></div>
+                </div>
+                <div id="price-range-slider-cursor-min" class="price-range-slider-cursor"></div>
+                <div id="price-range-slider-cursor-max" class="price-range-slider-cursor"></div>
+              </div>
+                        <!-- 3.20 Фильтр: верстать с помощью формы, кнопка «Показать» отвечает за отправку формы, при выключенном JavaScript
+                     должен осуществляться переход на отдельную страницу (отдельную страницу верстать не нужно).-->
+              <button class="btn btn-filter-hotels" type="submit">показать</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="place-search-result">
+          <div class="result-view-options-bar">
+            <div class="found-places-count">
+              найдено: 3
             </div>
-            <!-- не подходит к этому fieldset, но пока пусть будет здесь
-          3.20 Фильтр: верстать с помощью формы, кнопка «Показать» отвечает за отправку формы, при выключенном JavaScript
-          должен осуществляться переход на отдельную страницу (отдельную страницу верстать не нужно).-->
-            <button class="btn btn-filter-hotels" type="submit">
-              показать
-            </button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="place-search-result">
-        <div class="result-view-options-bar">
-          <div class="found-places-count">
-            найдено: 3
-          </div>
-          <div class="sort-params">
-            <div class="sort-params-caption">
-              сортировка:
-            </div>
-            <ul class="sort-params-ls">
-              <li>
-                <a id="sort-param-place-price" class="sort-param current" href="#">
+            <div class="sort-params">
+              <div class="sort-params-caption">
+                сортировка:
+              </div>
+              <ul class="sort-params-ls">
+                <li>
+                  <a id="sort-param-place-price" class="sort-param current" href="#">
                     по цене
                   </a>
-              </li>
-              <li>
-                <a id="sort-param-place-type" class="sort-param" href="#">
-                  по типу
+                </li>
+                <li>
+                  <a id="sort-param-place-type" class="sort-param" href="#">
+                    по типу
                   </a>
-              </li>
-              <li>
-                <a id="sort-param-place-rating" class="sort-param" href="#">
-                  по рейтингу
-                </a>
-              </li>
-            </ul>
+                </li>
+                <li>
+                  <a id="sort-param-place-rating" class="sort-param" href="#">
+                    по рейтингу
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="sort-direction">
+              <a class="icon-dir icon-up-dir current"></a>
+              <a class="icon-dir icon-down-dir"></a>
+            </div>
           </div>
-          <div class="sort-direction">
-            <a class="icon-dir icon-up-dir current"></a>
-            <a class="icon-dir icon-down-dir"></a>
+          <section class="found-places-ls">
+            <div class="found-place-item">
+              <div class="found-place-main">
+                <img src="img/found-place.amara-resort.jpg" width="135" height="90" alt="amara-resort &amp; SPA" />
+                <div class="found-place-desc">
+                  <h3 class="found-place-name">
+                    <a href="#">amara resort &amp; spa</a>
+                  </h3>
+                  <div class="found-place-moreinfo">
+                    <div class="found-place-type">
+                      Гостиница
+                    </div>
+                    <a class="btn btn-found-place-action">
+                      подробнее
+                    </a>
+                  </div>
+                  <div class="found-place-book">
+                    <div class="found-place-price">
+                      от 3500 р.
+                    </div>
+                    <a class="btn btn-brown btn-found-place-action">
+                      забронировать
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="place-rating-box">
+                <div class="stars">
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                </div>
+                <div class="place-rating">
+                  рейтинг: 8,5
+                </div>
+              </div>
+            </div>
+            <div class="found-place-item">
+              <div class="found-place-main">
+                <img src="img/found-place.desert-quail-inn.jpg" width="135" height="90" alt="desert quail inn" />
+                <div class="found-place-desc">
+                  <h3 class="found-place-name">
+                    <a href="#">desert quail inn </a>
+                  </h3>
+                  <div class="found-place-moreinfo">
+                    <div class="found-place-type">
+                      мотель
+                    </div>
+                    <a class="btn btn-found-place-action">
+                      подробнее
+                    </a>
+                  </div>
+                  <div class="found-place-book">
+                    <div class="found-place-price">
+                      от 2000 р.
+                    </div>
+                    <a class="btn btn-brown btn-found-place-action">
+                      забронировать
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="place-rating-box">
+                <div class="stars">
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                </div>
+                <div class="place-rating">
+                  рейтинг: 8,9
+                </div>
+              </div>
+            </div>
+            <div class="found-place-item">
+              <div class="found-place-main">
+                <img src="img/found-place.villas-at-poco.jpg" width="135" height="90" alt="villas at poco diablo" />
+                <div class="found-place-desc">
+                  <h3 class="found-place-name">
+                    <a href="#">Villas at Poco Diablo</a>
+                  </h3>
+                  <div class="found-place-moreinfo">
+                    <div class="found-place-type">
+                      апартаменты
+                    </div>
+                    <a class="btn btn-found-place-action" href="#">
+                      подробнее
+                    </a>
+                  </div>
+                  <div class="found-place-book">
+                    <div class="found-place-price">
+                      от 4000 р.
+                    </div>
+                    <a class="btn btn-brown btn-found-place-action" href="#">
+                      забронировать
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="place-rating-box">
+                <div class="stars">
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                  <span class="icon-star"></span>
+                </div>
+                <div class="place-rating">
+                  рейтинг: 9,2
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer main-footer">
+        <div class="container">
+          <div class="main-footer-contacts">
+            <a href="#">#visitsedona</a>
+          </div>
+          <div class="social-media-links container">
+            <a class="symbols icon-twitter social-media-links-item btn" href="#"></a>
+            <a class="symbols icon-facebook social-media-links-item btn" href="#"></a>
+            <a class="symbols icon-youtube social-media-links-item btn" href="#"></a>
+          </div>
+          <div class="site-copyright container">
+            <span class="">Website by</span>
+            <a href="#">
+              <div class="site-copyright-logo">
+                <!-- background-image: url("../img/htmlacademy-logo-sprite.png") -->
+              </div>
+            </a>
           </div>
         </div>
-        <section class="found-places-ls">
-          <div class="found-place-item">
-            <!--  <div class="found-place-info"> -->
-            <div class="found-place-main">
-              <img src="img/found-place.amara-resort.jpg" alt="amara-resort &amp; SPA" />
-              <div class="found-place-desc">
-                <h3 class="found-place-name">
-                  <a href="#">amara resort &amp; spa</a>
-                </h3>
-                <div class="found-place-moreinfo">
-                  <div class="found-place-type">
-                    Гостиница
-                  </div>
-                  <a class="btn btn-found-place-action">
-                    подробнее
-                  </a>
-                </div>
-                <div class="found-place-book">
-                  <div class="found-place-price">
-                    от 3500 р.
-                  </div>
-                  <a class="btn btn-brown btn-found-place-action">
-                    забронировать
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="place-rating-box">
-              <div class="stars">
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-              </div>
-              <div class="place-rating">
-                рейтинг: 8,5
-              </div>
-            </div>
-                <!--  </div> -->
-          </div>
-          <div class="found-place-item">
-            <!--  <div class="found-place-info"> -->
-            <div class="found-place-main">
-              <img src="img/found-place.desert-quail-inn.jpg" alt="desert quail inn" />
-              <div class="found-place-desc">
-                <h3 class="found-place-name">
-                  <a href="#">desert quail inn </a>
-                </h3>
-                <div class="found-place-moreinfo">
-                  <div class="found-place-type">
-                    мотель
-                  </div>
-                  <a class="btn btn-found-place-action">
-                    подробнее
-                  </a>
-                </div>
-                <div class="found-place-book">
-                  <div class="found-place-price">
-                    от 2000 р.
-                  </div>
-                  <a class="btn btn-brown btn-found-place-action">
-                    забронировать
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="place-rating-box">
-              <div class="stars">
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-              </div>
-              <div class="place-rating">
-                рейтинг: 8,9
-              </div>
-            </div>
-                <!--  </div> -->
-          </div>
-          <div class="found-place-item">
-            <!--  <div class="found-place-info"> -->
-            <div class="found-place-main">
-              <img src="img/found-place.villas-at-poco.jpg" alt="villas at poco diablo" />
-              <div class="found-place-desc">
-                <h3 class="found-place-name">
-                  <a href="#">Villas at Poco Diablo</a>
-
-
-                </h3>
-                <div class="found-place-moreinfo">
-                  <div class="found-place-type">
-                    апартаменты
-                    <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, a. -->
-                  </div>
-                  <a class="btn btn-found-place-action" href="#">
-                    подробнее
-
-                  </a>
-                </div>
-                <div class="found-place-book">
-                  <div class="found-place-price">
-                    от 4000 р.
-                  </div>
-                  <a class="btn btn-brown btn-found-place-action" href="#">
-                    забронировать
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="place-rating-box">
-              <div class="stars">
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-              </div>
-              <div class="place-rating">
-                рейтинг: 9,2
-              </div>
-            </div>
-                <!--  </div> -->
-          </div>
-        </section>
-      </div>
-    </main>
-
-
-
-    <footer class="footer main-footer">
-      <div class="container">
-        <div class="main-footer-contacts">
-          <a href="#">#visitsedona</a>
-        </div>
-        <div class="social-media-links container">
-          <a class="" href="#">
-            <div class="symbols icon-twitter social-media-links-item btn ">
-            </div>
-          </a>
-          <a class="" href="#">
-            <div class="symbols icon-facebook social-media-links-item btn">
-            </div>
-          </a>
-          <a class="" href="#">
-            <div class="symbols icon-youtube social-media-links-item btn">
-            </div>
-          </a>
-        </div>
-        <div class="site-copyright container">
-          <span class="">Website by</span>
-          <a href="#">
-            <div class="site-copyright-logo">
-              <!-- background-image: url("../img/htmlacademy-logo-sprite.png") -->
-            </div>
-          </a>
-        </div>
-      </div>
-    </footer>
-  </div>
-</body>
+      </footer>
+    </div>
+  </body>
 
 </html>
