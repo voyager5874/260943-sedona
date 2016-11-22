@@ -103,7 +103,7 @@
       /*больше всего 21px. хотя в фотошопе вроде
       line-leading а не height*/
       line-height: 21px;
-      font-family: "PT Sans", sans-serif;
+      font-family: "PT Sans", "Arial", sans-serif;
       text-transform: uppercase;
     }
 
@@ -276,19 +276,24 @@ main menu active down*/
     /*форма-фильтр*/
 
     .hotel-picker-form {
-      font-size: 0;
       position: relative;
       min-height: 218px;
       margin-bottom: 30px;
       padding-top: 28px;
       padding-right: 6%;
       padding-left: 6%;
+      font-size: 0;
       color: white;
       background-color: #6e7982;
       background-image: url("../img/hotel-picker-form-bg.jpg");
       background-position: center 40%;
       background-size: cover;
     }
+    /*.hotel-picker-form::after {
+      content: "";
+      display: table;
+      clear: both;
+    }*/
 
     .hotel-picker-form input[type=checkbox] {
       display: none;
@@ -301,13 +306,13 @@ main menu active down*/
     }
 
     .infrastructure, .place-type {
-      font-size: 14px;
       display: inline-block;
       margin: 0;
       /*margin-right: 11%;*/
       padding-right: 0;
       padding-bottom: 0;
       padding-left: 0;
+      font-size: 14px;
       vertical-align: top;
       border: none;
       /*outline: 1px solid black;*/
@@ -377,29 +382,43 @@ main menu active down*/
     }
 
     .price-range {
-      font-size: 14px;
       float: right;
-      width: 31%;
-      min-width: 234px;
+      width: 35%;
+      min-width: 250px;
       margin: 0;
       padding: 0;
+      font-size: 14px;
       /*padding-left: 10px;*/
       border: none;
-      outline: 1px solid yellow;
+      /*outline: 1px solid yellow;*/
       /*margin-bottom: 20px;*/
     }
 
     .price-range legend {
+      /*display: inline-block;*/
+      /*text-align: right;*/
+      width: 100%;
       margin-bottom: 10px;
       padding: 0;
+      /*background: grey;*/
+    }
+
+    .price-range legend::before {
+      content: "";
+      display: inline-block;
+      width: 12%;
+      height: 10px;
+      /*background-color: red;*/
     }
 
     .price-range-numbers {
       /*margin-top: -12px;*/
       position: relative;
+      width: 85%;
+      min-width: 224px;
       height: 36px;
       margin-bottom: 20px;
-      margin-left: 10px;
+      margin-left: auto;
       font-size: 0;
       text-align: center;
       border: 2px solid white;
@@ -420,33 +439,38 @@ main menu active down*/
 
     .price-range label {
       /*margin: 0;
-          padding: 0;*/
+      padding: 0;*/
       display: inline-block;
+      vertical-align: middle;
       width: 50%;
       /*padding-left: 65px;*/
       height: 100%;
       font-size: 14px;
       /*outline: 1px solid blue;*/
       /*vertical-align: top;*/
-      /*какие здесь параметры должны быть*/
-      /*в моем случае высота контентной области внутри label= 32px*/
       line-height: 32px;
       cursor: pointer;
     }
-
-    .price-range-start {
+    /*.price-range-start {
       padding-left: 10%;
-    }
+    }*/
 
-    .price-range-end {
+    .price-range-start input {
+      width: 8px;
+    }
+    /*.price-range-end {
       padding-left: 6%;
+    }*/
+
+    .price-range-end input {
+      width: 31px;
     }
     /*здесь наверно надо поле ввода
-по длине изменять, чтобы в середину вставала*/
+по длине изменять, чтобы в середину вставалo*/
 
     .price-range-numbers input {
       display: inline-block;
-      width: 50px;
+      /*width: 50px;*/
       height: 100%;
       font-weight: normal;
       /*от label*/
@@ -461,7 +485,7 @@ main menu active down*/
       border: none;
     }
 
-    .price-range-numbers input:focus {
+    .filter-numbers input:focus {
       outline: none;
     }
 
@@ -469,12 +493,14 @@ main menu active down*/
       /*outline: 1px solid yellow;*/
       position: relative;
       width: auto;
+      width: 85%;
+      min-width: 220px;
       /*padding-top: 2px;*/
       height: 2px;
-      margin-right: auto;
+      /*margin-right: auto;*/
       margin-bottom: 32px;
       margin-left: auto;
-      margin-left: 10px;
+      /*margin-left: 10px;*/
     }
 
     .price-range-slider-bar {
@@ -514,17 +540,36 @@ main menu active down*/
       height: 2px;
       background: white;
     }
+    /*если исходить из макетов, то при 1200 границы прямоугольника,
+относительно которого центрирована кнопка, - левый край legend fieldset
+и правый край прямоугольника с ценами,
+а при 768 legend уезжает вправо, и кнопка уже центрируется относительно только
+прямоугольника с ценами. Интересно такое изменение положения заголовка fielset -
+это специально так, вроде головоломки для перфекционистов?
+в скринкасте по разметке и стилизации этого фильтра скринкастер
+(Петров кажется) выровнял заголовок с прямоугольником цен и сказал,
+что не понимает задумки дизайнера. Я добился совпадения положения
+заголовка и прямоугольника и при макс и при мин шрине, но не могу
+центрировать кнопку при этом.
+Правильнее наверно было бы центрировать кнопку
+и пренебречь положением заголовка при 1200.
+пока оставлю*/
 
     .btn-filter-hotels {
       width: 136px;
-      max-width: 200px;
-      margin-right: auto;
+      margin-right: 26%;
+      /*margin-left: 30%;*/
+      /*max-width: 200px;*/
+      /*margin-right: auto;*/
       margin-left: auto;
       padding-top: 8px;
       padding-right: 10px;
       padding-bottom: 8px;
       padding-left: 10px;
-      /*display: block;*/
+      font-weight: normal;
+      font-size: 14px;
+      /*display: inline-block;*/
+      /*vertical-align: bottom;*/
       background-color: transparent;
       border: 2px solid white;
       border-radius: 2px;
@@ -534,14 +579,6 @@ main menu active down*/
     .btn-filter-hotels:hover {
       color: black;
       background-color: white;
-    }
-    /*.result-view-options * {
-      display: inline-block;
-    }*/
-    /*опции отображения результатов поиска*/
-
-    .place-search-result {
-      /*main-content*/
     }
 
     .result-view-options-bar {
@@ -557,12 +594,11 @@ main menu active down*/
       /* padding-top: 10px;
       padding-bottom: 10px;*/
     }
-
-    .result-view-options::after {
+    /*.result-view-options::after {
       content: "";
       display: table;
       clear: both;
-    }
+    }*/
 
     .found-places-count {
       display: inline-block;
@@ -683,9 +719,6 @@ main menu active down*/
       color: #81b3d2;
       cursor: default;
     }
-    /*нужно как-то сделать вертикальное выранивание
-    как это сделать с флоатом, если не флоат, то как правильно задать ширину*/
-    /*очему поднимается к верхней границе?*/
     /*найденные места отдыха*/
 
     .found-place-item {
@@ -722,9 +755,6 @@ main menu active down*/
       vertical-align: bottom;
       /*text-align: left;*/
     }
-    /* запутался в vertical элайнах на этой странице
-(опции поиска, карточки с найденными гостиницами)
-хотя вроде все выровнено*/
 
     .found-place-main img {
       display: inline-block;
@@ -892,10 +922,6 @@ main menu active down*/
     }
 
     .tourist-info-img {
-      /*хак - самый понятный и простой способ,
-      который нашел, чтобы растянуть див без содержимого
-      по высоте контейнера (который растягивается
-      содержимым первого див с текстом)*/
       position: absolute;
       /*width: 66.66666666666666666%;*/
       width: 66.67%;
@@ -923,6 +949,7 @@ main menu active down*/
       float: left;
       /*width: 33.33333333333333333%;*/
       width: 33.33%;
+      min-height: 330px;
       padding-top: 55px;
       /*в одном месте, обязательно margin для story?*/
       padding-right: 4%;
@@ -935,8 +962,7 @@ main menu active down*/
       /*line-height: 21px;*/
       /*прописал для title, story и number*/
       background-color: #ffffff;
-      outline: 1px solid black;
-      min-height: 330px;
+      /*outline: 1px solid black;*/
     }
 
     .tourist-info-img-bridge+.tourist-info-tile-blue {
@@ -944,27 +970,34 @@ main menu active down*/
     }
 
     .tourist-info-tile-blue {
+      /*padding-bottom: 30px;*/
+      min-height: 256px;
       padding-top: 50px;
       /*при ширине 1200 заголовок располагается ниже,
         чем при 768, как менять положение без media query здесь
-        я не придумал, поэтому выставил среднее значение*/
+        я не придумал, поэтому выставил среднее значение
+        Б11. При наполнении контентом (как в макете)
+элементы каждой страницы соответствуют макету.
+применение этого критерия в случае не совпадения с макетом
+при ширине 768 не вполне справедливо -
+при наполнении сетка ведь не разваливается
+Б13. Сайт нормально смотрится на минимальном для макета разрешении.
+- опят же речь не идет о полном совпадении.*/
       padding-right: 4%;
       /*padding-bottom: 55px;*/
       padding-left: 4%;
       color: white;
       background-color: #81b3d2;
-      /*padding-bottom: 30px;*/
-      min-height: 256px;
     }
 
     .tourist-info-tile-grey {
+      min-height: 256px;
       padding-top: 45px;
       padding-right: 5%;
       /*min-height: 350px;*/
       /*padding-bottom: 60px;*/
       padding-left: 5%;
       background-color: #eeeeee;
-      min-height: 256px;
     }
 
     .tourist-info-tile-title {
@@ -979,7 +1012,7 @@ main menu active down*/
       font-weight: bold;
       font-size: 21px;
       line-height: 21px;
-      background-color: #ff99ff;
+      /*background-color: #ff99ff;*/
     }
 
     .tourist-info-tile-number {
@@ -988,7 +1021,7 @@ main menu active down*/
       margin-bottom: 20px;
       margin-left: auto;
       line-height: 21px;
-      background-color: #92c48b;
+      /*background-color: #92c48b;*/
     }
 
     .tourist-info-tile-story {
@@ -1000,7 +1033,7 @@ main menu active down*/
       font-weight: normal;
       font-size: 14px;
       line-height: 21px;
-      background-color: #ffbf80;
+      /*background-color: #ffbf80;*/
     }
 
     .tourist-info-tile-number::before, .tourist-info-tile-number::after {
@@ -1288,9 +1321,11 @@ main menu active down*/
 
     .main-footer-contacts {
       display: inline-block;
-      /*что-то похожее но наверно надо как-то очевиднее без подборов*/
-      width: 36%;
-      padding-left: 3.8%;
+      /*что-то похожее но наверно надо как-то очевиднее
+      без подборов float влево и вправо,
+      задать высоту областей равную высоте кнопок соц сетей*/
+      width: 37%;
+      padding-left: 5%;
       font-weight: bold;
       font-size: 21px;
       line-height: 21px;
@@ -1321,8 +1356,8 @@ main menu active down*/
 
     .site-copyright {
       display: inline-block;
-      width: 36%;
-      padding-right: 0.8%;
+      width: 37%;
+      padding-right: 1.5%;
       font-size: 14px;
       vertical-align: middle;
       /*background-color: gold;*/
@@ -1331,6 +1366,7 @@ main menu active down*/
 
     .site-copyright span {
       display: inline-block;
+      vertical-align: top;
       width: auto;
       height: auto;
       margin-right: 2px;
@@ -1340,6 +1376,7 @@ main menu active down*/
 
     .site-copyright-logo {
       display: inline-block;
+      vertical-align: top;
       width: 120px;
       height: 40px;
       vertical-align: top;
@@ -1380,13 +1417,8 @@ main menu active down*/
     }
 
     .show-hidden {
-      /*visibility: visible;*/
       max-height: 500px;
       transition: max-height 0.4s ease-out;
-      /*        animation-name: form-appear;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;*/
-      /*animation-timing-function: linear;*/
     }
 
     .empty-input {
