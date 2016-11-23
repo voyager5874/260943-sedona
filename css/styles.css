@@ -289,11 +289,12 @@ main menu active down*/
       background-position: center 40%;
       background-size: cover;
     }
-    /*.hotel-picker-form::after {
+
+    .hotel-picker-form::after {
       content: "";
       display: table;
       clear: both;
-    }*/
+    }
 
     .hotel-picker-form input[type=checkbox] {
       display: none;
@@ -306,14 +307,15 @@ main menu active down*/
     }
 
     .infrastructure, .place-type {
-      display: inline-block;
+      /*display: inline-block;*/
+      float: left;
       margin: 0;
       /*margin-right: 11%;*/
       padding-right: 0;
       padding-bottom: 0;
       padding-left: 0;
       font-size: 14px;
-      vertical-align: top;
+      /*vertical-align: top;*/
       border: none;
       /*outline: 1px solid black;*/
     }
@@ -414,7 +416,7 @@ main menu active down*/
     .price-range-numbers {
       /*margin-top: -12px;*/
       position: relative;
-      width: 85%;
+      width: 86%;
       min-width: 224px;
       height: 36px;
       margin-bottom: 20px;
@@ -441,7 +443,6 @@ main menu active down*/
       /*margin: 0;
       padding: 0;*/
       display: inline-block;
-      vertical-align: middle;
       width: 50%;
       /*padding-left: 65px;*/
       height: 100%;
@@ -449,6 +450,7 @@ main menu active down*/
       /*outline: 1px solid blue;*/
       /*vertical-align: top;*/
       line-height: 32px;
+      vertical-align: bottom;
       cursor: pointer;
     }
     /*.price-range-start {
@@ -456,14 +458,14 @@ main menu active down*/
     }*/
 
     .price-range-start input {
-      width: 8px;
+      width: 9px;
     }
     /*.price-range-end {
       padding-left: 6%;
     }*/
 
     .price-range-end input {
-      width: 31px;
+      width: 32px;
     }
     /*здесь наверно надо поле ввода
 по длине изменять, чтобы в середину вставалo*/
@@ -548,32 +550,33 @@ main menu active down*/
 это специально так, вроде головоломки для перфекционистов?
 в скринкасте по разметке и стилизации этого фильтра скринкастер
 (Петров кажется) выровнял заголовок с прямоугольником цен и сказал,
-что не понимает задумки дизайнера. Я добился совпадения положения
-заголовка и прямоугольника и при макс и при мин шрине, но не могу
-центрировать кнопку при этом.
-Правильнее наверно было бы центрировать кнопку
-и пренебречь положением заголовка при 1200.
-пока оставлю*/
+что не понимает задумки дизайнера.
+Придумал решение только с лишним
+элементом в разметке и псевдоэлементом в стилях.
+Правильнее наверно было бы
+пренебречь положением заголовка при 1200.
+*/
+
+    .btn-filter-hotels-container {
+      float: right;
+      clear: right;
+      width: 22%;
+      min-width: 180px;
+      /*height: 10px;*/
+      /*outline: 1px solid black;*/
+    }
 
     .btn-filter-hotels {
-      width: 136px;
-      margin-right: 26%;
-      /*margin-left: 30%;*/
-      /*max-width: 200px;*/
-      /*margin-right: auto;*/
-      margin-left: auto;
+      width: 135px;
+      margin: 0;
+      padding: 0;
       padding-top: 8px;
-      padding-right: 10px;
       padding-bottom: 8px;
-      padding-left: 10px;
       font-weight: normal;
       font-size: 14px;
-      /*display: inline-block;*/
-      /*vertical-align: bottom;*/
       background-color: transparent;
       border: 2px solid white;
       border-radius: 2px;
-      /*margin-bottom: 20px;*/
     }
 
     .btn-filter-hotels:hover {
@@ -1366,19 +1369,19 @@ main menu active down*/
 
     .site-copyright span {
       display: inline-block;
-      vertical-align: top;
       width: auto;
       height: auto;
       margin-right: 2px;
       line-height: 40px;
+      vertical-align: top;
       /*outline: 1px solid black;*/
     }
 
     .site-copyright-logo {
       display: inline-block;
-      vertical-align: top;
       width: 120px;
       height: 40px;
+      vertical-align: top;
       vertical-align: top;
       /*background-image: url("../img/htmlacademy-logo-sprite.png");*/
       /*background-position: 40% 0%;*/
