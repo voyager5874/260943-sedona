@@ -440,29 +440,22 @@ main menu active down*/
     }
 
     .price-range label {
-      /*margin: 0;
-      padding: 0;*/
+      margin: 0;
+      padding: 0;
       display: inline-block;
       width: 50%;
-      /*padding-left: 65px;*/
       height: 100%;
       font-size: 14px;
       /*outline: 1px solid blue;*/
-      /*vertical-align: top;*/
       line-height: 32px;
-      vertical-align: bottom;
+      vertical-align: middle;
       cursor: pointer;
     }
-    /*.price-range-start {
-      padding-left: 10%;
-    }*/
+
 
     .price-range-start input {
       width: 10px;
     }
-    /*.price-range-end {
-      padding-left: 6%;
-    }*/
 
     .price-range-end input {
       width: 33px;
@@ -472,16 +465,13 @@ main menu active down*/
 
     .price-range-numbers input {
       display: inline-block;
-      /*width: 50px;*/
       height: 100%;
       font-weight: normal;
-      /*от label*/
       font-size: inherit;
-      line-height: inherit;
+      /*line-height: 32px;*/
       font-family: inherit;
       vertical-align: bottom;
       color: inherit;
-      /*margin: 0;*/
       background: none;
       /*background-color: rgba(255, 255, 255, 0.5);*/
       border: none;
