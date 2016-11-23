@@ -276,7 +276,7 @@ main menu active down*/
     /*форма-фильтр*/
 
     .hotel-picker-form {
-      position: relative;
+      /*position: relative;*/
       min-height: 218px;
       margin-bottom: 30px;
       padding-top: 28px;
@@ -458,14 +458,14 @@ main menu active down*/
     }*/
 
     .price-range-start input {
-      width: 9px;
+      width: 10px;
     }
     /*.price-range-end {
       padding-left: 6%;
     }*/
 
     .price-range-end input {
-      width: 32px;
+      width: 33px;
     }
     /*здесь наверно надо поле ввода
 по длине изменять, чтобы в середину вставалo*/
@@ -512,9 +512,6 @@ main menu active down*/
 
     .price-range-slider-cursor {
       position: absolute;
-      /*z-index: 1;*/
-      /*top: 50%;
-        transform: translateY(-50%);*/
       top: -9.5px;
       width: 19px;
       height: 19px;
@@ -588,11 +585,10 @@ main menu active down*/
       /*background-color: rgb(188, 203, 130);*/
       margin-bottom: 25px;
       padding-right: 6%;
-      padding-bottom: 30px;
+      padding-bottom: 29px;
       padding-left: 6%;
       font-size: 0;
       text-align: left;
-      /*overflow: auto;*/
       border-bottom: 1px solid #f6f6f6;
       /* padding-top: 10px;
       padding-bottom: 10px;*/
@@ -662,10 +658,7 @@ main menu active down*/
       /*outline: 1px solid black;*/
       vertical-align: bottom;
       vertical-align: bottom;
-      /*color: #b2b2b2;*/
       border-bottom: 1px dotted blue;
-      /*display: block;*/
-      /*width: 100%;*/
     }
 
     .sort-param:hover {
@@ -682,7 +675,6 @@ main menu active down*/
     .sort-param.current, .sort-param.current:hover, .sort-param.current:active {
       color: #82b3d3;
       border: none;
-      /*как-то сылку деактивировать совсем*/
       cursor: default;
     }
 
@@ -727,7 +719,7 @@ main menu active down*/
     .found-place-item {
       width: 100%;
       /*background-color: peru;*/
-      margin-bottom: 25px;
+      margin-bottom: 24px;
       padding-right: 6%;
       /*клирфиксы и разделители наверно можно совместить -
         сделать элемент выполняющим обе функции*/
@@ -737,7 +729,7 @@ main menu active down*/
       border-bottom: 1px solid #f6f6f6;
     }
 
-    .found-place-item:last-child {
+    .found-place-item:last-child, .hotels-main-content {
       margin-bottom: 0;
     }
 
@@ -782,12 +774,12 @@ main menu active down*/
     }
 
     .found-place-moreinfo {
-      max-width: 200px;
+      max-width: 180px;
       margin-right: 2px;
     }
 
     .found-place-book {
-      max-width: 200px;
+      max-width: 180px;
     }
 
     .found-place-type {
@@ -806,17 +798,6 @@ main menu active down*/
       padding-bottom: 3px;
       padding-left: 17px;
     }
-    /*    .found-place-book .btn-found-place-action {
-        background-color: #766357;
-    }
-
-    .found-place-book .btn-found-place-action:hover {
-        background-color: #604e43;
-    }*/
-    /*    .found-place-price {
-        display: inline-block;
-        outline: 1px solid black;
-    }*/
 
     .place-rating-box {
       /*background-color: orchid;*/
@@ -829,8 +810,9 @@ main menu active down*/
     }
 
     .stars {
+      margin-top: 2px;
       min-height: 20px;
-      margin-bottom: 46px;
+      margin-bottom: 48px;
       /*background-color: lightgrey;*/
       font-size: 0;
       text-align: right;
@@ -844,44 +826,29 @@ main menu active down*/
       padding: 0;
       font-size: 18px;
       line-height: 16px;
+      /*padding-top: 5px;*/
       vertical-align: bottom;
-      text-align: center;
-      /*margin-right: -5px;*/
+      text-align: right;
+      /*margin-right: -1px;*/
       /*outline: 1px solid red;*/
       /**/
     }
 
     .place-rating {
       margin: 0;
-      padding-top: 4px;
-      padding-bottom: 4px;
-      text-align: center;
+      padding-top: 2.5px;
+      padding-bottom: 2.5px;
+      text-align: right;
+      padding-right: 12px;
       background-color: #eeeeee;
+      /*outline: 1px solid black;*/
       /* padding-left: 15px;
         padding-right: 15px;*/
     }
-    /*.title {
-      font-size: 21px;
-      font-weight: bold;
-    }
-
-    .story {
-      font-size: 14px;
-      font-weight: normal;
-      line-height: 20px;
-    }*/
 
     .tourist-info-header {
       text-align: center;
     }
-    /*.reasons-header-text {
-        width: 620px;
-        text-align: center;
-        margin-bottom: 45px;
-        line-height: 26px;
-    }*/
-    /*отступы слева и справа или див с шириной? но внизу в
-    хедере кнопка может помещать задать отступы*/
 
     .tourist-info-header-title {
       width: 620px;
@@ -920,8 +887,6 @@ main menu active down*/
 
     .tourist-info-tile-row-white {
       background-color: #ffffff;
-      /*чтобы не заморачиваться с
-      растягиванием коротких колонок*/
     }
 
     .tourist-info-img {
@@ -954,16 +919,13 @@ main menu active down*/
       width: 33.33%;
       min-height: 330px;
       padding-top: 55px;
-      /*в одном месте, обязательно margin для story?*/
       padding-right: 4%;
       padding-bottom: 30px;
       padding-left: 4%;
       text-align: center;
       /*белый*/
       text-align: center;
-      /*бургер гад*/
       /*line-height: 21px;*/
-      /*прописал для title, story и number*/
       background-color: #ffffff;
       /*outline: 1px solid black;*/
     }
@@ -1004,9 +966,6 @@ main menu active down*/
     }
 
     .tourist-info-tile-title {
-      /*text-align: center;*/
-      /*webkit style -> margin after/before:1em
-      обнулять или не трогать?*/
       width: 160px;
       margin: 0;
       margin-right: auto;
@@ -1165,9 +1124,6 @@ main menu active down*/
       width: 39%;
       height: 100%;
     }
-    /*.onmap-search-form-core .input-row:last-of-type{
-	margin-bottom: 25px;
-}*/
 
     .onmap-search-form-core .people-count-row {
       margin-bottom: 55px;
@@ -1245,9 +1201,6 @@ main menu active down*/
     .onmap-search-form-label:hover {
       cursor: pointer;
     }
-    /*значки надо вставлять абсолютно
-иначе как заставить их быть в рамке активного инпута*/
-    /*символы через псевдоэлементы как в чекбоксах?*/
 
     .onmap-search-form .symbols {
       position: absolute;
@@ -1308,7 +1261,7 @@ main menu active down*/
 
     .main-footer {
       min-height: 120px;
-      padding-top: 37.5px;
+      padding-top: 36px;
       padding-bottom: 37.5px;
       font-size: 0;
       text-align: center;
@@ -1325,10 +1278,10 @@ main menu active down*/
     .main-footer-contacts {
       display: inline-block;
       /*что-то похожее но наверно надо как-то очевиднее
-      без подборов float влево и вправо,
-      задать высоту областей равную высоте кнопок соц сетей*/
+      без подборов float влево и вправо, с инлайн блоками
+      для обоих ширин не получается*/
       width: 37%;
-      padding-left: 5%;
+      padding-left: 4.7%;
       font-weight: bold;
       font-size: 21px;
       line-height: 21px;
@@ -1348,6 +1301,8 @@ main menu active down*/
     .social-media-links-item {
       display: inline-block;
       width: 48px;
+      /*в макете высота больше 48х48 видимо,
+      но выглядят вытянутыми*/
       height: 45px;
       margin-right: 2px;
       margin-left: 2px;
@@ -1359,8 +1314,9 @@ main menu active down*/
 
     .site-copyright {
       display: inline-block;
+      padding-top: 5px;
       width: 37%;
-      padding-right: 1.5%;
+      padding-right: 1.7%;
       font-size: 14px;
       vertical-align: middle;
       /*background-color: gold;*/
@@ -1371,8 +1327,10 @@ main menu active down*/
       display: inline-block;
       width: auto;
       height: auto;
-      margin-right: 2px;
-      line-height: 40px;
+      margin-right: 3px;
+      /**/
+      line-height: 36px;
+      /*padding-bottom: 5px;*/
       vertical-align: top;
       /*outline: 1px solid black;*/
     }
@@ -1382,9 +1340,6 @@ main menu active down*/
       width: 120px;
       height: 40px;
       vertical-align: top;
-      vertical-align: top;
-      /*background-image: url("../img/htmlacademy-logo-sprite.png");*/
-      /*background-position: 40% 0%;*/
       background-image: url("../img/sprite-all.png");
       background-repeat: no-repeat;
       background-position: -240px 0;
@@ -1392,16 +1347,12 @@ main menu active down*/
     }
 
     .site-copyright-logo:hover {
-      /*background-image: url("../img/htmlacademy-logo-sprite.png");*/
-      /*background-position: 40% 51%;*/
       background-image: url("../img/sprite-all.png");
       background-repeat: no-repeat;
       background-position: -240px -57px;
     }
 
     .site-copyright-logo:active {
-      /*background-image: url("../img/htmlacademy-logo-sprite.png");*/
-      /*background-position: 40% 101.282047109%;*/
       background-image: url("../img/sprite-all.png");
       background-repeat: no-repeat;
       background-position: -240px -114px;
